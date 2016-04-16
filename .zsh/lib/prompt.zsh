@@ -4,18 +4,18 @@ promptinit
 
 # Change user name color to red if logged in as root
 if [[ $UID == 0 || $EUID == 0 ]]; then
-   PROMPT='$fg[red]%n@%m '
+   PROMPT='%F{red}%n@%m%f '
 else
-   PROMPT='$fg[blue]%n@%m '
+   PROMPT='%F{blue}%n@%m%f '
 fi
 
-PROMPT+='$fg[yellow]%~ '
+PROMPT+='%F{yellow}%~%f '
 
-# Change green arrows (⇣⇡) if cnnection is via ssh
+# Change green arrows (⇣⇡) if connection is via ssh
 if [[ "${SSH_TTY}" ]]; then
-	PROMPT+="$fg[green]⇣⇡ $fg[white]〉";
+	PROMPT+="%F{green}⇣⇡%f %F{white}〉%f";
 else
-	PROMPT+="$fg[white]〉";
+	PROMPT+="%F{white}〉%f";
 fi;
 
 PROMPT+='%{$reset_color%}'
