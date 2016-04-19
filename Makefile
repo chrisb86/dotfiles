@@ -1,6 +1,6 @@
 DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-CANDIDATES := $(wildcard .??*) 
-EXCLUSIONS := .DS_Store .git .gitmodules .gitignore init 
+CANDIDATES := $(wildcard .??*)
+EXCLUSIONS := Makefile screenshot.png .DS_Store .git .gitmodules .gitignore README.md init
 DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
 
 all: install
