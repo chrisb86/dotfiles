@@ -1,7 +1,5 @@
-DOTPATH    := $(realpath $(dir $(lastword $(MAKEFILE_LIST))))
-CANDIDATES := $(wildcard .??*)
-EXCLUSIONS := Makefile screenshot.png .DS_Store .git .gitmodules .gitignore README.md init
-DOTFILES   := $(filter-out $(EXCLUSIONS), $(CANDIDATES))
+EXCLUDE		:= .DS_Store .git .gitmodules .gitignore
+DOTFILES 	:= $(filter-out $(EXCLUDE), $(wildcard .??*))
 
 all: install
 
@@ -10,7 +8,6 @@ help:
 	@echo "make deploy         #=> Create symlink to home directory"
 	@echo "make update         #=> Fetch changes for this repo"
 	@echo "make install        #=> Run make update, deploy, init"
-	@echo "make clean          #=> Remove the dot files and this repo"
 
 list:
 	@$(foreach val, $(DOTFILES), /bin/ls -dF $(val);)
@@ -28,8 +25,3 @@ update:
 
 install: update deploy
 	@exec $$SHELL
-
-clean:
-	@echo 'Remove dot files in your home directory...'
-	@-$(foreach val, $(DOTFILES), rm -vrf $(HOME)/$(val);)
-	-rm -rf $(DOTPATH)
