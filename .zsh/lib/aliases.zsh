@@ -9,6 +9,7 @@ alias sulast='sudo $(history -p !-1)'
 alias whois="whois -h whois-servers.net"
 alias ltmux="if tmux has-session -t $USER; then tmux attach -t $USER; else tmux new -s $USER; fi"
 alias ltitle='echo -ne "\033]0;$HOST\007"'
+alias ssh-copy-id='_(){ ssh $1 -p 5022 "mkdir -m 700 ~/.ssh; echo " $(< ~/.ssh/id_rsa.pub) " >> ~/.ssh/authorized_keys ; chmod 600 ~/.ssh/authorized_keys"; }; _'
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 alias r='open -a'
 alias htop='sudo htop'
