@@ -14,15 +14,17 @@ My color scheme is [Smyck Color Scheme by hukl](https://github.com/hukl/Smyck-Co
 
 The repo ships with a Makefile that you can use to deploy and update the dotfiles.
 
-	# make help
+	# bootstrap.sh help
 
-	make list           #=> Show dot files in this repo
-	make deploy         #=> Create symlink to home directory
-	make update         #=> Fetch changes for this repo
-	make install        #=> Run make update, deploy, init
-	make clean          #=> Remove the dot files and this repo
+	Usage: bootstrap.sh command {params}
 
-The dotfiles will be symlinked to your **~**.
+	list 			List all files that will be copied
+	update 			Update the git repo and the included submodules
+	deploy 			Copy the files to ~
+	install 		Update and deploy these dotfiles
+	help 			Show this screen
+
+The dotfiles will be copied to your **~**.
 
 ## Installation 
 
@@ -32,15 +34,14 @@ The dotfiles will be symlinked to your **~**.
 
 2. Deploy
 		
-		make install
+		./bootstrap.sh install
 
 3. Enjoy!
 
-If you want to update to the newest version, run ``make update`` from within the dotfiles folder.
+If you want to update to the newest version, run ``bootstrap.sh update`` from within the dotfiles folder and ``bootstrap.sh deploy`` to copy the updated files.
 
 
 ## Credits
 
 - dotfiles based on [dotfiles by hukl](https://github.com/hukl/dotfiles)
-- Makefile based on [Makefile by b4b4r07](https://github.com/b4b4r07/dotfiles/blob/master/Makefile)
 - [Git prompt by Josh Dick](https://gist.github.com/joshdick/4415470)
