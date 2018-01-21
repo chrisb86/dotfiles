@@ -9,6 +9,7 @@ setopt always_to_end
 WORDCHARS=''
 
 zmodload -i zsh/complist
+source ~/.zsh/comp/_*
 
 ## case-insensitive (all),partial-word and then substring completion
 if [ "x$CASE_SENSITIVE" = "xtrue" ]; then
