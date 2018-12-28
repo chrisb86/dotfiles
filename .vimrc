@@ -50,8 +50,8 @@ nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 set nofoldenable
 
 " Directories for swp files
-set backupdir=~/.vimbackup
-set directory=~/.vimbackup
+set backupdir=~/.vim/backups
+set directory=~/.vim/backups
 
 " make uses real tabs
 au FileType make set noexpandtab
