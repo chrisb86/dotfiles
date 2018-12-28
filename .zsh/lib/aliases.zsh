@@ -13,6 +13,7 @@ alias ssh-copy-id='_(){ ssh $1 -p 5022 "mkdir -m 700 ~/.ssh; echo " $(< ~/.ssh/i
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 alias r='open -a'
 alias htop='sudo htop'
+alias ttop="nice top -j -P -a"
 alias flushdns='dscacheutil -flushcache && killall -HUP mDNSResponder'
 alias pkg_add='brew install'
 alias pkg_search='brew search'

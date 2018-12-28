@@ -10,6 +10,7 @@ WORDCHARS=''
 
 zmodload -i zsh/complist
 fpath=(~/.zsh/comp/ $fpath)
+fpath=(/usr/local/share/zsh/site-functions/ $fpath)
 
 ## case-insensitive (all),partial-word and then substring completion
 if [ "x$CASE_SENSITIVE" = "xtrue" ]; then

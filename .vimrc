@@ -1,9 +1,5 @@
 set nocompatible
 
-" Initialize Pathogen
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-
 " Enable syntax highlighting
 syntax on
 filetype plugin indent on
@@ -57,18 +53,8 @@ set nofoldenable
 set backupdir=~/.vimbackup
 set directory=~/.vimbackup
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader>n :NERDTreeToggle<CR>
-
 " make uses real tabs
 au FileType make set noexpandtab
-
-" Erlang uses 4 spaces
-au FileType erlang set softtabstop=4 tabstop=4 shiftwidth=4
-
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
@@ -78,12 +64,3 @@ au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" ctrp custom ignores
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|\.eunit$',
-  \ 'file': '\.exe$\|\.so$\|\.dll\|\.beam$\|\.DS_Store$'
-  \ }
-
-let g:erlangCheckFile = "~/.vim/bundle/vimerl/compiler/erlang_check_file.erl"
-let g:erlangHighlightErrors = 1

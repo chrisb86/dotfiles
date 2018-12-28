@@ -78,8 +78,7 @@ deploy)
 
 	# Copy color vim scheme from init folder to .vim/colors
 	cp init/Smyck-Color-Scheme/smyck.vim .vim/colors/smyck.vim
-	cp init/iocage_zsh-completion/_iocage .zsh/comp/_iocage
-	
+
 	df_deploy
   ;;
 ######################## bootstrap.sh UPDATE ########################
@@ -91,7 +90,7 @@ update)
 install)
 	echo "#### Updating git repos and submodules"
 	df_update
-	
+
 	echo "#### Copying files to ~"
 	df_deploy
   ;;
