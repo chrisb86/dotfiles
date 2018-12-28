@@ -53,7 +53,8 @@ df_update () {
 # Usage: df_deploy
 df_deploy () {
 	# poor man's rsync
-	df_list | cpio -pdmB --quiet ~
+  TARGET=`realpath ~`
+	df_list | cpio -pdmB --quiet $TARGET
 }
 
 # List files that will be copied
