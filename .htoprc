@@ -1,7 +1,0 @@
-# Beware! This file is rewritten every time htop exits.
-# The parser is also very primitive, and not human-friendly.
-# (I know, it's in the todo list).
-left_meters=CPU Memory Swap 
-left_meter_modes=1 1 1 
-right_meters=Hostname Uptime 
-right_meter_modes=2 2 
