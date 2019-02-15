@@ -4,18 +4,25 @@ alias ...='cd ../..'
 alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 alias google='ping -c 10240000 google.com'
 alias foldersize='du -sh'
-alias nmap_localnet='nmap -sP 192.168.1.0/24'
-alias sulast='sudo $(history -p !-1)'
+alias nmap_localnet='nmap -sP 10.0.3.0/24'
 alias whois="whois -h whois-servers.net"
 alias ltmux="if tmux has-session -t $USER; then tmux attach -d -t $USER; else tmux new -s $USER; fi"
 alias ltitle='echo -ne "\033]0;$HOST\007"'
-alias ssh-copy-id='_(){ ssh $1 -p 5022 "mkdir -m 700 ~/.ssh; echo " $(< ~/.ssh/id_rsa.pub) " >> ~/.ssh/authorized_keys ; chmod 600 ~/.ssh/authorized_keys"; }; _'
-alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
-alias r='open -a'
-alias htop='sudo htop'
-alias ttop="nice top -j -P -a"
-alias flushdns='dscacheutil -flushcache && killall -HUP mDNSResponder'
-alias pkg_add='brew install'
-alias pkg_search='brew search'
-alias pkg_remove='brew remove'
-alias pkg_upgrade='brew update && brew upgrade && brew cleanup && brew cask cleanup'
+
+case `uname` in
+  Darwin)
+    # commands for OS X go here
+    alias flushdns='dscacheutil -flushcache && killall -HUP mDNSResponder'
+    alias htop='sudo htop'
+    alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
+    alias r='open -a'
+    alias sulast='sudo $(history -p !-1)'
+  ;;
+  Linux)
+    # commands for Linux go here
+  ;;
+  FreeBSD)
+    # commands for FreeBSD go here
+    alias sudo='doas'
+  ;;
+esac
