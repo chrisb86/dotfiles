@@ -1,53 +1,47 @@
-set nocompatible
+set nocompatible           " Vim defaults rather than vi ones. Keep at top.
+filetype plugin indent on  " Enable filetype-specific settings.
+syntax on                  " Enable syntax highlighting.
+set backspace=2            " Make the backspace behave as most applications.
+set autoindent             " Use current indent for new lines.
+set display=lastline       " Show as much of the line as will fit.
+set wildmenu               " Better tab completion in the commandline.
+set wildmode=list:longest  " List all matches and complete to the longest match.
+set showcmd                " Show (partial) command in bottom-right.
+set expandtab              " Use spaces instead of tabs for indentation.
+set smarttab               " Backspace removes 'shiftwidth' worth of spaces.
+set number                 " Show line numbers.
+set nowrap                 " Don't wrap long lines.
+set laststatus=2           " Always show the statusline.
+set ruler                  " Show the ruler in the statusline.
+set textwidth=80           " Wrap at n characters.
+set incsearch              " Jump to search match while typing.
+set hlsearch               " Highlight the last used search pattern.
+set nrformats-=octal       " Remove octal support from 'nrformats'.
+set tabstop=2              " Size of a Tab character.
+set shiftwidth=0           " Use same value as 'tabstop'.
+set softtabstop=-1         " Use same value as 'shiftwidth'.
+set encoding=utf-8         " Set encoding
+color smyck                " Colorscheme see https://github.com/hukl/Smyck-Color-Scheme
+set list listchars=tab:»·,trail:·" Show trailing spaces and highlight hard tabs
 
-" Enable syntax highlighting
-syntax on
-filetype plugin indent on
+" Go to the last cursor location when opening a file.
+augroup jump
+  autocmd BufReadPost *
+    \  if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
+      \| exe 'normal! g`"'
+    \| endif
+augroup end
 
-" Colorscheme see https://github.com/hukl/Smyck-Color-Scheme
-color smyck
-
-" Add line numbers
-set number
-set ruler
-
-" Set encoding
-set encoding=utf-8
-
-" Whitespace stuff
-set nowrap
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-
-" Show trailing spaces and highlight hard tabs
-set list listchars=tab:»·,trail:·
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-" Strip trailing whitespaces on each save
-fun! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
+" Clean trailing whitespace.
+fun! s:trim_whitespace()
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
 endfun
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
-" Search related settings
-set incsearch
-set hlsearch
-
-" Map Ctrl+l to clear highlighted searches
-nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+command! TrimWhitespace call s:trim_whitespace()
 
 " Highlight characters behind the 80 chars margin
 :au BufWinEnter * let w:m2=matchadd('ColumnMargin', '\%>80v.\+', -1)
-
-" Disable code folding
-set nofoldenable
 
 " Directories for swp files
 set backupdir=~/.vim/backups
@@ -61,6 +55,3 @@ au BufNewFile,BufRead *.json set ft=javascript
 
 " make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
