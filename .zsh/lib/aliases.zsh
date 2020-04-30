@@ -24,6 +24,5 @@ case `uname` in
   ;;
   FreeBSD)
     # commands for FreeBSD go here
-    alias sudo='doas'
   ;;
 esac
