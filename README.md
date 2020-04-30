@@ -4,7 +4,7 @@ These are my dotfiles. They are awesome.
 
 This repo contains my dotfiles which I use at OS X and FreeBSD systems. This set features a nice and fast zsh config, a neat vim environment and a tmux config.
 
-![Image](https://raw.githubusercontent.com/chrisb86/dotfiles/master/screenshot.png)
+![Image](https://git.debilux.org/chbaer/dotfiles/raw/branch/master/screenshot.png)
 
 The zsh prompt is handcrafted to look neat and give some extra info. When you are root the user- and hostname color changes from blue to red. If you are connected via ssh, the prompt will show some green arrows behind the working path and when you are in a git repository, it will show some git infos at the right side.
 
@@ -15,9 +15,9 @@ My color scheme is [Smyck Color Scheme by hukl](https://github.com/hukl/Smyck-Co
 The repo ships with a Makefile that you can use to deploy and update the dotfiles.
 
 	# bootstrap.sh help
-
+	
 	Usage: bootstrap.sh command {params}
-
+	
 	list 			List all files that will be copied
 	update 			Update the git repo and the included submodules
 	deploy 			Copy the files to ~
@@ -30,7 +30,7 @@ The dotfiles will be copied to your **~**.
 
 1. Get the dotfiles.
 
-		git clone https://github.com/chrisb86/dotfiles.git
+		git clone https://git.debilux.org/chbaer/dotfiles.git
 
 2. Deploy
 		
