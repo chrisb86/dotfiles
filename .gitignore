@@ -16,3 +16,5 @@ Thumbs.db
 .zsh/lib/extra.zsh
 
 *.sublime-*
+.vim/colors/smyck.vim
+*.log
