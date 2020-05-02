@@ -21,7 +21,7 @@ else
 fi
 
 # uncomment if completion should be colorful
-# zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-colors ''
 
 # should this be in keybindings?
 bindkey -M menuselect '^o' accept-and-infer-next-history
