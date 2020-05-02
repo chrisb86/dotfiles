@@ -10,14 +10,14 @@ The zsh prompt is handcrafted to look neat and give some extra info. When you ar
 
 The tmux config contains some nice settings to make my work a bit easier and look nice.
 
-My color scheme is [Smyck Color Scheme by hukl](https://github.com/hukl/Smyck-Color-Scheme) and my font is [Source Code Pro by Adobe Fonts](https://github.com/adobe-fonts/source-code-pro).
+My color scheme is [Smyck Color Scheme by hukl](https://github.com/hukl/Smyck-Color-Scheme) and my font is [FiraCode](https://github.com/tonsky/FiraCode).
 
 The repo ships with a Makefile that you can use to deploy and update the dotfiles.
 
 	# bootstrap.sh help
-	
+
 	Usage: bootstrap.sh command {params}
-	
+
 	list 			List all files that will be copied
 	update 			Update the git repo and the included submodules
 	deploy 			Copy the files to ~
@@ -26,14 +26,14 @@ The repo ships with a Makefile that you can use to deploy and update the dotfile
 
 The dotfiles will be copied to your **~**.
 
-## Installation 
+## Installation
 
 1. Get the dotfiles.
 
 		git clone https://git.debilux.org/chbaer/dotfiles.git
 
 2. Deploy
-		
+
 		./bootstrap.sh install
 
 3. Enjoy!
