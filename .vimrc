@@ -18,8 +18,8 @@ set incsearch              " Jump to search match while typing.
 set hlsearch               " Highlight the last used search pattern.
 set nrformats-=octal       " Remove octal support from 'nrformats'.
 set tabstop=2              " Size of a Tab character.
-set shiftwidth=0           " Use same value as 'tabstop'.
-set softtabstop=-1         " Use same value as 'shiftwidth'.
+set shiftwidth=2          " Use same value as 'tabstop'.
+set softtabstop=2         " Use same value as 'shiftwidth'.
 set encoding=utf-8         " Set encoding
 color smyck                " Colorscheme see https://github.com/hukl/Smyck-Color-Scheme
 set list listchars=tab:»·,trail:·" Show trailing spaces and highlight hard tabs
