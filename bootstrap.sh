@@ -79,6 +79,7 @@ deploy)
 
 	# Copy color vim scheme from init folder to .vim/colors
 	cp init/Smyck-Color-Scheme/smyck.vim .vim/colors/smyck.vim
+  cp init/vim-json/json.vim .vim/syntax/json.vim
 
 	df_deploy
   ;;
