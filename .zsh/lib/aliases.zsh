@@ -1,5 +1,5 @@
+alias ls='ls --color=always -h'
 alias ll='ls -la'
-alias lh='ls -lah'
 alias ...='cd ../..'
 alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 alias google='ping -c 10240000 google.com'
