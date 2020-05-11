@@ -7,6 +7,3 @@
 [submodule "init/vim-json"]
 	path = init/vim-json
 	url = https://github.com/elzr/vim-json
-[submodule "init/source-code-pro"]
-	path = init/source-code-pro
-	url = https://github.com/adobe-fonts/source-code-pro
