@@ -77,17 +77,17 @@ list)
 deploy)
 	echo "#### Copying files to ~"
 
-	# Copy color vim scheme from init folder to .vim/colors
+	# Copy vim color scheme and other files to .vim
 	cp init/Smyck-Color-Scheme/smyck.vim .vim/colors/smyck.vim
   cp init/vim-json/json.vim .vim/syntax/json.vim
 
 	df_deploy
-  ;;
+;;
 ######################## bootstrap.sh UPDATE ########################
 update)
 	echo "#### Updating git repos and submodules"
 	df_update
-  ;;
+;;
 ######################## bootstrap.sh INSTALL ########################
 install)
 	echo "#### Updating git repos and submodules"
@@ -95,8 +95,8 @@ install)
 
 	echo "#### Copying files to ~"
 	df_deploy
-  ;;
+;;
  *)
 	help 1
-  ;;
+;;
 esac
