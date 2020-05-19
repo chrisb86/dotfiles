@@ -1,0 +1,120 @@
+cask_args appdir: '/Applications'
+ALL_FFMPEG_OPTIONS = `brew options ffmpeg | grep -vE '\s' | grep -- '--with-'`.gsub("--", "").split("\n")
+
+tap "caskroom/cask"
+tap "caskroom/fonts"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-drivers"
+tap "homebrew/core"
+brew "brew-cask-completion"
+brew "checkbashisms"
+brew "coreutils"
+brew "exiftool"
+brew "ffmpeg", args: ALL_FFMPEG_OPTIONS
+brew "git"
+brew "grep"
+brew "htop"
+brew "hugo"
+brew "iperf"
+brew "iperf3"
+brew "mas"
+brew "mosh"
+brew "node"
+brew "nativefier"
+brew "nmap"
+brew "rsync"
+brew "tmux"
+brew "tree"
+brew "vim"
+brew "youtube-dl"
+brew "zsh"
+brew "zsh-completions"
+cask "alfred"
+cask "amethyst"
+cask "atom"
+cask "balenaetcher"
+cask "bartender"
+cask "bonjeff"
+cask "calibre"
+cask "carbon-copy-cloner"
+cask "chromium"
+cask "coconutbattery"
+cask "db-browser-for-sqlite"
+cask "dbeaver-community"
+cask "diskmaker-x"
+cask "evolv-escribe-suite"
+cask "fantastical"
+cask "firefox"
+cask "fluid"
+cask "fog"
+cask "font-courier-prime"
+cask "font-courier-prime-code"
+cask "font-courier-prime-medium-and-semi-bold"
+cask "font-courier-prime-sans"
+cask "fork"
+cask "github"
+cask "handbrake"
+cask "hazel"
+cask "istat-menus"
+cask "iterm2"
+cask "java"
+cask "jdownloader"
+cask "libreoffice"
+cask "little-snitch"
+cask "marked"
+cask "mediathekview"
+cask "moneymoney"
+cask "nextcloud"
+cask "onyx"
+cask "pdf-expert"
+cask "portfolioperformance"
+cask "qlcommonmark"
+cask "ramme"
+cask "sequel-pro"
+cask "shifty"
+cask "sloth"
+cask "sonos"
+cask "spotify"
+cask "thunderbird"
+cask "transmission"
+cask "transmit"
+cask "tuxera-ntfs"
+cask "typora"
+cask "virtualbox"
+cask "vlc"
+cask "wireshark"
+mas "Affinity Designer", id: 824171161
+mas "Affinity Publisher", id: 881418622
+mas "Amphetamine", id: 937984704
+mas "AudioBookBinder", id: 413969927
+mas "Banking 4X", id: 926711151
+mas "Bitwarden", id: 1352778147
+mas "Cardhop", id: 1290358394
+mas "Color Picker", id: 641027709
+mas "Create Booklet", id: 943029046
+mas "Discovery", id: 1381004916
+mas "Drafts", id: 1435957248
+mas "Enpass", id: 732710998
+mas "FileBot", id: 905384638
+mas "Interact Scratchpad", id: 1199660222
+mas "Keynote", id: 409183694
+mas "Mactracker", id: 430255202
+mas "Mastonaut", id: 1450757574
+mas "Mindcad Tiler", id: 432460453
+mas "MindNode", id: 992076693
+mas "Monit", id: 1014850245
+mas "Moom", id: 419330170
+mas "Notebooks", id: 1449826029
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "PDFify", id: 1435055351
+mas "Pixelmator", id: 407963104
+mas "Reeder", id: 1449412482
+mas "ShutterCount", id: 720123827
+mas "The Unarchiver", id: 425424353
+mas "Todoist", id: 585829637
+mas "Tweetbot", id: 557168941
+mas "VPN Monitor", id: 887410814
+mas "WhatsApp", id: 1147396723
+mas "Xcode", id: 497799835
