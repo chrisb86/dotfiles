@@ -48,12 +48,9 @@ cask "fantastical"
 cask "firefox"
 cask "fluid"
 cask "fog"
-cask "font-courier-prime"
-cask "font-courier-prime-code"
-cask "font-courier-prime-medium-and-semi-bold"
-cask "font-courier-prime-sans"
+cask "font-fira-code"
+cask "font-source-code-pro"
 cask "fork"
-cask "github"
 cask "handbrake"
 cask "hazel"
 cask "istat-menus"
@@ -65,9 +62,11 @@ cask "little-snitch"
 cask "marked"
 cask "mediathekview"
 cask "moneymoney"
+cask "monitorcontrol"
 cask "nextcloud"
 cask "onyx"
 cask "pdf-expert"
+cask "plex"
 cask "portfolioperformance"
 cask "qlcommonmark"
 cask "ramme"
@@ -84,11 +83,12 @@ cask "typora"
 cask "virtualbox"
 cask "vlc"
 cask "wireshark"
+cask "zoomus"
 mas "Affinity Designer", id: 824171161
+mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
 mas "AudioBookBinder", id: 413969927
-mas "Banking 4X", id: 926711151
 mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
 mas "Color Picker", id: 641027709

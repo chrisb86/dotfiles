@@ -2,6 +2,9 @@
 # Inspired by https://github.com/mathiasbynens/dotfiles/blob/master/.macos from Mathias Bynens
 
 MAC_HOSTNAME="leia"
+MAC_NATIVEFIERSITES="https://web.threema.ch/ https://app.youneedabudget.com/"
+MAC_NATIVEFIEROPTS="--darwin-dark-mode-support"
+MAC_NATIVEFIERTMP="/tmp/nativefier"
 
 # Close any open System Preferences panes, to prevent them from overriding
 # settings we’re about to change
@@ -9,6 +12,11 @@ osascript -e 'tell application "System Preferences" to quit'
 
 # Ask for the administrator password upfront
 sudo -v
+
+echo ">>> Updating macOS..."
+sudo softwareupdate -i -a
+
+echo ">>> Applying settings..."
 
 # Keep-alive: update existing `sudo` time stamp until `.macos` has finished
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
@@ -18,6 +26,21 @@ sudo scutil --set ComputerName "$MAC_HOSTNAME"
 sudo scutil --set HostName "$MAC_HOSTNAME"
 sudo scutil --set LocalHostName "$MAC_HOSTNAME"
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$MAC_HOSTNAME"
+
+# disable automatic update downloads
+sudo defaults write /Library/Preferences/com.apple.SoftwareUpdate AutomaticDownload -bool FALSE
+
+# enable network time
+sudo systemsetup -setusingnetworktime on
+
+# Enable DSDontWrite - By default, the Finder collects labels, tags, and other
+# metadata related to files on mounted SMB volumes before determining how
+# to display the files. macOS High Sierra 10.13 introduces the option for the
+# Finder to fetch only the basic information about files on a mounted SMB
+# volume, and to display them immediately in alphabetical order. This can
+# increase performance in certain environments.
+
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
 
 # Always show scrollbars
 defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
@@ -41,10 +64,6 @@ defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Remove duplicates in the “Open With” menu (also see `lscleanup` alias)
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user
-
-# Reveal IP address, hostname, OS version, etc. when clicking the clock
-# in the login window
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 # Disable automatic capitalization as it’s annoying when typing code
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -79,7 +98,7 @@ defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}"
 # Show icons for hard drives, servers, and removable media on the desktop
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
 defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 
 # Finder: show all filename extensions
@@ -111,7 +130,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `glyv`
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
-#Enable AirDrop over Ethernet and on unsupported Macs running Lion
+# Enable AirDrop over Ethernet and on unsupported Macs running Lion
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
 # Show the /Volumes folder
@@ -139,6 +158,7 @@ defaults write com.apple.dock wvous-bl-modifier -int 0
 # Check for software updates daily, not just once per week
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 
+echo ">>> Killing apps..."
 # Kill affected apps
 for app in "Activity Monitor" \
 	"cfprefsd" \
@@ -147,8 +167,25 @@ for app in "Activity Monitor" \
 	killall "${app}" &> /dev/null
 done
 
+echo ">>> Installing Homebrew..."
 # Install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+echo ">>> Processing Brewfile..."
 # Install apps from Brewfile
 brew bundle
+
+#TODO Install Luminar
+#TODO Install exactscan pro
+
+echo ">>> Creating single site browsers"
+
+mkdir -p $MAC_NATIVEFIERTMP
+
+for s in ${MAC_NATIVEFIERSITES}; do
+  nativefier ${MAC_NATIVEFIEROPTS} ${s} ${MAC_NATIVEFIERTMP}
+done
+
+find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
+
+rm -rf $MAC_NATIVEFIERTMP
