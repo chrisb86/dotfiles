@@ -2,8 +2,18 @@
 # Inspired by https://github.com/mathiasbynens/dotfiles/blob/master/.macos from Mathias Bynens
 
 MAC_HOSTNAME="leia"
+
+# URLs that should be created as singlesite browsers
 MAC_NATIVEFIERSITES="https://web.threema.ch/ https://app.youneedabudget.com/"
+
+# Options for nativefier
 MAC_NATIVEFIEROPTS="--darwin-dark-mode-support"
+
+# URLs of additional apps that should be downloaded as zip, dmg, pkg or app
+MAC_INSTALLDOWNLOADS="https://dl.exactcode.de/tmp/3bb50ff8eeb7ad116724b56a820139fa/ExactScanPro-19.10.10.dmg https://downloads.skylum.com/luminar4/installer/mac/Luminar4Installer.zip"
+
+# tmp dirs
+MAC_DOWNLOAD="/tmp/macinstall"
 MAC_NATIVEFIERTMP="/tmp/nativefier"
 
 # Close any open System Preferences panes, to prevent them from overriding
@@ -175,8 +185,47 @@ echo ">>> Processing Brewfile..."
 # Install apps from Brewfile
 brew bundle
 
-#TODO Install Luminar
-#TODO Install exactscan pro
+
+echo ">>> Instaling apps that are not avaliable in brew or AppStore..."
+MAC_INSTALLMOUNT="$MAC_DOWNLOAD/mount"
+mkdir -p ${MAC_INSTALLMOUNT}
+
+cd $MAC_DOWNLOAD
+
+# Download all packages
+for d in ${MAC_INSTALLDOWNLOADS}; do
+  echo ">>> Downloading ${d}"
+  curl -O ${d}
+done
+
+# Extracting *.zip
+find $MAC_DOWNLOAD -name "*.zip" -print0 | while IFS= read -r -d '' f; do
+  echo ">>> Extracting ${f}"
+  unzip -q ${f}
+  rm ${f}
+done
+
+# Install *.pkg
+find $MAC_DOWNLOAD -name "*.pkg" -print0 | while IFS= read -r -d '' f; do
+  echo ">>> Processing ${f}"
+  sudo installer -pkg "$f" -target /
+done
+
+# Install *.dmg
+find $MAC_DOWNLOAD -name "*.dmg" -print0 | while IFS= read -r -d '' f; do
+  echo ">>> Processing ${f}"
+  hdiutil attach $f -quiet -mountpoint ${MAC_INSTALLMOUNT}
+  cp -rf ${MAC_INSTALLMOUNT}/*.app /Applications
+  hdiutil detach ${MAC_INSTALLMOUNT} -quiet
+done
+
+# Install *.app
+find $MAC_DOWNLOAD -name "*.app" -print0 | while IFS= read -r -d '' f; do
+  echo ">>> Processing ${f}"
+  open -a "${f}"
+done
+
+#rm -rf $MAC_DOWNLOAD
 
 echo ">>> Creating single site browsers"
 
