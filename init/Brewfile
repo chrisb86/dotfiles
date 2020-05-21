@@ -26,7 +26,7 @@ brew "nmap"
 brew "rsync"
 brew "tmux"
 brew "tree"
-brew "vim"
+brew "vim", args: --HEAD
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"

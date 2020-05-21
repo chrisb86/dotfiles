@@ -12,3 +12,7 @@ setopt long_list_jobs
 export PAGER=less
 export LC_CTYPE=$LANG
 export LC_ALL=de_DE.UTF-8
+
+## editor
+
+export EDITOR=vim
