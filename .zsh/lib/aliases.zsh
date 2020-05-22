@@ -1,14 +1,9 @@
 alias ls='ls --color=always -h'
 alias ll='ls -la'
 alias ...='cd ../..'
-alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
-alias google='ping -c 10240000 google.com'
 alias foldersize='du -sh'
 alias duf='du -sk * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
-alias nmap_localnet='nmap -sP 10.0.3.0/24'
 alias whois="whois -h whois-servers.net"
-alias ltmux="if tmux has-session -t $USER; then tmux attach -d -t $USER; else tmux new -s $USER; fi"
-alias ltitle='echo -ne "\033]0;$HOST\007"'
 
 case `uname` in
   Darwin)
@@ -18,6 +13,9 @@ case `uname` in
     alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
     alias r='open -a'
     alias sulast='sudo $(history -p !-1)'
+    alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
+    alias google='ping -c 10240000 google.com'
+    alias nmap_localnet='nmap -sP 10.0.3.0/24'
   ;;
   Linux)
     # commands for Linux go here
