@@ -9,10 +9,5 @@ bindkey "^[m" copy-prev-shell-word
 setopt long_list_jobs
 
 ## pager
-export PAGER=less
 export LC_CTYPE=$LANG
 export LC_ALL=de_DE.UTF-8
-
-## editor
-
-export EDITOR=vim

@@ -1,11 +1,23 @@
-if [[ $UID == 0 || $EUID == 0 ]]; then
-  PATH="/root/bin:$PATH"
-fi
+# Set $PATH
+# Put only directories in $PATH that exist and remove duplicates
+typeset -U path  # No duplicates
+path=()
 
-PATH="$HOME/bin:$PATH"
+_prepath() {
+    for dir in "$@"; do
+        dir=${dir:A}
+        [[ ! -d "$dir" ]] && return
+        path=("$dir" $path[@])
+    done
+}
 
-PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
-PATH="/usr/local/bin:$PATH"
+_prepath /usr/local/bin /bin /usr/local/sbin # General
+_prepath /usr/bin  /usr/sbin /sbin /Library/Apple/usr/bin  # macOS
+_prepath /usr/sbin /sbin # FreeBSD
+
+_prepath "$HOME/bin"
+
+unfunction _prepath
 
 uname -npsr
 uptime

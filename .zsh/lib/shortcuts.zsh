@@ -14,3 +14,12 @@ case `uname` in
     hash -d www=/usr/local/www/ngineerx
   ;;
 esac
+
+insert_doas() { zle beginning-of-line; zle -U "doas " }
+replace_rm()  { zle beginning-of-line; zle delete-word; zle -U "rm " }
+
+zle -N insert-doas insert_doas
+zle -N replace-rm replace_rm
+
+bindkey '^s'    insert-doas
+bindkey '^r'    replace-rm

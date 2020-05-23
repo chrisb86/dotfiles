@@ -1,3 +1,16 @@
+_exists() { (( $+commands[$1] )) }
+
+_exists vim      && export EDITOR=vim
+_exists less     && export PAGER=less
+
+if _exists vim; then
+    alias vim="vim -p"
+    alias vi="vim"
+fi
+
+unfunction _exists
+
+
 alias ls='ls --color=always -h'
 alias ll='ls -la'
 alias ...='cd ../..'
