@@ -4,7 +4,7 @@ hash -d bin=$HOME/bin
 
 case `uname` in
   Darwin)
-    hash -d hucb=~$HOME/Sites/christianbaer.me
+    hash -d hucb=$HOME/Sites/christianbaer.me
   ;;
   Linux)
     # commands for Linux go here
