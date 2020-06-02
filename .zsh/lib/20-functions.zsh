@@ -1,4 +1,4 @@
-fpath+=$ZDOTDIR/functions
+fpath=($fpath $ZDOTDIR/functions)
 
 autoload extract
 autoload img2iso

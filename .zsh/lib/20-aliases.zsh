@@ -10,13 +10,12 @@ fi
 
 unfunction _exists
 
-
 alias ls='ls --color=always -h'
 alias ll='ls -la'
 alias ...='cd ../..'
 alias foldersize='du -sh'
 alias duf='du -sk * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done'
-alias whois="whois -h whois-servers.net"
+alias google='ping -c 10240000 google.com'
 
 case `uname` in
   Darwin)
@@ -27,7 +26,6 @@ case `uname` in
     alias r='open -a'
     alias sulast='sudo $(history -p !-1)'
     alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
-    alias google='ping -c 10240000 google.com'
     alias nmap_localnet='nmap -sP 10.0.3.0/24'
   ;;
   Linux)
@@ -35,5 +33,6 @@ case `uname` in
   ;;
   FreeBSD)
     # commands for FreeBSD go here
+    alias stl="sockstat -l"
   ;;
 esac

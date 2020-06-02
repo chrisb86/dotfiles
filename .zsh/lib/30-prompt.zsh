@@ -12,7 +12,7 @@ fi
 PROMPT+='%F{yellow}%~%f '
 
 # Change green arrows (⇣⇡) if connection is via ssh
-if [[ "${SSH_CLIENT}" ]]; then
+if [[ "${SSH_CONNECTION}" ]]; then
 	PROMPT+="%F{green}⇣⇡%f %F{white}〉%f";
 else
 	PROMPT+="%F{white}〉%f";

@@ -14,7 +14,6 @@ _prepath() {
 _prepath /usr/local/bin /bin /usr/local/sbin # General
 _prepath /usr/bin  /usr/sbin /sbin /Library/Apple/usr/bin  # macOS
 _prepath /usr/sbin /sbin # FreeBSD
-
-_prepath "$HOME/bin"
+_prepath ~/bin
 
 unfunction _prepath

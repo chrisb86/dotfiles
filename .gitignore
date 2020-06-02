@@ -17,3 +17,4 @@ Thumbs.db
 
 *.sublime-*
 *.log
+.zsh/lib/30-extra.zsh
