@@ -185,7 +185,6 @@ echo ">>> Processing Brewfile..."
 # Install apps from Brewfile
 brew bundle
 
-
 echo ">>> Instaling apps that are not avaliable in brew or AppStore..."
 MAC_INSTALLMOUNT="$MAC_DOWNLOAD/mount"
 mkdir -p ${MAC_INSTALLMOUNT}
@@ -238,3 +237,7 @@ done
 find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
 
 rm -rf $MAC_NATIVEFIERTMP
+
+## Set zsh from brew as default shell
+echo ">>> Setting /usr/local/bin/zsh as default shell for $USER"
+sudo chsh -s /usr/local/bin/zsh $USER
