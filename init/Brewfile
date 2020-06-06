@@ -1,6 +1,7 @@
 cask_args appdir: '/Applications'
 ALL_FFMPEG_OPTIONS = `brew options ffmpeg | grep -vE '\s' | grep -- '--with-'`.gsub("--", "").split("\n")
 
+tap "adoptopenjdk/openjdk"
 tap "caskroom/cask"
 tap "caskroom/fonts"
 tap "homebrew/bundle"
@@ -33,6 +34,7 @@ brew "vim", args: --HEAD
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
+cask "adoptopenjdk11"
 cask "alfred"
 cask "amethyst"
 cask "atom"
