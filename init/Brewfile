@@ -1,13 +1,16 @@
+## Options
 cask_args appdir: '/Applications'
+
 ALL_FFMPEG_OPTIONS = `brew options ffmpeg | grep -vE '\s' | grep -- '--with-'`.gsub("--", "").split("\n")
 
+## Taps
 tap "adoptopenjdk/openjdk"
-tap "caskroom/cask"
-tap "caskroom/fonts"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
+
+## brew formulae
 brew "brew-cask-completion"
 brew "checkbashisms"
 brew "coreutils"
@@ -30,11 +33,14 @@ brew "tesseract"
 brew "tesseract-lang"
 brew "tmux"
 brew "tree"
-brew "vim", args: --HEAD
+#brew "vim", args: --HEAD
+brew "vim"
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
-cask "adoptopenjdk11"
+
+## cask formulae
+cask "adoptopenjdk"
 cask "alfred"
 cask "amethyst"
 cask "atom"
@@ -91,6 +97,8 @@ cask "virtualbox-extension-pack"
 cask "vlc"
 cask "wireshark"
 cask "zoomus"
+
+## Mac AppStore
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
