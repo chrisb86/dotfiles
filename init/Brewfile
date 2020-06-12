@@ -40,7 +40,8 @@ brew "zsh"
 brew "zsh-completions"
 
 ## cask formulae
-cask "adoptopenjdk"
+#cask "adoptopenjdk"
+cask "adoptopenjdk8"
 cask "alfred"
 cask "amethyst"
 cask "atom"
