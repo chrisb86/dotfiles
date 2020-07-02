@@ -10,7 +10,7 @@ The zsh prompt is handcrafted to look neat and give some extra info. When you ar
 
 The tmux config contains some nice settings to make my work a bit easier and look nice.
 
-My color scheme is [Smyck Color Scheme by hukl](https://github.com/hukl/Smyck-Color-Scheme) and my font is [~~FiraCode~~](https://github.com/tonsky/FiraCode) [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/).
+My color scheme is the awesome [Nord Color scheme](https://www.nordtheme.com) by Arctic Ice Studio and my font is [~~FiraCode~~](https://github.com/tonsky/FiraCode) [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/).
 
 The repo ships with a Makefile that you can use to deploy and update the dotfiles.
 
@@ -43,5 +43,4 @@ If you want to update to the newest version, run ``bootstrap.sh update`` from wi
 
 ## Credits
 
-- dotfiles based on [dotfiles by hukl](https://github.com/hukl/dotfiles)
 - [Git prompt by Josh Dick](https://gist.github.com/joshdick/4415470)
