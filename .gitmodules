@@ -4,6 +4,3 @@
 [submodule "init/FiraCode"]
 	path = init/FiraCode
 	url = https://github.com/tonsky/FiraCode.git
-[submodule "init/vim-json"]
-	path = init/vim-json
-	url = https://github.com/elzr/vim-json
