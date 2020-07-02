@@ -78,7 +78,7 @@ deploy)
 	echo "#### Copying files to ~"
 
 	# Copy vim color scheme and other files to .vim
-	cp init/Smyck-Color-Scheme/smyck.vim .vim/colors/smyck.vim
+	cp init/nord-dircolors/src/dir_colors .dir_colors
 
 	df_deploy
 ;;
