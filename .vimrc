@@ -20,7 +20,7 @@ set tabstop=2              " Size of a Tab character.
 set shiftwidth=2           " Use same value as 'tabstop'.
 set softtabstop=2          " Use same value as 'shiftwidth'.
 set encoding=utf-8         " Set encoding
-color smyck                " Colorscheme see https://github.com/hukl/Smyck-Color-Scheme
+color nord                 " Use Nord color scheme
 set list listchars=tab:»⤍·,trail:·,eol:¤,nbsp:˽ " Show invisible chars
 " set colorcolumn=80         " Highlight the 80th collumn
 set wrap linebreak nolist  " Softwrap long lines at window border, don't break words
@@ -76,6 +76,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 	Plug 'elzr/vim-json'
+  Plug 'arcticicestudio/nord-vim'
 
 " Initialize plugin system
 call plug#end()
