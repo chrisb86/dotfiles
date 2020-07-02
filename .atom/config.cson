@@ -1,0 +1,24 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "nord-atom-ui"
+      "nord-atom-syntax"
+    ]
+    titleBar: "custom"
+  editor:
+    fontFamily: "Source Code Pro"
+    lineHeight: "1.4"
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 1
+    tabType: "hard"
+  minimap:
+    plugins:
+      cursorline: true
+      cursorlineDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+  welcome:
+    showOnStartup: false

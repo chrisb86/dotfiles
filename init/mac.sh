@@ -238,6 +238,10 @@ find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
 
 rm -rf $MAC_NATIVEFIERTMP
 
+echo ">>> Setting up Atom"
+
+apm install --packages-file ~/.atom/pkg.list
+
 ## Set zsh from brew as default shell
 echo ">>> Setting /usr/local/bin/zsh as default shell for $USER"
 sudo chsh -s /usr/local/bin/zsh $USER
