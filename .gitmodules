@@ -4,3 +4,6 @@
 [submodule "init/FiraCode"]
 	path = init/FiraCode
 	url = https://github.com/tonsky/FiraCode.git
+[submodule "init/nord-iterm2"]
+	path = init/nord-iterm2
+	url = https://github.com/arcticicestudio/nord-iterm2
