@@ -1,6 +1,3 @@
-[submodule "init/Smyck-Color-Scheme"]
-	path = init/Smyck-Color-Scheme
-	url = https://github.com/hukl/Smyck-Color-Scheme.git
 [submodule "init/FiraCode"]
 	path = init/FiraCode
 	url = https://github.com/tonsky/FiraCode.git
