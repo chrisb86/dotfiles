@@ -31,7 +31,7 @@ done
 )
 
 ## If tmux session is nested, source modified config (e.g. for overwriting styles)
-if [ -n "$TMUX" ]; then
+if [[ "${SSH_CONNECTION}" ]] && [[ "${TMUX}" ]]; then
   tmux source-file ~/.tmux.nested.conf
 fi
 
