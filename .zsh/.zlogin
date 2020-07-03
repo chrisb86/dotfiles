@@ -32,7 +32,7 @@ done
 
 
 ## Update or install vim plugins
-vim -i NONE +PlugUpdate +PlugClean! +qal
+#vim -i NONE +PlugUpdate +PlugClean! +qal
 
 ## Print some system info
 uname -npsr
