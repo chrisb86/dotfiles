@@ -1,0 +1,5 @@
+-o "%(title)s [%(id)s].%(ext)s"
+-f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best"
+--add-metadata
+--geo-bypass
+--continue
