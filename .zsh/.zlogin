@@ -30,6 +30,10 @@ for ((i=1; i <= $#fpath; ++i)); do
 done
 )
 
+## If tmux session is nested, source modified config (e.g. for overwriting styles)
+if [ -n "$TMUX" ]; then
+  tmux source-file ~/.tmux.nested.conf
+fi
 
 ## Update or install vim plugins
 #vim -i NONE +PlugUpdate +PlugClean! +qal
