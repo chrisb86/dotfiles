@@ -12,7 +12,6 @@ function tmix () {
 	    # display usage if no parameters given
 	    echo "Usage: tmix"
 			echo "No servers configured. define them as TMIX_SERVERS=\"<SERVER> <SERVER> <SERVER>\" e.g. in ${ZDOTDIR}/lib/30-extras.zsh"
-			exit
 	  else
 			echo "Creating tmux session $SESSION"
 			tmux new-session -d -s "${SESSION}"
