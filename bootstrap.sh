@@ -24,7 +24,8 @@
 
 exclude="README.md|init|Makefile|screenshot.png|.git|.gitignore|.gitmodules|.DS_Store|bootstrap.sh"
 
-bootstrap=`basename -- $0`
+bootstrap=`basename -- "$0"`
+basedir=`dirname "$0"`
 
 # Show help screen
 # Usage: help exitcode
@@ -43,6 +44,7 @@ help () {
 # Update git repo and submodules
 # Usage: df_update
 df_update () {
+	echo "#### Updating git repos and submodules"
 	git pull origin master
 	git submodule init
 	git submodule update
@@ -52,6 +54,7 @@ df_update () {
 # Deploy files to ~
 # Usage: df_deploy
 df_deploy () {
+	echo "#### Copying files to ~"
 	# poor man's rsync
   TARGET=`realpath ~`
 	df_list | cpio -pdmBu --quiet $TARGET
@@ -70,29 +73,26 @@ help)
   ;;
 ######################## bootstrap.sh LIST ########################
 list)
-	## Lists all files in repo, except those specified in $exclude"
+	# Lists all files in repo, except those specified in $exclude"
 	df_list
   ;;
 ######################## bootstrap.sh DEPLOY ########################
 deploy)
-	echo "#### Copying files to ~"
 
-	# Copy vim color scheme and other files to .vim
-	cp init/nord-dircolors/src/dir_colors .dir_colors
+
+	# Copy files from init to scripts basedir
+	cp init/nord-dircolors/src/dir_colors ./.dir_colors
 
 	df_deploy
 ;;
 ######################## bootstrap.sh UPDATE ########################
 update)
-	echo "#### Updating git repos and submodules"
+
 	df_update
 ;;
 ######################## bootstrap.sh INSTALL ########################
 install)
-	echo "#### Updating git repos and submodules"
 	df_update
-
-	echo "#### Copying files to ~"
 	df_deploy
 ;;
  *)
