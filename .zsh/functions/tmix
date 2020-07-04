@@ -1,0 +1,30 @@
+function tmix () {
+	set -o shwordsplit
+
+	SESSION="${TMIX_SESSION:-TMIX}"
+	SERVERS="${TMIX_SERVERS}"
+
+	if [[ $1 == "kill" ]]; then
+		echo "Killing tmux session $SESSION"
+		tmux kill-session -t "${SESSION}"
+	else
+		if [ -z "$SERVERS" ]; then
+	    # display usage if no parameters given
+	    echo "Usage: tmix"
+			echo "No servers configured. define them as TMIX_SERVERS=\"<SERVER> <SERVER> <SERVER>\" e.g. in ${ZDOTDIR}/lib/30-extras.zsh"
+			exit
+	  else
+			echo "Creating tmux session $SESSION"
+			tmux new-session -d -s "${SESSION}"
+
+			create_session=$?
+			if [[ $create_session = 0 ]]; then
+				for SERVER in ${SERVERS}; do
+					echo ">>> Connecting to ${SERVER}"
+					tmux new-window -n ${SERVER} -t ${SESSION}:
+					tmux send-keys -t ${SESSION}:${SERVER} "/usr/local/bin/mosh ${SERVER} -- doas tmux a -d" C-m
+				done
+			fi
+	  fi
+	fi
+}
