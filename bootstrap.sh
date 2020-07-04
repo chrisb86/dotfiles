@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
 # bootstrap.sh
-# Copyright 2016 Christian Busch
-# http://github.com/chrisb86/dotfiles
+# Copyright 2016 Christian Baer
+# https://git.debilux.org/chbaerr/dotfiles
 
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -22,7 +22,7 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTI
 
-exclude="README.md|init|Makefile|screenshot.png|.git|.gitignore|.gitmodules|.DS_Store|bootstrap.sh"
+exclude="README.md|init|Makefile|screenshot.png|screenshot-tmix.png|.git|.gitignore|.gitmodules|.DS_Store|bootstrap.sh"
 
 bootstrap=`basename -- "$0"`
 basedir=`dirname "$0"`
