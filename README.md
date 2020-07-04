@@ -12,7 +12,7 @@ The tmux config contains some nice settings to make my work a bit easier and loo
 
 My color scheme is the awesome [Nord Color scheme](https://www.nordtheme.com) by Arctic Ice Studio and my font is [~~FiraCode~~](https://github.com/tonsky/FiraCode) [Source Code Pro](https://adobe-fonts.github.io/source-code-pro/).
 
-The repo ships with a Makefile that you can use to deploy and update the dotfiles.
+The repo ships with a bootstrap script that you can use to deploy and update the dotfiles.
 
 	# bootstrap.sh help
 	
@@ -25,6 +25,34 @@ The repo ships with a Makefile that you can use to deploy and update the dotfile
 	help 			Show this screen
 
 The dotfiles will be copied to your **~**.
+
+## ZSH with bells and whistles
+
+The ZSH config doesn’t use any frameworks and is tuned for speed.
+
+The config delivers some nice extra functions.
+
+### extract()
+
+_extract_ can be run with _extract <filename>_ to extract archives in any given formats.
+
+### tmix()
+
+_tmix_ creates a new tmux session and connects to a given list of servers with mosh and attaches to a tmux session at the server.
+
+You must define a space separated list of servers as _$TMIX_SERVERS=“<SERVERS>”_ e.g. in _~/.zsh/lib/30-extras.zsh_.
+
+You can define a name for the used session in _$TMIX_SESSION=“<SESSION>”_. Otherwise it will use „TMIX“.
+
+_tmix kill_ kills the session.
+
+## tmux config
+
+The tmux config rebinds the prefix key to C-a. It features different shortcuts to make my life easier (e.g. "C-a -„ for splitting the window horizontally.)
+
+It also supports nested sessions with a modified color scheme. That’s nice when using tmix.
+
+![Image](https://git.debilux.org/chbaer/dotfiles/raw/branch/master/screenshot-tmix.png)
 
 ## Installation
 
