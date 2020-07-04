@@ -49,6 +49,9 @@ df_update () {
 	git submodule init
 	git submodule update
 	git submodule foreach git pull origin master
+
+	# Copy files from init to scripts basedir
+	cp init/nord-dircolors/src/dir_colors ./.dir_colors
 }
 
 # Deploy files to ~
@@ -78,10 +81,6 @@ list)
   ;;
 ######################## bootstrap.sh DEPLOY ########################
 deploy)
-
-
-	# Copy files from init to scripts basedir
-	cp init/nord-dircolors/src/dir_colors ./.dir_colors
 
 	df_deploy
 ;;
