@@ -15,10 +15,12 @@ tap "homebrew/services"
 ## brew formulae
 brew "brew-cask-completion"
 brew "checkbashisms"
+brew "cabal-install"
 brew "coreutils"
 brew "exiftool"
 brew "unbound"
 brew "ffmpeg", args: ALL_FFMPEG_OPTIONS
+brew "ghc"
 brew "git"
 brew "grep"
 brew "gotop"
