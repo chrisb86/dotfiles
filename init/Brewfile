@@ -4,54 +4,60 @@ cask_args appdir: '/Applications'
 ALL_FFMPEG_OPTIONS = `brew options ffmpeg | grep -vE '\s' | grep -- '--with-'`.gsub("--", "").split("\n")
 
 ## Taps
-tap "adoptopenjdk/openjdk"
+#tap "adoptopenjdk/openjdk"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
 
 ## brew formulae
 brew "brew-cask-completion"
 brew "checkbashisms"
 brew "coreutils"
 brew "exiftool"
+brew "unbound"
 brew "ffmpeg", args: ALL_FFMPEG_OPTIONS
 brew "git"
 brew "grep"
+brew "gotop"
 brew "htop"
 brew "hugo"
 brew "iperf"
 brew "iperf3"
+brew "ipmitool"
 brew "mas"
 brew "mosh"
 brew "node"
 brew "nativefier"
 brew "nmap"
 brew "ocrmypdf"
+brew "pandoc"
+brew "pandoc-citeproc"
+brew "plantuml"
 brew "rsync"
 brew "tesseract"
 brew "tesseract-lang"
 brew "tmux"
 brew "tree"
-#brew "vim", args: --HEAD
 brew "vim"
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
 
 ## cask formulae
-#cask "adoptopenjdk"
-cask "adoptopenjdk8"
 cask "alfred"
 cask "amethyst"
 cask "atom"
 cask "balenaetcher"
 cask "bartender"
+cask "bitwarden"
 cask "bonjeff"
 cask "calibre"
 cask "carbon-copy-cloner"
-cask "chromium"
 cask "coconutbattery"
+cask "daisydisk"
 cask "db-browser-for-sqlite"
 cask "dbeaver-community"
 cask "diskmaker-x"
@@ -66,18 +72,20 @@ cask "font-source-code-pro"
 cask "fork"
 cask "handbrake"
 cask "hazel"
+cask "hex-fiend"
 cask "istat-menus"
 cask "iterm2"
-cask "java"
 cask "jdownloader"
 cask "libreoffice"
 cask "little-snitch"
+cask "mactex-no-gui"
 cask "marked"
 cask "mediathekview"
 cask "moneymoney"
 cask "monitorcontrol"
 cask "nextcloud"
 cask "onyx"
+cask "oracle-jdk"
 cask "pdf-expert"
 cask "plex"
 cask "portfolioperformance"
@@ -88,16 +96,18 @@ cask "shifty"
 cask "sloth"
 cask "sonos"
 cask "spotify"
+cask "stats"
 cask "thunderbird"
 cask "transmission"
 cask "transmit"
+cask "tunnelblick"
 cask "tuxera-ntfs"
 cask "typora"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vlc"
 cask "wireshark"
-cask "zoomus"
+cask "zettlr"
 
 ## Mac AppStore
 mas "Affinity Designer", id: 824171161
@@ -105,11 +115,9 @@ mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
 mas "AudioBookBinder", id: 413969927
-mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
 mas "Color Picker", id: 641027709
 mas "Create Booklet", id: 943029046
-mas "Discovery", id: 1381004916
 mas "Drafts", id: 1435957248
 mas "Enpass", id: 732710998
 mas "FileBot", id: 905384638
@@ -121,7 +129,6 @@ mas "Mindcad Tiler", id: 432460453
 mas "MindNode", id: 992076693
 mas "Monit", id: 1014850245
 mas "Moom", id: 419330170
-mas "Notebooks", id: 1449826029
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "PDFify", id: 1435055351

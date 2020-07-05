@@ -183,9 +183,10 @@ echo ">>> Installing Homebrew..."
 
 echo ">>> Processing Brewfile..."
 # Install apps from Brewfile
-brew bundle
+brew bundle cleanup -f
+brew bundle install
 
-echo ">>> Instaling apps that are not avaliable in brew or AppStore..."
+echo ">>> Installing apps that are not avaliable in brew or AppStore..."
 MAC_INSTALLMOUNT="$MAC_DOWNLOAD/mount"
 mkdir -p ${MAC_INSTALLMOUNT}
 
@@ -239,8 +240,10 @@ find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
 rm -rf $MAC_NATIVEFIERTMP
 
 echo ">>> Setting up Atom"
-
 apm install --packages-file ~/.atom/pkg.list
+
+echo ">>> Setting up Pandoc environment"
+eval "$(/usr/libexec/path_helper)"
 
 ## Set zsh from brew as default shell
 echo ">>> Setting /usr/local/bin/zsh as default shell for $USER"
