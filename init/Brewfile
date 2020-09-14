@@ -11,6 +11,7 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "koekeishiya/formulae"
 
 ## brew formulae
 brew "brew-cask-completion"
@@ -29,6 +30,8 @@ brew "hugo"
 brew "iperf"
 brew "iperf3"
 brew "ipmitool"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 brew "mas"
 brew "mosh"
 brew "node"
@@ -50,7 +53,6 @@ brew "zsh-completions"
 
 ## cask formulae
 cask "alfred"
-cask "amethyst"
 cask "atom"
 cask "balenaetcher"
 cask "bartender"
