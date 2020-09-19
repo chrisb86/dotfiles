@@ -53,6 +53,7 @@ brew "zsh-completions"
 
 ## cask formulae
 cask "alfred"
+cask "arq"
 cask "atom"
 cask "balenaetcher"
 cask "bartender"
@@ -123,7 +124,6 @@ mas "Cardhop", id: 1290358394
 mas "Color Picker", id: 641027709
 mas "Create Booklet", id: 943029046
 mas "Drafts", id: 1435957248
-mas "Enpass", id: 732710998
 mas "FileBot", id: 905384638
 mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694

@@ -18,3 +18,5 @@ Thumbs.db
 *.sublime-*
 *.log
 .zsh/lib/30-extra.zsh
+init/nord-dircolors
+init/nord-iterm2

@@ -10,7 +10,7 @@ MAC_NATIVEFIERSITES="https://web.threema.ch/ https://app.youneedabudget.com/"
 MAC_NATIVEFIEROPTS="--darwin-dark-mode-support"
 
 # URLs of additional apps that should be downloaded as zip, dmg, pkg or app
-MAC_INSTALLDOWNLOADS="https://dl.exactcode.de/tmp/3bb50ff8eeb7ad116724b56a820139fa/ExactScanPro-19.10.10.dmg https://downloads.skylum.com/luminar4/installer/mac/Luminar4Installer.zip"
+MAC_INSTALLDOWNLOADS="https://dl.exactcode.de/tmp/3bb50ff8eeb7ad116724b56a820139fa/ExactScanPro-19.10.10.dmg https://downloads.skylum.com/luminar4/installer/mac/Luminar4Installer.zip https://downloads.binaryage.com/TotalFinder-1.13.0.dmg https://github.com/cbreak-black/ZetaWatch/releases/download/r46/ZetaWatch-r46-0-g573606.zip"
 
 # tmp dirs
 MAC_DOWNLOAD="/tmp/macinstall"
