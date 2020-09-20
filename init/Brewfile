@@ -15,6 +15,7 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 
 ## brew formulae
+brew "arping"
 brew "brew-cask-completion"
 brew "checkbashisms"
 brew "cabal-install"
