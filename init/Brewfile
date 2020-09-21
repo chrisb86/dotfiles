@@ -94,6 +94,7 @@ cask "nextcloud"
 cask "onyx"
 cask "oracle-jdk"
 cask "pdf-expert"
+cask "pine"
 cask "plex"
 cask "portfolioperformance"
 cask "qlcommonmark"
@@ -114,7 +115,6 @@ cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vlc"
 cask "wireshark"
-cask "zettlr"
 
 ## Mac AppStore
 mas "Affinity Designer", id: 824171161
