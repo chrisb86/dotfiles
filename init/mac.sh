@@ -246,6 +246,9 @@ echo ">>> Setting up Pandoc environment"
 eval "$(/usr/libexec/path_helper)"
 cabal install pandoc-include pandoc-include-code pandoc-plantuml-diagrams
 
+## Set up BitBar
+defaults write com.matryer.BitBar pluginsDirectory "~/.config/BitBar/"
+
 ## Set zsh from brew as default shell
 echo ">>> Setting /usr/local/bin/zsh as default shell for $USER"
 sudo chsh -s /usr/local/bin/zsh $USER
