@@ -240,15 +240,25 @@ find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
 rm -rf $MAC_NATIVEFIERTMP
 
 echo ">>> Setting up Atom"
-apm install --packages-file ~/.atom/pkg.list
+apm install --packages-file ${HOME}/.atom/pkg.list
+
+echo ">>> Setting up VSCodium"
+mkdir -p "${HOME}/Library/Application Support/VSCodium/User"
+
+# Link config files from ~/.config to ~/Library
+ln -sf "${HOME}/.config/VSCodium/User/settings.json" "${HOME}/Library/Application Support/VSCodium/User/settings.json"
+ln -sf "${HOME}/.config/VSCodium/User/keybindings.json" "${HOME}/Library/Application Support/VSCodium/User/keybindings.json"
+
+# Install extensions
+cat ${HOME}/.config/VSCodium/User/vscode-extensions.list | xargs -L 1 code --install-extension
 
 echo ">>> Setting up Pandoc environment"
 eval "$(/usr/libexec/path_helper)"
 cabal install pandoc-include pandoc-include-code pandoc-plantuml-diagrams
 
 ## Set up BitBar
-defaults write com.matryer.BitBar pluginsDirectory "~/.config/BitBar/"
+defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.config/BitBar/"
 
 ## Set zsh from brew as default shell
-echo ">>> Setting /usr/local/bin/zsh as default shell for $USER"
-sudo chsh -s /usr/local/bin/zsh $USER
+echo ">>> Setting /usr/local/bin/zsh as default shell for ${USER}"
+sudo chsh -s /usr/local/bin/zsh ${USER}

@@ -33,6 +33,7 @@ yabai -m config window_gap                   10
 
 yabai -m rule --add app="^Systemeinstellungen$" manage=off
 yabai -m rule --add app="^Todoist$" manage=off
+yabai -m rule --add app="^Fantastical$" manage=off
 
 YABAI_CERT=yabai-cert sh -c "$(curl -fsSL "https://git.io/update-yabai")" &
 sudo yabai --uninstall-sa

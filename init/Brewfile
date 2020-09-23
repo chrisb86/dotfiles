@@ -118,6 +118,7 @@ cask "typora"
 cask "virtualbox"
 cask "virtualbox-extension-pack"
 cask "vlc"
+cask "vscodium"
 cask "wireshark"
 
 ## Mac AppStore

@@ -1,0 +1,13 @@
+{
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontSize": 14,
+    "editor.wordWrap": "on",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.fontAliasing": "auto",
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.colorTheme": "Nord",
+    "workbench.preferredDarkColorTheme": "Nord",
+    "workbench.iconTheme": "city-lights-icons-vsc"
+}
