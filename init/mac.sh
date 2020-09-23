@@ -250,7 +250,7 @@ ln -sf "${HOME}/.config/VSCodium/User/settings.json" "${HOME}/Library/Applicatio
 ln -sf "${HOME}/.config/VSCodium/User/keybindings.json" "${HOME}/Library/Application Support/VSCodium/User/keybindings.json"
 
 # Install extensions
-cat ${HOME}/.config/VSCodium/User/vscode-extensions.list | xargs -L 1 code --install-extension
+cat ${HOME}/.config/VSCodium/User/extensions.list | xargs -L 1 code --install-extension
 
 echo ">>> Setting up Pandoc environment"
 eval "$(/usr/libexec/path_helper)"
