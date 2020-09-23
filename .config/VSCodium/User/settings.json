@@ -9,5 +9,8 @@
     "terminal.external.osxExec": "iTerm.app",
     "workbench.colorTheme": "Nord",
     "workbench.preferredDarkColorTheme": "Nord",
-    "workbench.iconTheme": "city-lights-icons-vsc"
+    "workbench.iconTheme": "city-lights-icons-vsc",
+    "markdown-preview-enhanced.previewTheme": "vue.css",
+    "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+    "workbench.activityBar.visible": false
 }
