@@ -12,3 +12,7 @@ setopt long_list_jobs
 export LC_CTYPE=$LANG
 export LC_ALL=de_DE.UTF-8
 export IOCAGE_COLOR=TRUE
+
+## npm config
+NPM_PACKAGES="${HOME}/.npm-packages"
+export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
