@@ -239,9 +239,6 @@ find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
 
 rm -rf $MAC_NATIVEFIERTMP
 
-echo ">>> Setting up Atom"
-apm install --packages-file ${HOME}/.atom/pkg.list
-
 echo ">>> Setting up VSCodium"
 mkdir -p "${HOME}/Library/Application Support/VSCodium/User"
 

@@ -57,7 +57,6 @@ brew "zsh-completions"
 ## cask formulae
 cask "alfred"
 cask "arq"
-cask "atom"
 cask "balenaetcher"
 cask "bartender"
 cask "bitbar"
