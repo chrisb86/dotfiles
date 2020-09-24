@@ -21,7 +21,7 @@ function tmix () {
 				for SERVER in ${SERVERS}; do
 					echo ">>> Connecting to ${SERVER}"
 					tmux new-window -n ${SERVER} -t ${SESSION}:
-					tmux send-keys -t ${SESSION}:${SERVER} "/usr/local/bin/mosh ${SERVER} -- doas tmux a -d" C-m
+					tmux send-keys -t ${SESSION}:${SERVER} "mosh ${SERVER} -- doas tmux a -d" C-m
 				done
 			fi
 	  fi
