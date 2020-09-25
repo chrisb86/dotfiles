@@ -12,6 +12,10 @@ MAC_NATIVEFIEROPTS="--darwin-dark-mode-support"
 # URLs of additional apps that should be downloaded as zip, dmg, pkg or app
 MAC_INSTALLDOWNLOADS="https://dl.exactcode.de/tmp/3bb50ff8eeb7ad116724b56a820139fa/ExactScanPro-19.10.10.dmg https://downloads.skylum.com/luminar4/installer/mac/Luminar4Installer.zip https://downloads.binaryage.com/TotalFinder-1.13.0.dmg https://github.com/cbreak-black/ZetaWatch/releases/download/r46/ZetaWatch-r46-0-g573606.zip"
 
+## Which App to use at default etxt editor (instead of TextEdit)
+DEFAULT_EDITOR="VSCodium.app"
+DEFAULT_EDITOR_FILETYPES="public.plain-text public.unix-executable public.data .zsh)"
+
 # tmp dirs
 MAC_DOWNLOAD="/tmp/macinstall"
 MAC_NATIVEFIERTMP="/tmp/nativefier"
@@ -238,6 +242,14 @@ done
 find $MAC_NATIVEFIERTMP -depth 2 -name "*.app" -exec cp -rf {} /Applications \;
 
 rm -rf $MAC_NATIVEFIERTMP
+
+## Set default text editor
+echo ">>> Setting ${DEFAULT_EDITOR} as default text editor."
+EDITOR_ID=`osascript -e 'id of app "'${DEFAULT_EDITOR}'"'`
+
+for EXT in ${EDITOR_FILETYPES}; do
+  duti -s ${EDITOR_ID} ${EXT}
+done
 
 echo ">>> Setting up VSCodium"
 mkdir -p "${HOME}/Library/Application Support/VSCodium/User"
