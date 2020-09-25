@@ -1,0 +1,412 @@
+com.github.alainm23.planner appearance 'Light'
+com.github.alainm23.planner badge-count 'None'
+com.github.alainm23.planner button-layout 'Windows'
+com.github.alainm23.planner calendar-enabled true
+com.github.alainm23.planner quick-add-project-selected int64 0
+com.github.alainm23.planner quick-add-save-last-project false
+com.github.alainm23.planner quick-add-shortcut '<Primary>Tab'
+com.github.alainm23.planner run-in-background true
+com.github.alainm23.planner run-on-startup true
+com.github.alainm23.planner todoist-account true
+com.github.fabiocolacio.marker.preferences.editor auto-indent true
+com.github.fabiocolacio.marker.preferences.editor enable-syntax-theme true
+com.github.fabiocolacio.marker.preferences.editor highlight-current-line true
+com.github.fabiocolacio.marker.preferences.editor replace-tabs true
+com.github.fabiocolacio.marker.preferences.editor show-line-numbers true
+com.github.fabiocolacio.marker.preferences.editor show-right-margin-position uint32 80
+com.github.fabiocolacio.marker.preferences.editor show-right-margin true
+com.github.fabiocolacio.marker.preferences.editor show-spaces true
+com.github.fabiocolacio.marker.preferences.editor spell-check-lang 'de_DE'
+com.github.fabiocolacio.marker.preferences.editor spell-check true
+com.github.fabiocolacio.marker.preferences.editor syntax-theme 'tango'
+com.github.fabiocolacio.marker.preferences.editor tab-width uint32 2
+com.github.fabiocolacio.marker.preferences.editor wrap-text true
+com.github.fabiocolacio.marker.preferences.preview charter-toggle false
+com.github.fabiocolacio.marker.preferences.preview css-theme 'swiss.css'
+com.github.fabiocolacio.marker.preferences.preview css-toggle true
+com.github.fabiocolacio.marker.preferences.preview highlight-theme 'default'
+com.github.fabiocolacio.marker.preferences.preview highlight-toggle true
+com.github.fabiocolacio.marker.preferences.window enable-dark-mode false
+com.github.fabiocolacio.marker.preferences.window view-mode 'dual-pane'
+org.gnome.calendar active-view 'week'
+org.gnome.calendar follow-night-light true
+org.gnome.clocks geolocation true
+org.gnome.clocks world-clocks [{'location': <(uint32 2, <('Coordinated Universal Time (UTC)', '@UTC', false, @a(dd) [], @a(dd) [])>)>}]
+org.gnome.Contacts did-initial-setup true
+org.gnome.Contacts sort-on-surname false
+org.gnome.DejaDup allow-metered false
+org.gnome.DejaDup delete-after 0
+org.gnome.DejaDup periodic-period 1
+org.gnome.DejaDup periodic true
+org.gnome.desktop.calendar show-weekdate true
+org.gnome.desktop.datetime automatic-timezone true
+org.gnome.desktop.default-applications.office.calendar exec 'gnome-calendar'
+org.gnome.desktop.default-applications.office.calendar needs-term false
+org.gnome.desktop.default-applications.office.tasks exec 'com.github.alainm23.planner'
+org.gnome.desktop.default-applications.office.tasks needs-term false
+org.gnome.desktop.default-applications.terminal exec-arg '-x'
+org.gnome.desktop.default-applications.terminal exec 'gnome-terminal'
+org.gnome.desktop.input-sources sources [('xkb', 'de+nodeadkeys')]
+org.gnome.desktop.interface clock-format '24h'
+org.gnome.desktop.interface clock-show-date true
+org.gnome.desktop.interface clock-show-seconds false
+org.gnome.desktop.interface clock-show-weekday true
+org.gnome.desktop.interface cursor-size 24
+org.gnome.desktop.interface cursor-theme 'Adwaita'
+org.gnome.desktop.interface document-font-name 'Cantarell 10'
+org.gnome.desktop.interface enable-animations true
+org.gnome.desktop.interface enable-hot-corners true
+org.gnome.desktop.interface font-name 'Cantarell 10'
+org.gnome.desktop.interface gtk-color-palette 'black:white:gray50:red:purple:blue:light blue:green:yellow:orange:lavender:brown:goldenrod4:dodger blue:pink:light green:gray10:gray30:gray75:gray90'
+org.gnome.desktop.interface gtk-enable-primary-paste true
+org.gnome.desktop.interface gtk-key-theme 'Default'
+org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+org.gnome.desktop.interface icon-theme 'Papirus-Dark'
+org.gnome.desktop.interface menubar-detachable false
+org.gnome.desktop.interface menus-have-tearoff false
+org.gnome.desktop.interface monospace-font-name 'Source Code Pro 9'
+org.gnome.desktop.interface overlay-scrolling true
+org.gnome.desktop.interface scaling-factor uint32 0
+org.gnome.desktop.interface show-battery-percentage true
+org.gnome.desktop.interface text-scaling-factor 1.0
+org.gnome.desktop.interface toolbar-detachable false
+org.gnome.desktop.interface toolbar-icons-size 'small'
+org.gnome.desktop.interface toolbar-style 'both-horiz'
+org.gnome.desktop.interface toolkit-accessibility false
+org.gnome.desktop.notifications application-children ['org-gnome-software', 'gnome-printers-panel', 'org-gnome-terminal', 'mozilla-thunderbird', 'org-gnome-extensions-desktop', 'com-github-alainm23-planner', 'org-gnome-dejadup', 'com-github-fabiocolacio-marker', 'com-gitlab-newsflash', 'firefox', 'libreoffice-startcenter', 'org-gnome-evolution-alarm-notify', 'org-gnome-nautilus', 'org-freedesktop-problems-applet']
+org.gnome.desktop.notifications show-banners true
+org.gnome.desktop.notifications show-in-lock-screen false
+org.gnome.desktop.peripherals.keyboard numlock-state true
+org.gnome.desktop.peripherals.keyboard remember-numlock-state true
+org.gnome.desktop.peripherals.mouse natural-scroll false
+org.gnome.desktop.peripherals.touchpad click-method 'fingers'
+org.gnome.desktop.peripherals.touchpad disable-while-typing true
+org.gnome.desktop.peripherals.touchpad edge-scrolling-enabled false
+org.gnome.desktop.peripherals.touchpad left-handed 'mouse'
+org.gnome.desktop.peripherals.touchpad middle-click-emulation false
+org.gnome.desktop.peripherals.touchpad natural-scroll true
+org.gnome.desktop.peripherals.touchpad send-events 'enabled'
+org.gnome.desktop.peripherals.touchpad speed 0.0
+org.gnome.desktop.peripherals.touchpad tap-and-drag true
+org.gnome.desktop.peripherals.touchpad tap-to-click false
+org.gnome.desktop.peripherals.touchpad two-finger-scrolling-enabled true
+org.gnome.desktop.peripherals.touchscreen output ['', '', '']
+org.gnome.desktop.peripherals.trackball accel-profile 'default'
+org.gnome.desktop.peripherals.trackball middle-click-emulation false
+org.gnome.desktop.peripherals.trackball scroll-wheel-emulation-button 0
+org.gnome.desktop.privacy disable-camera false
+org.gnome.desktop.privacy disable-microphone false
+org.gnome.desktop.privacy disable-sound-output false
+org.gnome.desktop.privacy hide-identity false
+org.gnome.desktop.privacy report-technical-problems false
+org.gnome.desktop.privacy send-software-usage-stats false
+org.gnome.desktop.privacy show-full-name-in-top-bar true
+org.gnome.desktop.wm.keybindings activate-window-menu ['<Alt>space']
+org.gnome.desktop.wm.keybindings always-on-top @as []
+org.gnome.desktop.wm.keybindings begin-move ['<Alt>F7']
+org.gnome.desktop.wm.keybindings begin-resize ['<Alt>F8']
+org.gnome.desktop.wm.keybindings close ['<Super>q']
+org.gnome.desktop.wm.keybindings cycle-group ['<Alt>F6']
+org.gnome.desktop.wm.keybindings cycle-group-backward ['<Shift><Alt>F6']
+org.gnome.desktop.wm.keybindings cycle-panels-backward ['<Shift><Control><Alt>Escape']
+org.gnome.desktop.wm.keybindings cycle-panels ['<Control><Alt>Escape']
+org.gnome.desktop.wm.keybindings cycle-windows ['<Alt>Escape']
+org.gnome.desktop.wm.keybindings cycle-windows-backward ['<Shift><Alt>Escape']
+org.gnome.desktop.wm.keybindings lower @as []
+org.gnome.desktop.wm.keybindings maximize-horizontally @as []
+org.gnome.desktop.wm.keybindings maximize ['<Super>Up']
+org.gnome.desktop.wm.keybindings maximize-vertically @as []
+org.gnome.desktop.wm.keybindings minimize ['<Super>comma']
+org.gnome.desktop.wm.keybindings move-to-center @as []
+org.gnome.desktop.wm.keybindings move-to-corner-ne @as []
+org.gnome.desktop.wm.keybindings move-to-corner-nw @as []
+org.gnome.desktop.wm.keybindings move-to-corner-se @as []
+org.gnome.desktop.wm.keybindings move-to-corner-sw @as []
+org.gnome.desktop.wm.keybindings move-to-monitor-down @as []
+org.gnome.desktop.wm.keybindings move-to-monitor-left ['<Shift><Super>Left', '<Shift><Super>h']
+org.gnome.desktop.wm.keybindings move-to-monitor-right ['<Shift><Super>Right', '<Shift><Super>l']
+org.gnome.desktop.wm.keybindings move-to-monitor-up @as []
+org.gnome.desktop.wm.keybindings move-to-side-e @as []
+org.gnome.desktop.wm.keybindings move-to-side-n @as []
+org.gnome.desktop.wm.keybindings move-to-side-s @as []
+org.gnome.desktop.wm.keybindings move-to-side-w @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-10 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-11 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-12 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-1 ['<Super><Shift>Home']
+org.gnome.desktop.wm.keybindings move-to-workspace-2 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-3 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-4 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-5 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-6 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-7 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-8 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-9 @as []
+org.gnome.desktop.wm.keybindings move-to-workspace-down ['<Shift><Super>Down', '<Shift><Super>j']
+org.gnome.desktop.wm.keybindings move-to-workspace-last ['<Super><Shift>End']
+org.gnome.desktop.wm.keybindings move-to-workspace-left ['<Control><Shift><Alt>Left']
+org.gnome.desktop.wm.keybindings move-to-workspace-right ['<Control><Shift><Alt>Right']
+org.gnome.desktop.wm.keybindings move-to-workspace-up ['<Shift><Super>Up', '<Shift><Super>k']
+org.gnome.desktop.wm.keybindings panel-main-menu ['<Alt>F1']
+org.gnome.desktop.wm.keybindings panel-run-dialog ['<Alt>F2']
+org.gnome.desktop.wm.keybindings raise @as []
+org.gnome.desktop.wm.keybindings raise-or-lower @as []
+org.gnome.desktop.wm.keybindings set-spew-mark @as []
+org.gnome.desktop.wm.keybindings show-desktop @as []
+org.gnome.desktop.wm.keybindings switch-applications-backward ['<Shift><Super>Tab', '<Shift><Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-applications ['<Super>Tab', '<Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-group-backward ['<Shift><Super>Above_Tab', '<Shift><Alt>Above_Tab']
+org.gnome.desktop.wm.keybindings switch-group ['<Super>Above_Tab', '<Alt>Above_Tab']
+org.gnome.desktop.wm.keybindings switch-input-source-backward ['<Shift><Super>space', '<Shift>XF86Keyboard']
+org.gnome.desktop.wm.keybindings switch-input-source ['<Super>space', 'XF86Keyboard']
+org.gnome.desktop.wm.keybindings switch-panels-backward ['<Shift><Control><Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-panels ['<Control><Alt>Tab']
+org.gnome.desktop.wm.keybindings switch-to-workspace-10 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-11 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-12 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-1 ['<Super>Home']
+org.gnome.desktop.wm.keybindings switch-to-workspace-2 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-3 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-4 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-5 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-6 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-7 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-8 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-9 @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-down ['<Primary><Super>Down', '<Primary><Super>j']
+org.gnome.desktop.wm.keybindings switch-to-workspace-last ['<Super>End']
+org.gnome.desktop.wm.keybindings switch-to-workspace-left @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-right @as []
+org.gnome.desktop.wm.keybindings switch-to-workspace-up ['<Primary><Super>Up', '<Primary><Super>k']
+org.gnome.desktop.wm.keybindings switch-windows @as []
+org.gnome.desktop.wm.keybindings switch-windows-backward @as []
+org.gnome.desktop.wm.keybindings toggle-above @as []
+org.gnome.desktop.wm.keybindings toggle-fullscreen @as []
+org.gnome.desktop.wm.keybindings toggle-maximized ['<Super>m']
+org.gnome.desktop.wm.keybindings toggle-on-all-workspaces @as []
+org.gnome.desktop.wm.keybindings toggle-shaded @as []
+org.gnome.desktop.wm.keybindings unmaximize ['<Super>Down', '<Alt>F5']
+org.gnome.desktop.wm.preferences action-double-click-titlebar 'toggle-maximize'
+org.gnome.desktop.wm.preferences action-middle-click-titlebar 'none'
+org.gnome.desktop.wm.preferences action-right-click-titlebar 'menu'
+org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,maximize,close'
+org.gnome.desktop.wm.preferences disable-workarounds false
+org.gnome.desktop.wm.preferences focus-mode 'click'
+org.gnome.desktop.wm.preferences focus-new-windows 'smart'
+org.gnome.desktop.wm.preferences mouse-button-modifier '<Super>'
+org.gnome.desktop.wm.preferences num-workspaces 5
+org.gnome.desktop.wm.preferences raise-on-click true
+org.gnome.desktop.wm.preferences resize-with-right-button false
+org.gnome.desktop.wm.preferences theme 'Adwaita'
+org.gnome.desktop.wm.preferences titlebar-font 'Cantarell Bold 10'
+org.gnome.desktop.wm.preferences titlebar-uses-system-font true
+org.gnome.desktop.wm.preferences visual-bell false
+org.gnome.desktop.wm.preferences visual-bell-type 'fullscreen-flash'
+org.gnome.desktop.wm.preferences workspace-names @as []
+org.gnome.gitg.preferences.commit.diff context-lines 3
+org.gnome.gitg.preferences.commit.diff tab-width 2
+org.gnome.gitg.preferences.commit.message enable-spell-checking true
+org.gnome.gitg.preferences.commit.message show-markup true
+org.gnome.gitg.preferences.commit.message show-right-margin true
+org.gnome.gitg.preferences.commit.message show-subject-margin true
+org.gnome.gitg.preferences.commit.message spell-checking-language ''
+org.gnome.gitg.preferences.diff changes-inline false
+org.gnome.gitg.preferences.diff context-lines 3
+org.gnome.gitg.preferences.diff ignore-whitespace false
+org.gnome.gitg.preferences.diff patience false
+org.gnome.gitg.preferences.diff tab-width 2
+org.gnome.gitg.preferences.diff wrap true
+org.gnome.gitg.preferences.history collapse-inactive-lanes 2
+org.gnome.gitg.preferences.history collapse-inactive-lanes-enabled true
+org.gnome.gitg.preferences.history default-selection 'all-commits'
+org.gnome.gitg.preferences.history mainline-head true
+org.gnome.gitg.preferences.history reference-sort-order 'last-activity'
+org.gnome.gitg.preferences.history show-staged true
+org.gnome.gitg.preferences.history show-stash true
+org.gnome.gitg.preferences.history show-unstaged true
+org.gnome.gitg.preferences.history show-upstream-with-branch true
+org.gnome.gitg.preferences.history topological-order true
+org.gnome.gitg.preferences.interface default-activity 'history'
+org.gnome.gitg.preferences.interface enable-diff-highlighting true
+org.gnome.gitg.preferences.interface enable-monitoring true
+org.gnome.gitg.preferences.interface orientation 'horizontal'
+org.gnome.gitg.preferences.interface style-scheme 'classic'
+org.gnome.gitg.preferences.interface use-gravatar true
+org.gnome.gitg.preferences.main clone-directory ''
+org.gnome.gitg.state.commit paned-sidebar-position 200
+org.gnome.gitg.state.commit sign-off false
+org.gnome.mutter attach-modal-dialogs true
+org.gnome.mutter auto-maximize true
+org.gnome.mutter center-new-windows true
+org.gnome.mutter dynamic-workspaces false
+org.gnome.mutter edge-tiling true
+org.gnome.mutter workspaces-only-on-primary true
+org.gnome.nautilus.compression default-compression-format 'zip'
+org.gnome.nautilus.icon-view captions ['none', 'size', 'date_modified']
+org.gnome.nautilus.icon-view default-zoom-level 'small'
+org.gnome.nautilus.icon-view text-ellipsis-limit ['3']
+org.gnome.nautilus.list-view default-column-order ['name', 'size', 'type', 'owner', 'group', 'permissions', 'where', 'date_modified', 'date_modified_with_time', 'date_accessed', 'recency', 'starred', 'detailed_type']
+org.gnome.nautilus.list-view default-visible-columns ['name', 'size', 'date_modified', 'starred']
+org.gnome.nautilus.list-view default-zoom-level 'small'
+org.gnome.nautilus.list-view use-tree-view true
+org.gnome.nautilus.preferences always-use-location-entry false
+org.gnome.nautilus.preferences click-policy 'double'
+org.gnome.nautilus.preferences confirm-trash true
+org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+org.gnome.nautilus.preferences default-sort-in-reverse-order false
+org.gnome.nautilus.preferences default-sort-order 'name'
+org.gnome.nautilus.preferences executable-text-activation 'display'
+org.gnome.nautilus.preferences fts-enabled true
+org.gnome.nautilus.preferences install-mime-activation true
+org.gnome.nautilus.preferences mouse-back-button 8
+org.gnome.nautilus.preferences mouse-forward-button 9
+org.gnome.nautilus.preferences mouse-use-extra-buttons true
+org.gnome.nautilus.preferences open-folder-on-dnd-hover true
+org.gnome.nautilus.preferences recursive-search 'local-only'
+org.gnome.nautilus.preferences search-filter-time-type 'last_modified'
+org.gnome.nautilus.preferences search-view 'list-view'
+org.gnome.nautilus.preferences show-create-link false
+org.gnome.nautilus.preferences show-delete-permanently false
+org.gnome.nautilus.preferences show-directory-item-counts 'local-only'
+org.gnome.nautilus.preferences show-hidden-files false
+org.gnome.nautilus.preferences show-image-thumbnails 'local-only'
+org.gnome.nautilus.preferences tabs-open-position 'after-current-tab'
+org.gnome.nautilus.preferences thumbnail-limit uint64 10
+org.gnome.nautilus.preferences use-experimental-views false
+org.gnome.nautilus.window-state maximized false
+org.gnome.nautilus.window-state start-with-location-bar true
+org.gnome.nautilus.window-state start-with-sidebar true
+org.gnome.nm-applet disable-connected-notifications false
+org.gnome.nm-applet disable-disconnected-notifications false
+org.gnome.nm-applet disable-vpn-notifications false
+org.gnome.nm-applet disable-wifi-create false
+org.gnome.nm-applet show-applet true
+org.gnome.nm-applet stamp 0
+org.gnome.nm-applet suppress-wireless-networks-available true
+org.gnome.settings-daemon.plugins.color night-light-enabled true
+org.gnome.settings-daemon.plugins.color night-light-schedule-automatic true
+org.gnome.shell always-show-log-out true
+org.gnome.shell.app-switcher current-workspace-only false
+org.gnome.shell development-tools true
+org.gnome.shell enabled-extensions ['dash-to-dock@micxgx.gmail.com', 'auto-move-windows@gnome-shell-extensions.gcampax.github.com', 'blyr@yozoon.dev.gmail.com', 'Move_Clock@rmy.pobox.com', 'Hide_Activities@shay.shayel.org', 'panel-osd@berend.de.schouwer.gmail.com', 'remove-dropdown-arrows@mpdeimos.com', 'status-area-horizontal-spacing@mathematical.coffee.gmail.com', 'native-window-placement', 'user-theme@gnome-shell-extensions.gcampax.github.com', 'native-window-placement@gnome-shell-extensions.gcampax.github.com', 'nightthemeswitcher@romainvigier.fr', 'ding@rastersoft.com', 'tray-icons@zhangkaizhao.com', 'trayIconsReloaded@selfmade.pl', 'pop-shell@system76.com', 'workspace-switcher@tomha.github.com', 'netspeed@hedayaty.gmail.com', 'caffeine@patapon.info', 'appindicatorsupport@rgcjonas.gmail.com', 'steal-my-focus@kagesenshi.org']
+org.gnome.shell favorite-apps ['org.gnome.Software.desktop', 'org.gnome.Nautilus.desktop', 'firefox.desktop', 'mozilla-thunderbird.desktop', 'com.github.fabiocolacio.marker.desktop', 'com.gitlab.newsflash.desktop', 'org.gnome.Calendar.desktop', 'org.gnome.Contacts.desktop', 'com.github.alainm23.planner.desktop', 'appeditor-local-application-4.desktop', 'appeditor-local-application-5.desktop', 'appeditor-local-application-3.desktop', 'org.gnome.Terminal.desktop', 'codium.desktop', 'org.gnome.gitg.desktop', 'org.zealdocs.Zeal.desktop']
+org.gnome.shell.keybindings focus-active-notification ['<Super>n']
+org.gnome.shell remember-mount-password true
+org.gnome.shell.weather automatic-location false
+org.gnome.shell.weather locations [<(uint32 2, <('Langenlonsheim', '', false, [(0.87082178170920299, 0.1378889992795384)], [(0.87411906122272931, 0.14398966328953219)])>)>]
+org.gnome.shell.window-switcher app-icon-mode 'both'
+org.gnome.shell.window-switcher current-workspace-only true
+org.gnome.shell.world-clocks locations [<(uint32 2, <('Coordinated Universal Time (UTC)', '@UTC', false, @a(dd) [], @a(dd) [])>)>]
+org.gnome.software allow-updates true
+org.gnome.software download-updates-notify true
+org.gnome.software download-updates true
+org.gnome.software enable-repos-dialog true
+org.gnome.software enable-shell-extensions-repo true
+org.gnome.software external-appstream-system-wide false
+org.gnome.software external-appstream-urls @as []
+org.gnome.software filter-default-branch true
+org.gnome.software install-bundles-system-wide true
+org.gnome.software install-timestamp int64 0
+org.gnome.software show-nonfree-prompt false
+org.gnome.software show-nonfree-ui true
+org.gnome.software show-ratings false
+org.gnome.software show-upgrade-prerelease false
+org.gnome.system.smb workgroup 'debilux'
+org.gnome.Terminal.Legacy.Keybindings close-tab '<Ctrl><Shift>w'
+org.gnome.Terminal.Legacy.Keybindings close-window '<Ctrl><Shift>q'
+org.gnome.Terminal.Legacy.Keybindings copy '<Ctrl><Shift>c'
+org.gnome.Terminal.Legacy.Keybindings copy-html 'disabled'
+org.gnome.Terminal.Legacy.Keybindings detach-tab 'disabled'
+org.gnome.Terminal.Legacy.Keybindings export 'disabled'
+org.gnome.Terminal.Legacy.Keybindings find-clear '<Control><Shift>J'
+org.gnome.Terminal.Legacy.Keybindings find '<Control><Shift>F'
+org.gnome.Terminal.Legacy.Keybindings find-next '<Control><Shift>G'
+org.gnome.Terminal.Legacy.Keybindings find-previous '<Control><Shift>H'
+org.gnome.Terminal.Legacy.Keybindings full-screen 'F11'
+org.gnome.Terminal.Legacy.Keybindings header-menu 'disabled'
+org.gnome.Terminal.Legacy.Keybindings help 'disabled'
+org.gnome.Terminal.Legacy.Keybindings move-tab-left '<Ctrl><Shift>Page_Up'
+org.gnome.Terminal.Legacy.Keybindings move-tab-right '<Ctrl><Shift>Page_Down'
+org.gnome.Terminal.Legacy.Keybindings new-tab '<Ctrl><Shift>t'
+org.gnome.Terminal.Legacy.Keybindings new-window '<Ctrl><Shift>n'
+org.gnome.Terminal.Legacy.Keybindings next-tab '<Control>Page_Down'
+org.gnome.Terminal.Legacy.Keybindings paste '<Ctrl><Shift>v'
+org.gnome.Terminal.Legacy.Keybindings preferences 'disabled'
+org.gnome.Terminal.Legacy.Keybindings prev-tab '<Control>Page_Up'
+org.gnome.Terminal.Legacy.Keybindings print 'disabled'
+org.gnome.Terminal.Legacy.Keybindings read-only 'disabled'
+org.gnome.Terminal.Legacy.Keybindings reset-and-clear 'disabled'
+org.gnome.Terminal.Legacy.Keybindings reset 'disabled'
+org.gnome.Terminal.Legacy.Keybindings save-contents 'disabled'
+org.gnome.Terminal.Legacy.Keybindings select-all 'disabled'
+org.gnome.Terminal.Legacy.Keybindings set-terminal-title 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-10 '<Alt>0'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-11 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-12 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-13 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-14 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-15 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-16 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-17 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-18 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-19 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-1 '<Alt>1'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-20 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-21 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-22 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-23 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-24 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-25 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-26 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-27 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-28 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-29 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-2 '<Alt>2'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-30 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-31 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-32 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-33 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-34 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-35 'disabled'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-3 '<Alt>3'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-4 '<Alt>4'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-5 '<Alt>5'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-6 '<Alt>6'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-7 '<Alt>7'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-8 '<Alt>8'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-9 '<Alt>9'
+org.gnome.Terminal.Legacy.Keybindings switch-to-tab-last 'disabled'
+org.gnome.Terminal.Legacy.Keybindings toggle-menubar 'disabled'
+org.gnome.Terminal.Legacy.Keybindings zoom-in '<Ctrl>plus'
+org.gnome.Terminal.Legacy.Keybindings zoom-normal '<Ctrl>0'
+org.gnome.Terminal.Legacy.Keybindings zoom-out '<Ctrl>minus'
+org.gnome.Terminal.Legacy.Settings confirm-close true
+org.gnome.Terminal.Legacy.Settings default-show-menubar true
+org.gnome.Terminal.Legacy.Settings headerbar @mb nothing
+org.gnome.Terminal.Legacy.Settings menu-accelerator-enabled true
+org.gnome.Terminal.Legacy.Settings mnemonics-enabled false
+org.gnome.Terminal.Legacy.Settings new-tab-position 'last'
+org.gnome.Terminal.Legacy.Settings new-terminal-mode 'window'
+org.gnome.Terminal.Legacy.Settings schema-version uint32 3
+org.gnome.Terminal.Legacy.Settings shell-integration-enabled true
+org.gnome.Terminal.Legacy.Settings shortcuts-enabled true
+org.gnome.Terminal.Legacy.Settings tab-policy 'automatic'
+org.gnome.Terminal.Legacy.Settings tab-position 'top'
+org.gnome.Terminal.Legacy.Settings theme-variant 'dark'
+org.gnome.Terminal.Legacy.Settings unified-menu false
+org.gnome.Terminal.ProfilesList default '80ac96c0-9204-43c9-b17b-cb7230049729'
+org.gnome.Terminal.ProfilesList list ['80ac96c0-9204-43c9-b17b-cb7230049729']
+org.gnome.Weather automatic-location false
+org.gnome.Weather locations [<(uint32 2, <('Langenlonsheim', '', false, [(0.87082178170920299, 0.1378889992795384)], [(0.87411906122272931, 0.14398966328953219)])>)>]
+org.gtk.Settings.FileChooser clock-format '24h'
+org.gtk.Settings.FileChooser date-format 'regular'
+org.gtk.Settings.FileChooser expand-folders true
+org.gtk.Settings.FileChooser location-mode 'path-bar'
+org.gtk.Settings.FileChooser show-hidden false
+org.gtk.Settings.FileChooser show-size-column true
+org.gtk.Settings.FileChooser show-type-column true
+org.gtk.Settings.FileChooser sort-column 'name'
+org.gtk.Settings.FileChooser sort-directories-first true
+org.gtk.Settings.FileChooser sort-order 'ascending'
+org.gtk.Settings.FileChooser startup-mode 'recent'
+org.gtk.Settings.FileChooser type-format 'category'
