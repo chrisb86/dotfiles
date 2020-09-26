@@ -226,7 +226,7 @@ done
 # Install *.app
 find $MAC_DOWNLOAD -name "*.app" -print0 | while IFS= read -r -d '' f; do
   echo ">>> Processing ${f}"
-  open -a "${f}"
+  sudo mv "${f}" /Applications/
 done
 
 #rm -rf $MAC_DOWNLOAD
