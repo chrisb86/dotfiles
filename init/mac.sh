@@ -219,6 +219,10 @@ done
 find $MAC_DOWNLOAD -name "*.dmg" -print0 | while IFS= read -r -d '' f; do
   echo ">>> Processing ${f}"
   hdiutil attach $f -quiet -mountpoint ${MAC_INSTALLMOUNT}
+  find ${MAC_INSTALLMOUNT} -name "*.pkg" -print0 | while IFS= read -r -d '' f; do
+    echo ">>> Processing ${f}"
+    sudo installer -pkg "$f" -target /
+  done
   cp -rf ${MAC_INSTALLMOUNT}/*.app /Applications
   hdiutil detach ${MAC_INSTALLMOUNT} -quiet
 done
