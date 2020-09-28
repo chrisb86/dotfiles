@@ -66,7 +66,6 @@ cask "bonjeff"
 cask "calibre"
 cask "carbon-copy-cloner"
 cask "coconutbattery"
-cask "daisydisk"
 cask "db-browser-for-sqlite"
 cask "dbeaver-community"
 cask "diskmaker-x"
@@ -131,6 +130,7 @@ mas "Cardhop", id: 1290358394
 mas "Color Picker", id: 641027709
 mas "Create Booklet", id: 943029046
 mas "Drafts", id: 1435957248
+mas "DaisyDisk", id: 411643860  
 mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694
 mas "Mactracker", id: 430255202
