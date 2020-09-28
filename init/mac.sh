@@ -265,10 +265,6 @@ ln -sf "${HOME}/.config/VSCodium/User/keybindings.json" "${HOME}/Library/Applica
 # Install extensions
 cat ${HOME}/.config/VSCodium/User/extensions.list | xargs -L 1 code --install-extension
 
-echo ">>> Setting up Pandoc environment"
-eval "$(/usr/libexec/path_helper)"
-cabal install pandoc-include pandoc-include-code pandoc-plantuml-diagrams
-
 ## Set up BitBar
 defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.config/BitBar/"
 
