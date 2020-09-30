@@ -14,7 +14,10 @@ MAC_INSTALLDOWNLOADS="https://dl.exactcode.de/tmp/3bb50ff8eeb7ad116724b56a820139
 
 ## Which App to use at default etxt editor (instead of TextEdit)
 DEFAULT_EDITOR="VSCodium.app"
-DEFAULT_EDITOR_FILETYPES="public.plain-text public.unix-executable public.data .zsh)"
+DEFAULT_EDITOR_FILETYPES="public.plain-text public.unix-executable public.data all)"
+
+## Which commands can be run with sudo without password prompt
+SUDO_NOPASS="/usr/local/bin/htop /usr/local/bin/yabai"
 
 # tmp dirs
 MAC_DOWNLOAD="/tmp/macinstall"
@@ -267,6 +270,12 @@ cat ${HOME}/.config/VSCodium/User/extensions.list | xargs -L 1 code --install-ex
 
 ## Set up BitBar
 defaults write com.matryer.BitBar pluginsDirectory "${HOME}/.config/BitBar/"
+
+## Configure sudo
+echo ">>> Configure sudo"
+for command in ${SUDO_NOPASS}; do
+  echo echo "${USER} ALL = NOPASSWD: ${command}" | sudo tee -a /etc/sudoers.d/${USER}
+fi
 
 ## Set zsh from brew as default shell
 echo ">>> Setting /usr/local/bin/zsh as default shell for ${USER}"
