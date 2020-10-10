@@ -1,4 +1,5 @@
 {
+    "editor.autoIndent": "full",
     "editor.tabSize": 2,
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "Source Code Pro",
