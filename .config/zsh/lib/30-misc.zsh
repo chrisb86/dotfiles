@@ -17,6 +17,9 @@ export IOCAGE_COLOR=TRUE
 NPM_PACKAGES="${HOME}/.npm-packages"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
-## Use vimrc fom XDG config home
+## Set some app specific dirs with XDM scheme
 export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 export VIMINIT='let $VIMRC="$VIMDOTDIR/vimrc" | source $VIMRC'
+export GOPATH="${XDG_DATA_HOME}/go"
+export INPUTRC="${XDG_CONFIG_HOME}/readline/inputrc"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
