@@ -18,4 +18,5 @@ NPM_PACKAGES="${HOME}/.npm-packages"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
 
 ## Use vimrc fom XDG config home
-export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'
+export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
+export VIMINIT='let $VIMRC="$VIMDOTDIR/vimrc" | source $VIMRC'
