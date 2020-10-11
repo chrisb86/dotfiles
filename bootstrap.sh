@@ -51,7 +51,7 @@ df_update () {
 	git submodule foreach git pull origin master
 
 	# Copy files from init to scripts basedir
-	cp init/nord-dircolors/src/dir_colors ./.dir_colors
+	cp init/nord-dircolors/src/dir_colors ./.config/dircolors
 }
 
 # Deploy files to ~
