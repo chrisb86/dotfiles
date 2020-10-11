@@ -16,3 +16,6 @@ export IOCAGE_COLOR=TRUE
 ## npm config
 NPM_PACKAGES="${HOME}/.npm-packages"
 export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+
+## Use vimrc fom XDG config home
+export VIMINIT='source "$XDG_CONFIG_HOME/vim/vimrc"'

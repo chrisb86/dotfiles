@@ -1,13 +1,21 @@
+set undodir=$XDG_DATA_HOME/vim/undo
+set directory=$XDG_DATA_HOME/vim/swap
+set backupdir=$XDG_DATA_HOME/vim/backup
+set viewdir=$XDG_DATA_HOME/vim/view
+set viminfo+='1000,n$XDG_DATA_HOME/vim/viminfo
+set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
+
+
 " Install vim-plug
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+if empty(glob('$XDG_DATA_HOME/vim/autoload/plug.vim'))
+  silent !curl -fLo $XDG_DATA_HOME/vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 " Specify a directory for plugins
 " Install plugins
-call plug#begin('~/.vim/plugged')
+call plug#begin('$XDG_DATA_HOME/vim/plugged')
 
 	Plug 'elzr/vim-json'
   Plug 'arcticicestudio/nord-vim'
@@ -64,10 +72,6 @@ command! TrimWhitespace call s:trim_whitespace()
 
 " Highlight characters behind the 80 chars margin
 " :au BufWinEnter * let w:m2=matchadd('ColumnMargin', '\%>80v.\+', -1)
-
-" Directories for swp files
-set backupdir=~/.vim/backups
-set directory=~/.vim/backups
 
 " Treat all .md files as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
