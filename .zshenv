@@ -1,7 +1,7 @@
 ## ~/.zshenv - Should contain commands to set the $PATH and other important environment variables
 
 # Set up XDG environment
-export XDG_CONFIG_HOME=${$XDG_CONFIG_HOME:=${HOME}/.config}
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:=${HOME}/.config}
 
 # Where to look for zsh config
 export ZDOTDIR=${ZDOTDIR:=${XDG_CONFIG_HOME}/zsh}
