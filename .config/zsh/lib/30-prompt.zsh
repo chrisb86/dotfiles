@@ -2,20 +2,16 @@ setopt prompt_subst
 autoload -U promptinit
 promptinit
 
-# Change user name color to red if logged in as root
-if [[ $UID == 0 || $EUID == 0 ]]; then
-   PROMPT='%F{red}%n@%m%f '
-else
-   PROMPT='%F{blue}%n@%m%f '
-fi
-
-PROMPT+='%F{yellow}%~%f '
-
-# Change green arrows (⇣⇡) if connection is via ssh
+# Add green arrows (⇣⇡) if connection is via ssh
 if [[ "${SSH_CONNECTION}" ]]; then
-	PROMPT+="%F{green}⇣⇡%f %F{white}〉%f";
-else
-	PROMPT+="%F{white}〉%f";
+	p_ssh=" %F{green}⇣⇡%f";
 fi;
 
-PROMPT+='%{$reset_color%}'
+p_at='%(!.%F{red}%B#%b%f.%F{blue}@%f)'
+p_user='%(!.%F{red}%B%n%b%f.%F{blue}%n%f)'
+p_host='%F{blue}%m%f'
+p_path='%F{yellow}%~%f'
+p_pr='%(?.%F{blue}.%F{red}) 〉%f'
+
+PS1="$p_user$p_at$p_host$p_ssh $p_path$p_pr"
+unset p_at p_user p_host p_path p_pr
