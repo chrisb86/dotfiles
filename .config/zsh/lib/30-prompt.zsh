@@ -14,4 +14,4 @@ p_path='%F{yellow}%~%f'
 p_pr='%(?.%F{white}.%F{red}) 〉%f'
 
 PS1="$p_user$p_at$p_host$p_ssh $p_path$p_pr"
-wunset p_at p_user p_host p_path p_pr
+unset p_at p_user p_host p_path p_pr
