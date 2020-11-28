@@ -15,7 +15,8 @@ _prepath /usr/local/bin /bin /usr/local/sbin # General
 _prepath /usr/bin  /usr/sbin /sbin /Library/Apple/usr/bin  # macOS
 _prepath /usr/sbin /sbin # FreeBSD
 _prepath ~/bin
-_prepath ~/.npm-packages/bin #npm
-_prepath ~/.local/bin/ #pip
+_prepath ~/.local/bin
+_prepath ~/Library/Python/2.7/bin
+_prepath ~/Library/Python/2.9/bin
 
 unfunction _prepath

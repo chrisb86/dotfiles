@@ -18,6 +18,4 @@ export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 export VIMINIT='let $VIMRC="$VIMDOTDIR/vimrc" | source $VIMRC'
 export GOPATH="${XDG_DATA_HOME}/go"
 export INPUTRC="${XDG_CONFIG_HOME}/readline/inputrc"
-export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME}/npm/npmrc"
-export NPM_PACKAGES="${XDG_CONFIG_HOME}/npm/packages"
-export MANPATH="${MANPATH-$(manpath)}:$NPM_PACKAGES/share/man"
+export MANPATH="${MANPATH-$(manpath)}:${HOME}/.local/share/man"
