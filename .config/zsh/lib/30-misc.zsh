@@ -17,5 +17,6 @@ export IOCAGE_COLOR=TRUE
 export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
 export VIMINIT='let $VIMRC="$VIMDOTDIR/vimrc" | source $VIMRC'
 export GOPATH="${XDG_DATA_HOME}/go"
+export PYTHONUSERBASE=${HOME}/.local
 export INPUTRC="${XDG_CONFIG_HOME}/readline/inputrc"
 export MANPATH="${MANPATH-$(manpath)}:${HOME}/.local/share/man"
