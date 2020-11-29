@@ -22,7 +22,7 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTI
 
-exclude="README.md|init|Makefile|screenshot.png|screenshot-tmix.png|.git|.gitignore|.gitmodules|.DS_Store|bootstrap.sh"
+exclude="README.md|init|Makefile|screenshot.png|.png|.git|.gitignore|.gitmodules|.DS_Store|bootstrap.sh"
 
 bootstrap=`basename -- "$0"`
 basedir=`dirname "$0"`
@@ -57,10 +57,17 @@ df_update () {
 # Deploy files to ~
 # Usage: df_deploy
 df_deploy () {
-	echo "#### Copying files to ~"
-	# poor man's rsync
-  TARGET=`realpath ~`
-	df_list | cpio -pdmBu --quiet $TARGET
+	
+	list_dirs=$(find . -type d | cut -d "/" -f 2- | grep -vE "${exclude}")
+	list_files=$(find . -type f | cut -d "/" -f 2- | grep -vE "${exclude}")
+
+	for dir in ${list_dirs}; do
+		mkdir -p ${HOME}/${dir}
+	done
+
+	for file in ${list_files}; do
+		cp -f ${file} ${HOME}/${file}
+	done
 }
 
 # List files that will be copied
