@@ -10,6 +10,7 @@ WORDCHARS=''
 
 zmodload -i zsh/complist
 fpath=($fpath $ZDOTDIR/completions/)
+fpath=($fpath /usr/local/share/zsh/)
 fpath=($fpath /usr/local/share/zsh/site-functions/)
 
 ## case-insensitive (all),partial-word and then substring completion

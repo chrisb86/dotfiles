@@ -7,7 +7,12 @@ for config_file ($ZDOTDIR/lib/30-*.zsh) source $config_file
 (
 #Initalize and compile completion cache
 autoload -Uz compinit
-compinit
+
+if [ "$(id -u)" -ne 0 ]; then
+  compinit  -i # Ignore insecure directories
+else
+  compinit
+fi
 
 ## Compile startup files
 
