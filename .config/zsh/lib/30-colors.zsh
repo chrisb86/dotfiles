@@ -5,7 +5,7 @@ LSCOLORS="gxfxcxdxbxegedabagacad"
 CLICOLOR="YES"
 
 ## Load .dir_colors for GNU systems
-test -r "~/.dir_colors" && eval $(dircolors ~/.dir_colors)
+test -r "$XDG_CONFIG_HOME/dircolors" && eval $(dircolors "$XDG_CONFIG_HOME"/dircolors)
 
 FX=(
     reset     "%{[00m%}"
