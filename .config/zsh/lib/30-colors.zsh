@@ -9,8 +9,6 @@ if command -v dircolors &> /dev/null; then
     test -r "$XDG_CONFIG_HOME/dircolors" && eval $(dircolors "$XDG_CONFIG_HOME"/dircolors)
 fi
 
-
-
 FX=(
     reset     "%{[00m%}"
     bold      "%{[01m%}" no-bold      "%{[22m%}"
