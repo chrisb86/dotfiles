@@ -1,6 +1,0 @@
-[submodule "init/nord-iterm2"]
-	path = init/nord-iterm2
-	url = https://github.com/arcticicestudio/nord-iterm2
-[submodule "init/nord-dircolors"]
-	path = init/nord-dircolors
-	url = https://github.com/arcticicestudio/nord-dircolors
