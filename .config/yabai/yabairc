@@ -102,7 +102,9 @@ yabai -m rule --add label="Rechner" app="^Rechner$" manage=off
 yabai -m rule --add label="Numi" app="^Numi$" manage=off
 yabai -m rule --add label="thunderbird-activities" app="^Thunderbird$" title="^Aktivitäten$" manage=off
 yabai -m rule --add label="thunderbird-send" app="^Thunderbird$" title='^Nachricht wird gesendet.*$' manage=off
+yabai -m rule --add label="thunderbird-open" app="^Thunderbird$" title='^Öffnen von.*$' manage=off
 yabai -m rule --add label="fantastical-helper" app="^Fantastical Helper$" manage=off
+yabai -m rule --add label="finder-trash" app="^Finder$" title="^Papierkorb$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
 yabai -m rule --add label="Preview" app="Preview" manage=off
 yabai -m rule --add label="System Preferences" app="^System Preferences$" manage=off
