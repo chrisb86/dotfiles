@@ -66,50 +66,54 @@ i=0; for name in ${yabai_create_spaces}; do
   fi
 done
 
+## Sticky Windows
+yabai -m rule --add label="todoist" app="^Todoist$" sticky=on
+
 ## Screen 1 (Main)
 space=main
-yabai -m rule --add label="Firefox" app="^Firefox$" space="${space}"
-yabai -m rule --add label="Reeder" app="^Reeder$" space="${space}"
+yabai -m rule --add label="firefox" app="^Firefox$" space="${space}"
+yabai -m rule --add label="reeder" app="^Reeder$" space="${space}"
 
 ## Screen 2 (Mail)
 space=mail
-yabai -m rule --add label="Mail" app="^Mail$" space="${space}"
-yabai -m rule --add label="Thunderbird" app="^Thunderbird$" space="${space}"
+yabai -m rule --add label="mail" app="^Mail$" space="${space}"
+yabai -m rule --add label="thunderbird" app="^Thunderbird$" space="${space}"
 
 ## Screen 3 (PIM)
 space=pim
-yabai -m rule --add label="Kalender" app="^Kalender$" space="${space}"
-yabai -m rule --add label="Fantastical" app="^Fantastical$" space="${space}"
-yabai -m rule --add label="Kontakte" app="^Kontakte$" space="${space}"
+yabai -m rule --add label="calendar" app="^Kalender$" space="${space}"
+yabai -m rule --add label="fantastical" app="^Fantastical$" space="${space}"
+yabai -m rule --add label="contacts" app="^Kontakte$" space="${space}"
 
 ## Screen 4 (Terminal)
 space=shell
-yabai -m rule --add label="iTerm2" app="^iTerm2$" space="${space}"
-yabai -m rule --add label="Terminal" app="^Terminal$" space="${space}"
+yabai -m rule --add label="iterm" app="^iTerm2$" space="${space}"
+yabai -m rule --add label="terminal" app="^Terminal$" space="${space}"
 
 ## Screen 5 (Coding)
 space=code
-yabai -m rule --add label="VSCodium" app="^VSCodium$" space="${space}"
-yabai -m rule --add label="Fork" app="^Fork$" space="${space}"
+yabai -m rule --add label="vscodium" app="^VSCodium$" space="${space}"
+yabai -m rule --add label="vscode" app="^VSCode$" space="${space}"
+yabai -m rule --add label="fork" app="^Fork$" space="${space}"
 
 ## Screen 6 (Misc.)
 space=misc
+yabai -m rule --add label="moneymoney" app="^MoneyMoney$" space="${space}"
+yabai -m rule --add label="ynab" app="^YNAB$" space="${space}"
 
 ## Unmanaged windows
-yabai -m rule --add label="Alfred Preferences" app="^Alfred Preferences$" manage=off
-yabai -m rule --add label="App Store" app="^App Store$" manage=off
-yabai -m rule --add label="Rechner" app="^Rechner$" manage=off
-yabai -m rule --add label="Numi" app="^Numi$" manage=off
-yabai -m rule --add label="thunderbird-activities" app="^Thunderbird$" title="^Aktivitäten$" manage=off
-yabai -m rule --add label="thunderbird-send" app="^Thunderbird$" title='^Nachricht wird gesendet.*$' manage=off
-yabai -m rule --add label="thunderbird-open" app="^Thunderbird$" title='^Öffnen von.*$' manage=off
+yabai -m rule --add label="appstore" app="^App Store$" manage=off
+yabai -m rule --add label="calculator" app="^Rechner$" manage=off
+yabai -m rule --add label="numi" app="^Numi$" manage=off
+yabai -m rule --add label="preview" app="Vorschau" manage=off
+yabai -m rule --add label="systempreferences" app="^System.*einstellungen$" manage=off
+yabai -m rule --add label="virtualBox" app="^VirtualBox$" manage=off
+yabai -m rule --add label="nextcloud" app="^nextcloud$" manage=off
+
+yabai -m rule --add label="alfred-preferences" app="^Alfred Preferences$" manage=off
+yabai -m rule --add label="thunderbird-unmanaged" app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
 yabai -m rule --add label="fantastical-helper" app="^Fantastical Helper$" manage=off
-yabai -m rule --add label="finder-trash" app="^Finder$" title="^Papierkorb$" manage=off
-yabai -m rule --add label="Finder" app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=off
-yabai -m rule --add label="Preview" app="Preview" manage=off
-yabai -m rule --add label="System Preferences" app="^System Preferences$" manage=off
-yabai -m rule --add label="VirtualBox" app="^VirtualBox$" manage=off
-yabai -m rule --add label="Nextcloud" app="^nextcloud$" manage=off
-yabai -m rule --add label="FileBot" app="^FileBot" manage=off
+yabai -m rule --add label="finder-unmanaged" app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
+yabai -m rule --add label="fileBot-unmanaged" app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
 
 echo "yabai configuration loaded.."
