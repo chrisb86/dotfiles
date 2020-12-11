@@ -2,10 +2,10 @@
 
 yabai="/usr/local/bin/yabai"
 yabai_sa=$(${yabai} --check-sa)
-yabai_bitbar_plugin="yabai_skhd.1d.sh"
+yabai_bitbar_plugin="bitbar_yabai.1s.sh"
 yabai_bitbar_refresh_cmd="open -gj 'bitbar://refreshPlugin?name=${yabai_bitbar_plugin}'"
 
-yabai_create_spaces="main mail pim shell code misc"
+yabai_create_spaces="Main Mail PIM Shell Code Misc."
 yabai_create_spaces_count=$(set -- ${yabai_create_spaces} && echo $#)
 
 yabai_spaces=$(yabai -m query --spaces --display 1 | jq length)
@@ -16,10 +16,7 @@ if ${yabai_sa}; then
   sudo ${yabai} --install-sa
 fi
 
-# sudo ${yabai} --load-sa
-#sudo ${yabai} --load-sa
 ${yabai} --load-sa
-#yabai -m signal --add event=dock_did_restart action="sudo ${yabai} --load-sa"
 yabai -m signal --add event=dock_did_restart action="${yabai} --load-sa"
 
 ## Global settings
@@ -30,7 +27,6 @@ yabai -m config split_ratio                  0.6
 yabai -m config mouse_modifier               fn
 yabai -m config mouse_action1                move
 yabai -m config mouse_action2                resize
-
 
 ## General space settings
 yabai -m config layout                       bsp
@@ -67,53 +63,55 @@ i=0; for name in ${yabai_create_spaces}; do
 done
 
 ## Sticky Windows
-yabai -m rule --add label="todoist" app="^Todoist$" sticky=on
+yabai -m rule --add app="^Todoist$" sticky=on
 
 ## Screen 1 (Main)
-space=main
-yabai -m rule --add label="firefox" app="^Firefox$" space="${space}"
-yabai -m rule --add label="reeder" app="^Reeder$" space="${space}"
+space=1
+yabai -m rule --add app="^Firefox$" space="${space}"
+yabai -m rule --add app="^Reeder$" space="${space}"
 
 ## Screen 2 (Mail)
-space=mail
-yabai -m rule --add label="mail" app="^Mail$" space="${space}"
-yabai -m rule --add label="thunderbird" app="^Thunderbird$" space="${space}"
+space=2
+yabai -m rule --add app="^Mail$" space="${space}"
+yabai -m rule --add app="^Thunderbird$" space="${space}"
 
 ## Screen 3 (PIM)
-space=pim
-yabai -m rule --add label="calendar" app="^Kalender$" space="${space}"
-yabai -m rule --add label="fantastical" app="^Fantastical$" space="${space}"
-yabai -m rule --add label="contacts" app="^Kontakte$" space="${space}"
+space=3
+yabai -m rule --add app="^Kalender$" space="${space}"
+yabai -m rule --add app="^Fantastical$" space="${space}"
+yabai -m rule --add app="^Kontakte$" space="${space}"
 
 ## Screen 4 (Terminal)
-space=shell
-yabai -m rule --add label="iterm" app="^iTerm2$" space="${space}"
-yabai -m rule --add label="terminal" app="^Terminal$" space="${space}"
+space=4
+yabai -m rule --add app="^iTerm2$" space="${space}"
+yabai -m rule --add app="^Terminal$" space="${space}"
 
 ## Screen 5 (Coding)
-space=code
-yabai -m rule --add label="vscodium" app="^VSCodium$" space="${space}"
-yabai -m rule --add label="vscode" app="^VSCode$" space="${space}"
-yabai -m rule --add label="fork" app="^Fork$" space="${space}"
+space=5
+yabai -m rule --add app="^VSCodium$" space="${space}"
+yabai -m rule --add app="^VSCode$" space="${space}"
+yabai -m rule --add app="^Fork$" space="${space}"
 
 ## Screen 6 (Misc.)
-space=misc
-yabai -m rule --add label="moneymoney" app="^MoneyMoney$" space="${space}"
-yabai -m rule --add label="ynab" app="^YNAB$" space="${space}"
+space=6
+yabai -m rule --add app="^MoneyMoney$" space="${space}"
+yabai -m rule --add app="^YNAB$" space="${space}"
 
 ## Unmanaged windows
-yabai -m rule --add label="appstore" app="^App Store$" manage=off
-yabai -m rule --add label="calculator" app="^Rechner$" manage=off
-yabai -m rule --add label="numi" app="^Numi$" manage=off
-yabai -m rule --add label="preview" app="Vorschau" manage=off
-yabai -m rule --add label="systempreferences" app="^System.*einstellungen$" manage=off
-yabai -m rule --add label="virtualBox" app="^VirtualBox$" manage=off
-yabai -m rule --add label="nextcloud" app="^nextcloud$" manage=off
+yabai -m rule --add app="^App Store$" manage=off
+yabai -m rule --add app="^Rechner$" manage=off
+yabai -m rule --add app="^Numi$" manage=off
+yabai -m rule --add app="Vorschau" manage=off
+yabai -m rule --add app="^System.*einstellungen$" manage=off
+yabai -m rule --add app="^VirtualBox$" manage=off
+yabai -m rule --add app="^nextcloud$" manage=off
+yabai -m rule --add app="^Color Picker$" manage=off
+yabai -m rule --add app="(Brother|HP)" manage=off
 
-yabai -m rule --add label="alfred-preferences" app="^Alfred Preferences$" manage=off
-yabai -m rule --add label="thunderbird-unmanaged" app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
-yabai -m rule --add label="fantastical-helper" app="^Fantastical Helper$" manage=off
-yabai -m rule --add label="finder-unmanaged" app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
-yabai -m rule --add label="fileBot-unmanaged" app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
+yabai -m rule --add app="^Alfred Preferences$" manage=off
+yabai -m rule --add app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
+yabai -m rule --add app="^Fantastical Helper$" manage=off
+yabai -m rule --add app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
+yabai -m rule --add app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
 
 echo "yabai configuration loaded.."
