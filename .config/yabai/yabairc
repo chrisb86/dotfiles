@@ -64,6 +64,7 @@ done
 
 ## Sticky Windows
 yabai -m rule --add app="^Todoist$" sticky=on
+yabai -m rule --add app="^Bitwarden$" sticky=on
 
 ## Screen 1 (Main)
 space=1
