@@ -2,7 +2,7 @@
 
 yabai="/usr/local/bin/yabai"
 yabai_sa=$(${yabai} --check-sa)
-yabai_bitbar_plugin="bitbar_yabai.1s.sh"
+yabai_bitbar_plugin="yabai_enhanced.365d.sh"
 yabai_bitbar_refresh_cmd="open -gj 'bitbar://refreshPlugin?name=${yabai_bitbar_plugin}'"
 
 yabai_create_spaces="Main Mail PIM Shell Code Misc."
@@ -111,6 +111,7 @@ yabai -m rule --add app="(Brother|HP)" manage=off
 
 yabai -m rule --add app="^Alfred Preferences$" manage=off
 yabai -m rule --add app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
+yabai -m rule --add app="^DBeaver$" title="(Treibereinstellungen)" manage=off
 yabai -m rule --add app="^Fantastical Helper$" manage=off
 yabai -m rule --add app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
 yabai -m rule --add app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
