@@ -97,6 +97,7 @@ yabai -m rule --add app="^Fork$" space="${space}"
 space=6
 yabai -m rule --add app="^MoneyMoney$" space="${space}"
 yabai -m rule --add app="^YNAB$" space="${space}"
+yabai -m rule --add app="^Portfolio Performance$" space="${space}"
 
 ## Unmanaged windows
 yabai -m rule --add app="^App Store$" manage=off
@@ -115,5 +116,6 @@ yabai -m rule --add app="^DBeaver$" title="(Treibereinstellungen)" manage=off
 yabai -m rule --add app="^Fantastical Helper$" manage=off
 yabai -m rule --add app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
 yabai -m rule --add app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
+yabai -m rule --add app="^Fork$" title="(General|Commit|Git|Integration|Custom Commands|Updates)" manage=off
 
 echo "yabai configuration loaded.."
