@@ -16,7 +16,7 @@ if ${yabai_sa}; then
   sudo ${yabai} --install-sa
 fi
 
-${yabai} --load-sa
+sudo ${yabai} --load-sa ## sudo needed since Big Sur
 ${yabai} -m signal --add event=dock_did_restart action="${yabai} --load-sa"
 
 ## Global settings
