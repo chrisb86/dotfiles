@@ -118,6 +118,9 @@ ${yabai} -m rule --add app="^Hazel$" manage=off
 ${yabai} -m rule --add app="^Color Picker$" manage=off
 ${yabai} -m rule --add app="^ColorSlurp$" manage=off
 ${yabai} -m rule --add app="(Brother|HP)" manage=off
+${yabai} -m rule --add app="^ExactScan Pro$" manage=off
+${yabai} -m rule --add app="^coconutBattery$" manage=off
+${yabai} -m rule --add app="^Arq$" manage=off
 
 ${yabai} -m rule --add app="^Alfred Preferences$" manage=off
 ${yabai} -m rule --add app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
