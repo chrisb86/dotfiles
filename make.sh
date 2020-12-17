@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-# bootstrap.sh
+# make.sh
 # Copyright 2016 Christian Baer
 # https://git.debilux.org/chbaerr/dotfiles
 
@@ -22,21 +22,21 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTI
 
-exclude="README.md|init|Makefile|screenshot.png|.png|.git|.gitignore|.gitmodules|.DS_Store|bootstrap.sh"
+exclude="README.md|init|Makefile|screenshot.png|.png|.git|.gitignore|.gitmodules|.DS_Store|make.sh"
 
-bootstrap=`basename -- "$0"`
+self=`basename -- "$0"`
 basedir=`dirname "$0"`
 
 # Show help screen
 # Usage: help exitcode
 help () {
-  echo "Usage: $bootstrap command {params}"
+  echo "Usage: ${self} command {params}"
   echo
-  echo "list 			List all files that will be copied"
-  echo "update 			Update the git repo and the included submodules"
-  echo "deploy 			Copy the files to ~"
-  echo "install 		Update and deploy these dotfiles"
-  echo "help 			Show this screen"
+  echo "list        List all files that will be copied"
+  echo "update      Update the git repo and the included submodules"
+  echo "deploy      Copy the files to ~"
+  echo "install     Update and deploy these dotfiles"
+  echo "help        Show this screen"
 
   exit $1
 }
@@ -45,10 +45,10 @@ help () {
 # Usage: df_update
 df_update () {
 	echo "#### Updating git repos and submodules"
-	git pull origin master
+	git pull origin
 	git submodule init
 	git submodule update
-	git submodule foreach git pull origin master
+	git submodule foreach git pull origin
 }
 
 # Deploy files to ~
