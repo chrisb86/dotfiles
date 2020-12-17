@@ -1,14 +1,25 @@
 #!/bin/sh
 
+## Path to yabai
 yabai="/usr/local/bin/yabai"
-yabai_sa=$(${yabai} --check-sa)
+
+## Name of yabai bitbar plugin
 yabai_bitbar_plugin="yabai_enhanced.*?.sh"
+
+## Spaces that should be created
+yabai_create_spaces="Main Mail PIM Shell Code Misc."
+
+## Send refresh signal to bitbar
 yabai_bitbar_refresh_cmd="set SHELL=/bin/sh && open -g 'bitbar://refreshPlugin?name=${yabai_bitbar_plugin}'"
 
-yabai_create_spaces="Main Mail PIM Shell Code Misc."
+## Get nuber of spaces that should be created
 yabai_create_spaces_count=$(set -- ${yabai_create_spaces} && echo $#)
 
-yabai_spaces=$(${yabai} -m query --spaces --display 1 | jq length)
+## Get number of existing spaces
+yabai_spaces=$(${yabai} -m query --spaces | jq length)
+
+## Check version of scripting additions
+yabai_sa=$(${yabai} --check-sa)
 
 ## Install or update scripting additions
 if ${yabai_sa}; then
@@ -16,15 +27,14 @@ if ${yabai_sa}; then
   sudo ${yabai} --install-sa
 fi
 
+## Load scripting additions
 sudo ${yabai} --load-sa ## sudo needed since Big Sur
 ${yabai} -m signal --add event=dock_did_restart action="${yabai} --load-sa"
 
 ## Global settings
 ${yabai} -m config mouse_follows_focus          off
-${yabai} -m config focus_follows_mouse          off # autofocus|autoraise|off
-#${yabai} -m config window_placement             first_child #
- spawn left
-${yabai} -m config window_placement second_child # spawn right
+${yabai} -m config focus_follows_mouse          off
+${yabai} -m config window_placement             second_child
 
 ${yabai} -m config split_ratio                  0.6
 ${yabai} -m config window_shadow                float
@@ -44,11 +54,11 @@ ${yabai} -m config window_gap                   10
 ${yabai} -m space 1 --layout                    stack
 
 # Yabai-Spaces for BitBar
-${yabai} -m signal --add event=space_changed action="${yabai_bitbar_refresh_cmd}"
-${yabai} -m signal --add event=display_added action="${yabai_bitbar_refresh_cmd}"
-${yabai} -m signal --add event=display_removed action="${yabai_bitbar_refresh_cmd}"
-${yabai} -m signal --add event=display_changed action="${yabai_bitbar_refresh_cmd}"
-${yabai} -m signal --add event=display_moved action="${yabai_bitbar_refresh_cmd}"
+${yabai} -m signal --add event=space_changed    action="${yabai_bitbar_refresh_cmd}"
+${yabai} -m signal --add event=display_added    action="${yabai_bitbar_refresh_cmd}"
+${yabai} -m signal --add event=display_removed  action="${yabai_bitbar_refresh_cmd}"
+${yabai} -m signal --add event=display_changed  action="${yabai_bitbar_refresh_cmd}"
+${yabai} -m signal --add event=display_moved    action="${yabai_bitbar_refresh_cmd}"
 
 ## Destroy all spaces in reverse order(except of the first one)
 i=${yabai_spaces}; while [ ${i} -ne 1 ]; do
@@ -103,7 +113,7 @@ ${yabai} -m rule --add app="^MoneyMoney$" space="${space}"
 ${yabai} -m rule --add app="^YNAB$" space="${space}"
 ${yabai} -m rule --add app="^Portfolio Performance$" space="${space}"
 
-## Unmanaged windows
+## Unmanaged applications
 ${yabai} -m rule --add app="^App Store$" manage=off
 ${yabai} -m rule --add app="^iStat Menus$" manage=off
 ${yabai} -m rule --add app="^Bartender .*$" manage=off
@@ -122,6 +132,7 @@ ${yabai} -m rule --add app="^ExactScan Pro$" manage=off
 ${yabai} -m rule --add app="^coconutBattery$" manage=off
 ${yabai} -m rule --add app="^Arq$" manage=off
 
+## Unmanaged windows of specific applications
 ${yabai} -m rule --add app="^Alfred Preferences$" manage=off
 ${yabai} -m rule --add app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
 ${yabai} -m rule --add app="^DBeaver$" title="(Treibereinstellungen|Neue Verbindung anlegen)" manage=off
