@@ -22,8 +22,12 @@ ${yabai} -m signal --add event=dock_did_restart action="${yabai} --load-sa"
 ## Global settings
 ${yabai} -m config mouse_follows_focus          off
 ${yabai} -m config focus_follows_mouse          off # autofocus|autoraise|off
-${yabai} -m config window_placement             first_child
+#${yabai} -m config window_placement             first_child #
+ spawn left
+${yabai} -m config window_placement second_child # spawn right
+
 ${yabai} -m config split_ratio                  0.6
+${yabai} -m config window_shadow                float
 ${yabai} -m config mouse_modifier               fn
 ${yabai} -m config mouse_action1                move
 ${yabai} -m config mouse_action2                resize
@@ -101,6 +105,8 @@ ${yabai} -m rule --add app="^Portfolio Performance$" space="${space}"
 
 ## Unmanaged windows
 ${yabai} -m rule --add app="^App Store$" manage=off
+${yabai} -m rule --add app="^iStat Menus$" manage=off
+${yabai} -m rule --add app="^Bartender .*$" manage=off
 ${yabai} -m rule --add app="^Rechner$" manage=off
 ${yabai} -m rule --add app="^Numi$" manage=off
 ${yabai} -m rule --add app="Vorschau" manage=off
@@ -108,13 +114,16 @@ ${yabai} -m rule --add app="^System.*einstellungen$" manage=off
 ${yabai} -m rule --add app="^Festplatten.*dienstprogramm$" manage=off
 ${yabai} -m rule --add app="^VirtualBox$" manage=off
 ${yabai} -m rule --add app="^nextcloud$" manage=off
+${yabai} -m rule --add app="^Hazel$" manage=off
 ${yabai} -m rule --add app="^Color Picker$" manage=off
+${yabai} -m rule --add app="^ColorSlurp$" manage=off
 ${yabai} -m rule --add app="(Brother|HP)" manage=off
 
 ${yabai} -m rule --add app="^Alfred Preferences$" manage=off
 ${yabai} -m rule --add app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
-${yabai} -m rule --add app="^DBeaver$" title="(Treibereinstellungen)" manage=off
+${yabai} -m rule --add app="^DBeaver$" title="(Treibereinstellungen|Neue Verbindung anlegen)" manage=off
 ${yabai} -m rule --add app="^Fantastical Helper$" manage=off
+${yabai} -m rule --add app="^Fantastical$" title="(Allgemein|Darstellung|Accounts|Kalender|Erinnerungen|Wetter|Erweitert|Aktualisieren)" manage=off
 ${yabai} -m rule --add app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
 ${yabai} -m rule --add app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
 ${yabai} -m rule --add app="^Fork$" title="(General|Commit|Git|Integration|Custom Commands|Updates)" manage=off
