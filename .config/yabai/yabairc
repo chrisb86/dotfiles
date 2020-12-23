@@ -29,7 +29,7 @@ fi
 
 ## Load scripting additions
 sudo ${yabai} --load-sa ## sudo needed since Big Sur
-${yabai} -m signal --add event=dock_did_restart action="${yabai} --load-sa"
+${yabai} -m signal --add event=dock_did_restart action="sudo ${yabai} --load-sa"
 
 ## Global settings
 ${yabai} -m config mouse_follows_focus          off
@@ -112,6 +112,7 @@ space=6
 ${yabai} -m rule --add app="^MoneyMoney$" space="${space}"
 ${yabai} -m rule --add app="^YNAB$" space="${space}"
 ${yabai} -m rule --add app="^Portfolio Performance$" space="${space}"
+${yabai} -m rule --add app="^Affinity .*$" space="${space}"
 
 ## Unmanaged applications
 ${yabai} -m rule --add app="^App Store$" manage=off
@@ -121,13 +122,14 @@ ${yabai} -m rule --add app="^Rechner$" manage=off
 ${yabai} -m rule --add app="^Numi$" manage=off
 ${yabai} -m rule --add app="Vorschau" manage=off
 ${yabai} -m rule --add app="^System.*einstellungen$" manage=off
+${yabai} -m rule --add app="^System.*informationen$" manage=off
 ${yabai} -m rule --add app="^Festplatten.*dienstprogramm$" manage=off
 ${yabai} -m rule --add app="^VirtualBox$" manage=off
 ${yabai} -m rule --add app="^nextcloud$" manage=off
 ${yabai} -m rule --add app="^Hazel$" manage=off
 ${yabai} -m rule --add app="^Color Picker$" manage=off
 ${yabai} -m rule --add app="^ColorSlurp$" manage=off
-${yabai} -m rule --add app="(Brother|HP)" manage=off
+${yabai} -m rule --add app="^PrinterProxy$" manage=off
 ${yabai} -m rule --add app="^ExactScan Pro$" manage=off
 ${yabai} -m rule --add app="^coconutBattery$" manage=off
 ${yabai} -m rule --add app="^Arq$" manage=off
@@ -135,12 +137,14 @@ ${yabai} -m rule --add app="^Arq$" manage=off
 ## Unmanaged windows of specific applications
 ${yabai} -m rule --add app="^Alfred Preferences$" manage=off
 ${yabai} -m rule --add app="^Thunderbird$" title="(Nachricht wird gesendet|Aktivitäten|Öffnen von)" manage=off
+${yabai} -m rule --add app="^MoneyMoney$" title="(Einstellungen)" manage=off
 ${yabai} -m rule --add app="^DBeaver$" title="(Treibereinstellungen|Neue Verbindung anlegen)" manage=off
 ${yabai} -m rule --add app="^Fantastical Helper$" manage=off
+${yabai} -m rule --add app="^Affinity .*$" title="(Dokument)" manage=off
 ${yabai} -m rule --add app="^Fantastical$" title="(Allgemein|Darstellung|Accounts|Kalender|Erinnerungen|Wetter|Erweitert|Aktualisieren)" manage=off
 ${yabai} -m rule --add app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
-${yabai} -m rule --add app="^FileBot$" title="(Invalid Characters|TheTVDB|TheMovieDB|AccoustID)" manage=off
+${yabai} -m rule --add app="^FileBot$" title="(Invalid Characters|Preset Editor|TheTVDB|TheMovieDB|AccoustID)" manage=off
 ${yabai} -m rule --add app="^Fork$" title="(General|Commit|Git|Integration|Custom Commands|Updates)" manage=off
-${yabai} -m rule --add app="^Mail$" title="(Accountinformationen|Aktivität)" manage=off
+${yabai} -m rule --add app="^Mail$" title="(Accountinformationen|Aktivität|Allgemein|Accounts|Spam|Schrift & Farbe|Darstellung|Verfassen|Signaturen|Regeln)" manage=off
 
 echo "yabai configuration loaded.."
