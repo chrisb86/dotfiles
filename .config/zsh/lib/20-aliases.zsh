@@ -17,6 +17,7 @@ alias foldersize="du -sh"
 alias duf="du -sk * | sort -n | while read size fname; do for unit in k M G T P E Z Y; do if [ $size -lt 1024 ]; then echo -e "${size}${unit}\t${fname}"; break; fi; size=$((size/1024)); done; done"
 alias google="ping -c 10240000 google.com"
 alias history="history -i"
+alias sulast="sudo $(history -p !-1)"
 
 case `uname` in
   Darwin)
@@ -28,7 +29,6 @@ case `uname` in
     alias nmap_localnet="nmap -sP 10.0.3.0/24"
 		alias fetch="curl -O"
 		alias htop="sudo htop"
-		alias sulast="sudo $(history -p !-1)"
   ;;
   Linux)
     # commands for Linux go here
@@ -36,6 +36,6 @@ case `uname` in
   FreeBSD)
     # commands for FreeBSD go here
     alias stl="sockstat -l"
-		alias sulast="doas $(history -p !-1)"
+    alias ziostat="cmdwatch -n 1 zpool iostat -vPL 1 1"
   ;;
 esac
