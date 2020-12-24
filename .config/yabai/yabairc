@@ -143,7 +143,7 @@ ${yabai} -m rule --add app="^Fantastical Helper$" manage=off
 ${yabai} -m rule --add app="^Affinity .*$" title="(Dokument)" manage=off
 ${yabai} -m rule --add app="^Fantastical$" title="(Allgemein|Darstellung|Accounts|Kalender|Erinnerungen|Wetter|Erweitert|Aktualisieren)" manage=off
 ${yabai} -m rule --add app="^Finder$" title="(Kopieren|Bewegen|Verbinden|Infos|Einstellungen|Über|Papierkorb)" manage=off
-${yabai} -m rule --add app="^FileBot$" title="(Invalid Characters|Preset Editor|TheTVDB|TheMovieDB|AccoustID)" manage=off
+${yabai} -m rule --add app="^FileBot$" title="(Invalid Characters|Preset Editor|Conflicts|TheTVDB|TheMovieDB|AccoustID)" manage=off
 ${yabai} -m rule --add app="^Fork$" title="(General|Commit|Git|Integration|Custom Commands|Updates)" manage=off
 ${yabai} -m rule --add app="^Mail$" title="(Accountinformationen|Aktivität|Allgemein|Accounts|Spam|Schrift & Farbe|Darstellung|Verfassen|Signaturen|Regeln)" manage=off
 
