@@ -4,9 +4,9 @@ These are my dotfiles. They are awesome.
 
 This repo contains my dotfiles which I use at OS X and FreeBSD systems. This set features a nice and fast zsh config, a neat vim environment and a tmux config.
 
-![Image](https://git.debilux.org/chbaer/dotfiles/raw/branch/master/screenshot.png)
+![Image](https://raw.githubusercontent.com/chrisb86/dotfiles/main/screenshot.png)
 
-The zsh prompt is handcrafted to look neat and give some extra info. When you are root the user- and hostname color changes from blue to red. If you are connected via ssh, the prompt will show some green arrows behind the working path and when you are in a git repository, it will show some git infos at the right side.
+The zsh prompt is handcrafted to look neat and provide some extra info. When you are root the user- and hostname color changes from blue to red. If you are connected via ssh, the prompt will show some green arrows behind the working path and when you are in a git repository, it will show some git infos at the right side.
 
 The tmux config contains some nice settings to make my work a bit easier and look nice.
 
@@ -52,7 +52,7 @@ The tmux config rebinds the prefix key to C-a. It features different shortcuts t
 
 It also supports nested sessions with a modified color scheme. That’s nice when using tmix.
 
-![Image](https://git.debilux.org/chbaer/dotfiles/raw/branch/master/screenshot-tmix.png)
+![Image](https://raw.githubusercontent.com/chrisb86/dotfiles/main/screenshot-tmix.png)
 
 ## Installation
 
@@ -62,7 +62,7 @@ It also supports nested sessions with a modified color scheme. That’s nice whe
 
 2. Deploy
 
-		./bootstrap.sh install
+		./make.sh install
 
 3. Enjoy!
 
