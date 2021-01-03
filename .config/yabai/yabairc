@@ -7,7 +7,7 @@ yabai="/usr/local/bin/yabai"
 yabai_bitbar_plugin="yabai_enhanced.*?.sh"
 
 ## Spaces that should be created
-yabai_create_spaces="Main Mail PIM Shell Code Misc."
+yabai_create_spaces="Main Mail Messaging PIM Shell Code Misc."
 
 ## Send refresh signal to bitbar
 yabai_bitbar_refresh_cmd="set SHELL=/bin/sh && open -g 'bitbar://refreshPlugin?name=${yabai_bitbar_plugin}'"
@@ -80,35 +80,34 @@ done
 ${yabai} -m rule --add app="^Todoist$" sticky=on
 ${yabai} -m rule --add app="^Bitwarden$" sticky=on
 
-## Screen 1 (Main)
-space=1
+space=Main
 ${yabai} -m rule --add app="^Firefox$" space="${space}"
 ${yabai} -m rule --add app="^Reeder$" space="${space}"
 
-## Screen 2 (Mail)
-space=2
+space=Mail
 ${yabai} -m rule --add app="^Mail$" space="${space}"
 ${yabai} -m rule --add app="^Thunderbird$" space="${space}"
 
-## Screen 3 (PIM)
-space=3
+space=Messaging
+${yabai} -m rule --add app="^Threema$" space="${space}"
+${yabai} -m rule --add app="^WhatsApp$" space="${space}"
+${yabai} -m rule --add app="^Nachrichten$" space="${space}"
+
+space=PIM
 ${yabai} -m rule --add app="^Kalender$" space="${space}"
 ${yabai} -m rule --add app="^Fantastical$" space="${space}"
 ${yabai} -m rule --add app="^Kontakte$" space="${space}"
 
-## Screen 4 (Terminal)
-space=4
+space=Shell
 ${yabai} -m rule --add app="^iTerm2$" space="${space}"
 ${yabai} -m rule --add app="^Terminal$" space="${space}"
 
-## Screen 5 (Coding)
-space=5
+space=Code
 ${yabai} -m rule --add app="^VSCodium$" space="${space}"
 ${yabai} -m rule --add app="^VSCode$" space="${space}"
 ${yabai} -m rule --add app="^Fork$" space="${space}"
 
-## Screen 6 (Misc.)
-space=6
+space=Misc.
 ${yabai} -m rule --add app="^MoneyMoney$" space="${space}"
 ${yabai} -m rule --add app="^YNAB$" space="${space}"
 ${yabai} -m rule --add app="^Portfolio Performance$" space="${space}"
@@ -133,6 +132,8 @@ ${yabai} -m rule --add app="^PrinterProxy$" manage=off
 ${yabai} -m rule --add app="^ExactScan Pro$" manage=off
 ${yabai} -m rule --add app="^coconutBattery$" manage=off
 ${yabai} -m rule --add app="^Arq$" manage=off
+${yabai} -m rule --add app="^The Unarchiver$" manage=off
+${yabai} -m rule --add app="^VMware Fusion$" manage=off
 
 ## Unmanaged windows of specific applications
 ${yabai} -m rule --add app="^Alfred Preferences$" manage=off
