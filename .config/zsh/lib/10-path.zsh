@@ -12,11 +12,10 @@ _prepath() {
 }
 
 _prepath /usr/local/bin /bin /usr/local/sbin # General
-_prepath /usr/bin  /usr/sbin /sbin /Library/Apple/usr/bin  # macOS
+_prepath /usr/bin /usr/sbin /sbin /Library/Apple/usr/bin  # macOS
 _prepath /usr/sbin /sbin # FreeBSD
 _prepath ~/bin
 _prepath ~/.local/bin
-_prepath ~/Library/Python/2.7/bin
-_prepath ~/Library/Python/2.9/bin
+_prepath /opt/homebrew/bin # Homebrew an Apple Silicon
 
 unfunction _prepath
