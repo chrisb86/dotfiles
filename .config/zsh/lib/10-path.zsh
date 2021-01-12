@@ -11,11 +11,11 @@ _prepath() {
     done
 }
 
-_prepath /usr/local/bin /bin /usr/local/sbin # General
 _prepath /usr/bin /usr/sbin /sbin /Library/Apple/usr/bin  # macOS
 _prepath /usr/sbin /sbin # FreeBSD
-_prepath ~/bin
+_prepath /usr/local/bin /bin /usr/local/sbin # General
+_prepath /opt/homebrew/bin /opt/homebrew/sbin # Homebrew an Apple Silicon
 _prepath ~/.local/bin
-_prepath /opt/homebrew/bin # Homebrew an Apple Silicon
+_prepath ~/bin
 
 unfunction _prepath
