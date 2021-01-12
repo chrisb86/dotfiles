@@ -27,8 +27,8 @@ case `uname` in
     alias r="open -a"
     alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
     alias nmap_localnet="nmap -sP 10.0.3.0/24"
-		alias fetch="curl -O"
-		alias htop="sudo htop"
+    alias fetch="curl -O"
+	alias htop="sudo htop"
   ;;
   Linux)
     # commands for Linux go here
