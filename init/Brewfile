@@ -1,59 +1,48 @@
 ## Options
 cask_args appdir: '/Applications'
-
-ALL_FFMPEG_OPTIONS = `brew options ffmpeg | grep -vE '\s' | grep -- '--with-'`.gsub("--", "").split("\n")
+cask_args language: 'de,deu,en,eng'
 
 ## Taps
-#tap "adoptopenjdk/openjdk"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
-tap "homebrew/cask-versions"
 tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "buo/cask-upgrade"
 
 ## brew formulae
 brew "arping"
 brew "brew-cask-completion"
+brew "python@3.9"
 brew "checkbashisms"
-brew "coreutils"
 brew "duti"
 brew "exiftool"
-brew "unbound"
-brew "ffmpeg", args: ALL_FFMPEG_OPTIONS
-brew "ghc"
+brew "ffmpeg"
 brew "git"
-brew "grep"
-brew "gotop"
 brew "htop"
 brew "hugo"
-brew "iperf"
-#brew "iperf3"
 brew "ipmitool"
 brew "jq"
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai", args: ["HEAD"]
-brew "mas"
 brew "mosh"
-brew "node"
-brew "nativefier"
 brew "nmap"
-brew "ocrmypdf"
-brew "pandoc"
-brew "pandoc-citeproc"
+brew "node"
 brew "rsync"
-brew "shfmt"
 brew "tesseract"
 brew "tesseract-lang"
 brew "tmux"
-brew "tnftp"
 brew "tree"
 brew "vim"
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai"
+brew "bitwarden-cli"
+brew "ocrmypdf"
+brew "pandoc"
 
 ## cask formulae
 cask "alfred"
@@ -61,91 +50,80 @@ cask "arq"
 cask "balenaetcher"
 cask "bartender"
 cask "bitbar"
-cask "bitwarden"
 cask "bonjeff"
 cask "calibre"
-cask "carbon-copy-cloner"
 cask "coconutbattery"
-cask "db-browser-for-sqlite"
 cask "dbeaver-community"
-cask "diskmaker-x"
 cask "drawio"
 cask "evolv-escribe-suite"
 cask "fantastical"
-#cask "filebot"
+cask "filebot"
 cask "firefox"
-cask "fluid"
-cask "fog"
 cask "font-fira-code"
 cask "font-source-code-pro"
 cask "fork"
 cask "handbrake"
 cask "hazel"
 cask "hex-fiend"
-cask "intel-power-gadget"
 cask "istat-menus"
 cask "iterm2"
 cask "libreoffice"
-cask "little-snitch4" #for Catalina
-#cask "little-snitch"
+cask "little-snitch"
+cask "logitech-options"
 cask "mactex-no-gui"
 cask "marked"
 cask "mediathekview"
+cask "microsoft-teams"
 cask "moneymoney"
 cask "monitorcontrol"
 cask "nextcloud"
+cask "numi"
 cask "onyx"
 cask "oracle-jdk"
-cask "openzfs"
 cask "pdf-expert"
 cask "plex"
+cask "pocket-casts"
 cask "portfolioperformance"
 cask "qlcommonmark"
-cask "ramme"
-cask "sequel-pro"
+cask "sequel-ace"
 cask "shifty"
-cask "sloth"
 cask "sonos"
 cask "spotify"
-#cask "stats"
-cask "thunderbird"
 cask "transmission"
 cask "transmit"
-cask "tunnelblick"
-#cask "tuxera-ntfs"
 cask "typora"
-cask "virtualbox"
-cask "virtualbox-extension-pack"
 cask "vlc"
+cask "intellidock"
 cask "vscodium"
 cask "wireshark"
+cask "mas"
 
 ## Mac AppStore
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
+mas "Apple Configurator 2", id: 1037126344
 mas "AudioBookBinder", id: 413969927
+mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
-mas "Color Picker", id: 641027709
+mas "ColorSlurp", id: 1287239339
 mas "Create Booklet", id: 943029046
+mas "DaisyDisk", id: 411643860
 mas "Drafts", id: 1435957248
-mas "DaisyDisk", id: 411643860  
 mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694
 mas "Mactracker", id: 430255202
 mas "Mastonaut", id: 1450757574
 mas "Mindcad Tiler", id: 432460453
 mas "MindNode", id: 992076693
-mas "Monit", id: 1014850245
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "PDFify", id: 1435055351
-mas "Pixelmator", id: 407963104
-mas "Reeder", id: 1449412482
-mas "ShutterCount", id: 720123827
+mas "Parcel", id: 639968404
+mas "Passepartout", id: 1433645014
+mas "Reeder", id: 1529448980
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Tweetbot", id: 557168941
 mas "WhatsApp", id: 1147396723
-#mas "Xcode", id: 497799835
+mas "Xcode", id: 497799835
