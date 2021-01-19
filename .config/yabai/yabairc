@@ -104,6 +104,7 @@ yabai -m rule --add app="^Kontakte$" space="${space}"
 space=Shell
 yabai -m rule --add app="^iTerm2$" space="${space}"
 yabai -m rule --add app="^Terminal$" space="${space}"
+yabai -m rule --add app="^Alacritty$" space="${space}"
 
 space=Code
 yabai -m rule --add app="^VSCodium$" space="${space}"
