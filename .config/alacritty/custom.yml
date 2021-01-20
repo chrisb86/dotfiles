@@ -7,11 +7,15 @@ window:
     x: 5
     y: 25
 
+  dimensions:
+    columns: 164
+    lines: 42
+
 scrolling:
-  history: 100000
+  history: 10000
 
 # Display tabs using this many cells (changes require restart)
-tabspaces: 4
+tabspaces: 2
 
 # When true, bold text is drawn using the bright variant of colors.
 draw_bold_text_with_bright_colors: true
@@ -66,15 +70,34 @@ shell:
 # using Mac's 'command' to control your tmux.
 # A great reference: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/#make-alacritty-feel-like-iterm2
 key_bindings:
-  - { key: T,     mods: Command,          chars: "\x01\x63" } # Create window
-  - { key: X,     mods: Command,          chars: "\x01\x78" } # Kill pane/window
-  - { key: V,     mods: Command,          chars: "\x01\x7c" } # Split pane vertically
-  - { key: S,     mods: Command,          chars: "\x01\x2d" } # Split pane horizontally
-  - { key: T,     mods: Command|Shift,  chars: "\x02\x63" } # Create window in nested session
-  - { key: X,     mods: Command|Shift,  chars: "\x02\x78" } # Kill pane/window in nested session
-  - { key: V,     mods: Command|Shift,  chars: "\x02\x7c" } # Split pane vertically in nested session
-  - { key: S,     mods: Command|Shift,  chars: "\x02\x2d" } # Split pane horizontally in nested session
-  - { key: H,     mods: Command,          chars: "\x01\x70" } # Move to previous window
-  - { key: J,     mods: Command,          chars: "\x01\x29" } # Move to next session
-  - { key: K,     mods: Command,          chars: "\x01\x28" } # Move to previous session
-  - { key: L,     mods: Command,          chars: "\x01\x6e" } # Move to next window
+  
+  # Alacritty
+  - { key: N,       mods: Command,        action: SpawnNewInstance } # Spawn new instance
+  - { key: Key0,    mods: Command,        action: ResetFontSize    } # Reset font size
+  - { key: Plus,    mods: Command,        action: IncreaseFontSize } # Increase font size
+  - { key: Minus,   mods: Command,        action: DecreaseFontSize } # Decrease font size
+  
+  # tmux
+  - { key: H,       mods: Command,        chars: "\x01\x70" } # Move to previous window
+  - { key: J,       mods: Command,        chars: "\x01\x29" } # Move to next session
+  - { key: K,       mods: Command,        chars: "\x01\x28" } # Move to previous session
+  - { key: L,       mods: Command,        chars: "\x01\x6e" } # Move to next window
+
+  - { key: T,       mods: Command,        chars: "\x01\x63" } # Create window
+  - { key: X,       mods: Command,        chars: "\x01\x78" } # Kill pane/window
+  - { key: A,       mods: Command,        chars: "\x01\x7c" } # Split pane vertically
+  - { key: S,       mods: Command,        chars: "\x01\x2d" } # Split pane horizontally
+  
+  - { key: T,       mods: Command|Shift,  chars: "\x02\x63" } # Create window in nested session
+  - { key: X,       mods: Command|Shift,  chars: "\x02\x78" } # Kill pane/window in nested session
+  - { key: A,       mods: Command|Shift,  chars: "\x02\x7c" } # Split pane vertically in nested session
+  - { key: S,       mods: Command|Shift,  chars: "\x02\x2d" } # Split pane horizontally in nested session
+
+## General key bindings
+  - { key: Comma,   mods: Command,        command:
+      {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}     }
+  - { key: Back,    mods: Command,        chars: "\x15" } # delete word/line
+  - { key: Left,    mods: Alt,            chars: "\x1bb"                       } # One word left
+  - { key: Right,   mods: Alt,            chars: "\x1bf"                       } # One word right
+  - { key: Left,    mods: Command,        chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right,   mods: Command,        chars: "\x1bOF",   mode: AppCursor   } # End

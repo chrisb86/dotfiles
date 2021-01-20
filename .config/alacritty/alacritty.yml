@@ -1,6 +1,5 @@
 live_config_reload: true
 
 import:
-  - ~/.config/alacritty/default.yml
   - ~/.config/alacritty/custom.yml
   - ~/.config/alacritty/nord.yml
