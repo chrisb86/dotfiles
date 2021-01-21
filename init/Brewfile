@@ -3,24 +3,25 @@ cask_args appdir: '/Applications'
 cask_args language: 'de,deu,en,eng'
 
 ## Taps
+tap "buo/cask-upgrade"
+tap "fabianishere/personal"
+tap "federico-terzi/espanso"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
+tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "buo/cask-upgrade"
 tap "koekeishiya/formulae"
-tap "federico-terzi/espanso"
-tap "fabianishere/personal"
 
 ## brew formulae
 brew "arping"
+brew "bitwarden-cli"
 brew "brew-cask-completion"
-brew "python@3.9"
 brew "checkbashisms"
 brew "duti"
+brew "espanso"
 brew "exiftool"
 brew "ffmpeg"
 brew "git"
@@ -31,27 +32,26 @@ brew "jq"
 brew "mosh"
 brew "nmap"
 brew "node"
+brew "ocrmypdf"
+brew "pam_reattach"
+brew "pandoc"
+brew "python@3.9"
+brew "reattach-to-user-namespace"
 brew "rsync"
-brew "tesseract"
+brew "skhd"
 brew "tesseract-lang"
+brew "tesseract"
 brew "tmux"
 brew "tree"
 brew "vim"
-brew "youtube-dl"
-brew "zsh"
-brew "zsh-completions"
-brew "skhd"
 brew "yabai"
-brew "bitwarden-cli"
-brew "ocrmypdf"
-brew "pandoc"
-brew "espanso"
-brew "pam_reattach"
-brew "reattach-to-user-namespace"
+brew "youtube-dl"
+brew "zsh-completions"
+brew "zsh"
 
 ## cask formulae
+cask "alacritty"
 cask "alfred"
-cask "kap"
 cask "arq"
 cask "balenaetcher"
 cask "bartender"
@@ -71,13 +71,16 @@ cask "fork"
 cask "handbrake"
 cask "hazel"
 cask "hex-fiend"
+cask "intellidock"
 cask "istat-menus"
-cask "alacritty"
+cask "kap"
+cask "keyboardcleantool"
 cask "libreoffice"
 cask "little-snitch"
 cask "logitech-options"
 cask "mactex-no-gui"
 cask "marked"
+cask "mas"
 cask "mediathekview"
 cask "microsoft-teams"
 cask "moneymoney"
@@ -98,15 +101,10 @@ cask "spotify"
 cask "transmission"
 cask "transmit"
 cask "typora"
+cask "unclack"
 cask "vlc"
-cask "intellidock"
 cask "vscodium"
 cask "wireshark"
-cask "mas"
-cask "unclack"
-cask "default-folder-x"
-cask "keyboardcleantool"
-cask "bettertouchtool"
 
 ## Mac AppStore
 mas "Affinity Designer", id: 824171161
@@ -125,6 +123,9 @@ mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694
 mas "Mactracker", id: 430255202
 mas "Mastonaut", id: 1450757574
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
 mas "Mindcad Tiler", id: 432460453
 mas "MindNode", id: 992076693
 mas "Numbers", id: 409203825
@@ -137,6 +138,3 @@ mas "Todoist", id: 585829637
 mas "Tweetbot", id: 557168941
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft Word", id: 462054704
-mas "Microsoft PowerPoint", id: 462062816
