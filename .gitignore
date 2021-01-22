@@ -18,3 +18,9 @@ Thumbs.db
 *.sublime-*
 *.log
 .zsh/lib/30-extra.zsh
+.gitsecret/keys/random_seed
+!*.secret
+.config/espanso/user/email.yml
+.config/espanso/user/misc.yml
+.config/espanso/user/people.yml
+.config/espanso/user/personal.yml
