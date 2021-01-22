@@ -56,6 +56,7 @@ cask "arq"
 cask "balenaetcher"
 cask "bartender"
 cask "bitbar"
+cask "bitwarden"
 cask "bonjeff"
 cask "calibre"
 cask "coconutbattery"
@@ -113,7 +114,6 @@ mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator 2", id: 1037126344
 mas "AudioBookBinder", id: 413969927
-mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
 mas "ColorSlurp", id: 1287239339
 mas "Create Booklet", id: 943029046
