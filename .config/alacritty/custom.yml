@@ -81,22 +81,26 @@ key_bindings:
   - { key: Minus,   mods: Command,        action: DecreaseFontSize } # Decrease font size
   
   # tmux
-  - { key: H,       mods: Command,        chars: "\x01\x70" } # Move to previous window
+  
   - { key: J,       mods: Command,        chars: "\x01\x29" } # Move to next session
   - { key: K,       mods: Command,        chars: "\x01\x28" } # Move to previous session
-  - { key: L,       mods: Command,        chars: "\x01\x6e" } # Move to next window
 
   - { key: T,       mods: Command,        chars: "\x01\x63" } # Create window
+  - { key: H,       mods: Command,        chars: "\x01\x70" } # Move to previous window
+  - { key: L,       mods: Command,        chars: "\x01\x6e" } # Move to next window
   - { key: X,       mods: Command,        chars: "\x01\x78" } # Kill pane/window
   - { key: A,       mods: Command,        chars: "\x01\x7c" } # Split pane vertically
   - { key: S,       mods: Command,        chars: "\x01\x2d" } # Split pane horizontally
   - { key: Z,       mods: Command,        chars: "\x01\x7a" } # Maximize pane
-
+  
   - { key: T,       mods: Command|Shift,  chars: "\x02\x63" } # Create window in nested session
+  - { key: H,       mods: Command|Shift,  chars: "\x02\x70" } # Move to previous window
+  - { key: L,       mods: Command|Shift,  chars: "\x02\x6e" } # Move to next window
   - { key: X,       mods: Command|Shift,  chars: "\x02\x78" } # Kill pane/window in nested session
   - { key: A,       mods: Command|Shift,  chars: "\x02\x7c" } # Split pane vertically in nested session
   - { key: S,       mods: Command|Shift,  chars: "\x02\x2d" } # Split pane horizontally in nested session
   - { key: Z,       mods: Command|Shift,  chars: "\x02\x7a" } # Maximize pane in nested session
+  
 
 ## General key bindings
   - { key: Comma,   mods: Command,        command:
