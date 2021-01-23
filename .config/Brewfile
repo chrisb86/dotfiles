@@ -1,6 +1,6 @@
 ## Options
-cask_args appdir: '/Applications'
-cask_args language: 'de,deu,en,eng'
+cask_args appdir: "/Applications"
+cask_args language: "de,deu,en,eng"
 
 ## Taps
 tap "buo/cask-upgrade"
@@ -14,6 +14,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "hudochenkov/sshpass"
 
 ## brew formulae
 brew "arping"
@@ -49,6 +50,7 @@ brew "yabai"
 brew "youtube-dl"
 brew "zsh-completions"
 brew "zsh"
+brew "hudochenkov/sshpass/sshpass"
 
 ## cask formulae
 cask "alacritty"
@@ -74,7 +76,6 @@ cask "gpg-suite-no-mail"
 cask "handbrake"
 cask "hazel"
 cask "hex-fiend"
-cask "intellidock"
 cask "istat-menus"
 cask "kap"
 cask "keyboardcleantool"
@@ -108,6 +109,9 @@ cask "unclack"
 cask "vlc"
 cask "vscodium"
 cask "wireshark"
+cask "webex"
+cask "zoom"
+cask "silicon-info"
 
 ## Mac AppStore
 mas "Affinity Designer", id: 824171161
