@@ -22,7 +22,7 @@
 # LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTI
 
-exclude="README.md|init|Makefile|screenshot.png|.png|.git|.gitignore|.gitmodules|.DS_Store|make.sh"
+exclude="README.md|init|Makefile|screenshot.png|.png|.git|.gitignore|.gitmodules|.gitsecret|.DS_Store|make.sh"
 
 self=`basename -- "$0"`
 basedir=`dirname "$0"`
