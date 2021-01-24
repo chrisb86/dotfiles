@@ -3,7 +3,7 @@ declare -U fpath
 
 fpath=($fpath $ZDOTDIR/completions/)
 fpath=($fpath /usr/local/share/zsh/site-functions)
-fpath=($fpath $(brew --prefix)/share/zsh/site-functions)
+fpath=($fpath /opt/homebrew/share/zsh/site-functions)
 
 # case insensitive path-completion
 
