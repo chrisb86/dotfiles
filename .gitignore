@@ -25,4 +25,4 @@ Thumbs.db
 .config/espanso/user/people.yml
 .config/espanso/user/personal.yml
 .config/zsh/lib/30-extras.zsh
-.ssh/config
+.ssh/conf.d/hosts.conf
