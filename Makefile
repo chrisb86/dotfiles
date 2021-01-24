@@ -12,9 +12,15 @@ HOMEDIR = ${HOME}
 help: ## This help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-all: git-fetch git-secrets-reveal deploy ## Run all tasks
+all: git-fetch git-secrets-reveal deploy-macos ## Update repo, decrypt secrets and run deploy-macos
 
-deploy: deploy-alacritty deploy-bitbar deploy-duti deploy-espanso deploy-htop deploy-readline deploy-skhd deploy-yabai deploy-tmux deploy-vim deploy-vscodium deploy-youtubedl deploy-zsh deploy-brewfile deploy-ssh deploy-hushlogin ## Deploy all config files
+install: git-fetch deploy-base ## Update repor and run deploy-base
+
+deploy-base: deploy-htop deploy-readline deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
+
+deploy-workstation: deploy-base deploy-alacritty deploy-espanso deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
+
+deploy-macos: deploy-workstation deploy-bitbar deploy-duti deploy-skhd deploy-yabai deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
 
 gen-vscodium-plugin-list: ## Update the list of VSCodium plugins
 	@echo "\033[32m>>>\033[0m Updating the list of VSCodium plugins at .config/VSCodium/UserUser/extensions.list"
@@ -79,7 +85,7 @@ deploy-espanso: ## Deploy espanso config
 	@echo "\033[32m>>>\033[0m Deploy espanso config to ${HOMEDIR}/.config/espanso"
 	@mkdir -p ${HOMEDIR}/.config/espanso/user
 	@cp .config/espanso/*.yml ${HOMEDIR}/.config/espanso
-	@cp .config/espanso/user/*.yml ${HOMEDIR}/.config/espanso/user
+	-@cp .config/espanso/user/*.yml ${HOMEDIR}/.config/espanso/user
 	@echo "\033[32m>>>\033[0m Enabeling espanso daemon"
 	@espanso register
 
@@ -156,7 +162,7 @@ deploy-ssh: ## Deploy SSH config
 	@mkdir -p ${HOMEDIR}/.ssh/master
 	@mkdir -p ${HOMEDIR}/.ssh/conf.d
 	@cp .ssh/config ${HOMEDIR}/.ssh/
-	@cp .ssh/conf.d/*.conf ${HOMEDIR}/.ssh/conf.d
+	-@cp .ssh/conf.d/*.conf ${HOMEDIR}/.ssh/conf.d
 
 deploy-hushlogin: ## Deploy .hushlogin
 	@echo "\033[32m>>>\033[0m Deploy .hushlogin to ${HOMEDIR}"
