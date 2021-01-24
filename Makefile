@@ -16,7 +16,7 @@ all: git-fetch git-secrets-reveal deploy-macos ## Update repo, decrypt secrets a
 
 install: git-fetch deploy-base ## Update repor and run deploy-base
 
-deploy-base: deploy-htop deploy-readline deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
+deploy-base: deploy-htop deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
 
 deploy-workstation: deploy-base deploy-alacritty deploy-espanso deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
 
@@ -93,11 +93,6 @@ deploy-htop: ## Deploy htop config
 	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
 	@mkdir -p ${HOMEDIR}/.config/htop
 	@cp .config/htop/htoprc ${HOMEDIR}/.config/htop
-
-deploy-readline: ## Deploy readliine config
-	@echo "\033[1;32m>>>\033[1;0m Deploy readline config to ${HOMEDIR}/.config/readline"
-	@mkdir -p ${HOMEDIR}/.config/readline
-	@cp .config/readline/inputrc ${HOMEDIR}/.config/readline
 
 deploy-skhd: ## Deploy skhd config
 	@echo "\033[1;32m>>>\033[1;0m Deploy skhd config to ${HOMEDIR}/.config/skhd"
