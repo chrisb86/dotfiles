@@ -81,7 +81,6 @@ key_bindings:
   - { key: Minus,   mods: Command,        action: DecreaseFontSize } # Decrease font size
   
   # tmux
-  
   - { key: J,       mods: Command,        chars: "\x01\x29" } # Move to next session
   - { key: K,       mods: Command,        chars: "\x01\x28" } # Move to previous session
 
@@ -101,10 +100,9 @@ key_bindings:
   - { key: S,       mods: Command|Shift,  chars: "\x02\x2d" } # Split pane horizontally in nested session
   - { key: Z,       mods: Command|Shift,  chars: "\x02\x7a" } # Maximize pane in nested session
   
-
 ## General key bindings
   - { key: Comma,   mods: Command,        command:
-      {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}     }
+      {program: "sh", args: ["-c","open ~/.config/alacritty/"]}   } # Open alacritty config directory
   - { key: Back,    mods: Command,        chars: "\x15" } # delete word/line
   - { key: Left,    mods: Alt,            chars: "\x1bb"                       } # One word left
   - { key: Right,   mods: Alt,            chars: "\x1bf"                       } # One word right
