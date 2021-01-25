@@ -104,7 +104,6 @@ cask "sonos"
 cask "spotify"
 cask "transmission"
 cask "transmit"
-cask "typora"
 cask "unclack"
 cask "vlc"
 cask "vscodium"
@@ -125,6 +124,7 @@ mas "ColorSlurp", id: 1287239339
 mas "Create Booklet", id: 943029046
 mas "DaisyDisk", id: 411643860
 mas "Drafts", id: 1435957248
+mas "iA Writer", id: "775737590"
 mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694
 mas "Mactracker", id: 430255202
