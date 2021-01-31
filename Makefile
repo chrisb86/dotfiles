@@ -99,7 +99,7 @@ deploy-skhd: ## Deploy skhd config
 	@mkdir -p ${HOMEDIR}/.config/skhd
 	@cp .config/skhd/skhdrc ${HOMEDIR}/.config/skhd
 	@echo "\033[1;32m>>>\033[1;0m Enabeling skhd daemon"
-	@brew services start skhd
+	@brew services restart skhd
 
 deploy-tmux: ## Deploy tmux config
 	@echo "\033[1;32m>>>\033[1;0m Deploy tmux config to ${HOMEDIR}/.config/tmux"
@@ -130,7 +130,7 @@ deploy-yabai: ## Deploy yabai config
 	@mkdir -p ${HOMEDIR}/.config/yabai
 	@cp .config/yabai/yabairc ${HOMEDIR}/.config/yabai
 	@echo "\033[1;32m>>>\033[1;0m Enabeling yabai daemon"
-	@brew services start yabai
+	@brew services restart yabai
 
 deploy-youtubedl: ## Deploy youtube-dl config
 	@echo "\033[1;32m>>>\033[1;0m Deploy youtube-dl config to ${HOMEDIR}/.config/youtube-dl"
