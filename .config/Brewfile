@@ -44,6 +44,7 @@ brew "skhd"
 brew "tesseract-lang"
 brew "tesseract"
 brew "tmux"
+brew "topgrade"
 brew "tree"
 brew "vim"
 brew "yabai"
@@ -78,6 +79,7 @@ cask "hazel"
 cask "hex-fiend"
 cask "iina"
 cask "istat-menus"
+cask "jettison"
 cask "kap"
 cask "keyboardcleantool"
 cask "libreoffice"
@@ -140,6 +142,7 @@ mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "Passepartout", id: 1433645014
 mas "Reeder", id: 1529448980
+mas "SceneCuts", id 1540491573
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Tweetbot", id: 557168941
