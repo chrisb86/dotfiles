@@ -139,6 +139,7 @@ yabai -m rule --add app="^Arq$" manage=off
 yabai -m rule --add app="^The Unarchiver$" manage=off
 yabai -m rule --add app="^VMware Fusion$" manage=off
 yabai -m rule --add app="^Passepartout$" manage=off
+yabai -m rule --add app="^Facetime$" manage=off
 
 ## Unmanaged windows of specific applications
 yabai -m rule --add app="^Alfred Preferences$" manage=off
