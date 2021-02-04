@@ -16,11 +16,11 @@ all: git-fetch git-secrets-reveal deploy-macos ## Update repo, decrypt secrets a
 
 install: git-fetch deploy-base ## Update repor and run deploy-base
 
-deploy-base: deploy-htop deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
+deploy-base: deploy-htop-zfs deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
 
 deploy-workstation: deploy-base deploy-alacritty deploy-espanso deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
 
-deploy-macos: deploy-workstation deploy-bitbar deploy-duti deploy-skhd deploy-yabai deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
+deploy-macos: deploy-htop deploy-workstation deploy-bitbar deploy-duti deploy-skhd deploy-yabai deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
 
 gen-vscodium-plugin-list: ## Update the list of VSCodium plugins
 	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCodium plugins at .config/VSCodium/UserUser/extensions.list"
@@ -92,7 +92,12 @@ deploy-espanso: ## Deploy espanso config
 deploy-htop: ## Deploy htop config
 	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
 	@mkdir -p ${HOMEDIR}/.config/htop
-	@cp .config/htop/htoprc ${HOMEDIR}/.config/htop
+	@cp .config/htop/htoprc ${HOMEDIR}/.config/htop/htoprc
+
+deploy-htop-zfs: ## Deploy htop config with zfs
+	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
+	@mkdir -p ${HOMEDIR}/.config/htop
+	@cp .config/htop/htoprc.zfs ${HOMEDIR}/.config/htop/htoprc
 
 deploy-skhd: ## Deploy skhd config
 	@echo "\033[1;32m>>>\033[1;0m Deploy skhd config to ${HOMEDIR}/.config/skhd"

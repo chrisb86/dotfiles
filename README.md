@@ -37,6 +37,7 @@ deploy-bitbar                  Deploy BitBar config
 deploy-duti                    Deploy duti config
 deploy-espanso                 Deploy espanso config
 deploy-htop                    Deploy htop config
+deploy-htop-zfs                Deploy htop config with zfs
 deploy-skhd                    Deploy skhd config
 deploy-tmux                    Deploy tmux config
 deploy-vim                     Deploy vim config
