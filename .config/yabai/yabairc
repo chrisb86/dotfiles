@@ -85,6 +85,8 @@ yabai -m rule --add app="^Bitwarden$" sticky=on
 
 space=Main
 yabai -m rule --add app="^Firefox$" space="${space}"
+yabai -m rule --add app="^Safari$" space="${space}"
+yabai -m rule --add app="^Chrome$" space="${space}"
 yabai -m rule --add app="^Reeder$" space="${space}"
 
 space=Mail
