@@ -7,22 +7,25 @@ tap "buo/cask-upgrade"
 tap "fabianishere/personal"
 tap "federico-terzi/espanso"
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
-tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 tap "hudochenkov/sshpass"
+tap "khanhas/tap"
+tap "koekeishiya/formulae"
 
 ## brew formulae
 brew "arping"
 brew "bitwarden-cli"
 brew "brew-cask-completion"
 brew "checkbashisms"
+brew "convmv"
 brew "duti"
-brew "espanso"
+brew "federico-terzi/espanso/espanso"
+brew "esptool"
 brew "exiftool"
 brew "ffmpeg", args: ["HEAD"]
 brew "git"
@@ -36,32 +39,36 @@ brew "mosh"
 brew "nmap"
 brew "node"
 brew "ocrmypdf"
-brew "pam_reattach"
+brew "fabianishere/personal/pam_reattach"
 brew "pandoc"
 brew "python3"
 brew "reattach-to-user-namespace"
 brew "rsync"
-brew "skhd"
+# brew "skhd"
+brew "shfmt"
 brew "tesseract-lang"
 brew "tesseract"
 brew "tmux"
 brew "topgrade"
 brew "tree"
 brew "vim"
-brew "yabai", args: ["HEAD"]
+# brew "yabai", args: ["HEAD"]
 brew "youtube-dl"
-brew "zsh-completions"
 brew "zsh"
+brew "zsh-completions"
 brew "hudochenkov/sshpass/sshpass"
 
 ## cask formulae
 cask "alacritty"
 cask "alfred"
+cask "amethyst"
+cask "arduino"
 cask "arq"
+cask "autodesk-fusion360"
 cask "balenaetcher"
 cask "bartender"
-cask "bitbar"
-cask "bitwarden"
+#cask "bitbar"
+#cask "bitwarden"
 cask "bonjeff"
 cask "calibre"
 cask "coconutbattery"
@@ -80,6 +87,7 @@ cask "hazel"
 cask "hex-fiend"
 cask "iina"
 cask "istat-menus"
+cask "iterm2"
 cask "jettison"
 cask "kap"
 cask "keyboardcleantool"
@@ -98,43 +106,53 @@ cask "monitorcontrol"
 cask "nextcloud"
 cask "numi"
 cask "onyx"
+cask "openemu"
 cask "oracle-jdk"
 cask "pdf-expert"
 cask "plex"
 cask "pocket-casts"
 cask "portfolioperformance"
 cask "qlcommonmark"
+cask "raspberry-pi-imager"
 cask "sequel-ace"
 cask "shifty"
+cask "silicon-info"
 cask "sonos"
 cask "spotify"
+cask "sweet-home3d"
 cask "transmission"
 cask "transmit"
 cask "unclack"
 cask "vlc"
+cask "vnc-viewer"
 cask "vscodium"
-cask "wireshark"
 cask "webex"
+cask "whichspace"
+cask "wireshark"
 cask "zoom"
-cask "silicon-info"
 
 ## Mac AppStore
+mas "AdGuard for Safari", id: 1440147259
 mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
 mas "Apple Configurator 2", id: 1037126344
 mas "AudioBookBinder", id: 413969927
+mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
 mas "ColorSlurp", id: 1287239339
+mas "Controller", id: 1198176727
 mas "Create Booklet", id: 943029046
 mas "DaisyDisk", id: 411643860
 mas "Drafts", id: 1435957248
+mas "HomePass", id: 1330266650
 mas "iA Writer", id: 775737590
 mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694
 mas "Mactracker", id: 430255202
 mas "Mastonaut", id: 1450757574
+mas "Memento", id: 1200227397
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
@@ -145,9 +163,11 @@ mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
 mas "Passepartout", id: 1433648537
 mas "Reeder", id: 1529448980
-mas "SceneCuts", id: 1540491573
+mas "RSS Button for Safari", id: 1437501942
+mas "Scenecuts Helper", id: 1540491573
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
+mas "Turn Off the Lights for Safari", id: 1273998507
 mas "Tweetbot", id: 557168941
 mas "WhatsApp", id: 1147396723
 mas "Xcode", id: 497799835
