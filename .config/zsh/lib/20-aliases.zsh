@@ -33,6 +33,6 @@ case `uname` in
   FreeBSD)
     # commands for FreeBSD go here
     alias stl="sockstat -l"
-    alias ziostat="cmdwatch -n 1 zpool iostat -vPL 1 1"
+    alias ziostat="cmdwatch -n 1 zpool iostat -vy 1 1"
   ;;
 esac
