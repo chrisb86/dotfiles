@@ -5,7 +5,6 @@ cask_args language: "de,deu,en,eng"
 ## Taps
 tap "buo/cask-upgrade"
 tap "fabianishere/personal"
-tap "federico-terzi/espanso"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -19,86 +18,74 @@ tap "koekeishiya/formulae"
 
 ## brew formulae
 brew "arping"
+brew "node"
 brew "bitwarden-cli"
 brew "brew-cask-completion"
+brew "python@3.9"
 brew "checkbashisms"
 brew "convmv"
 brew "duti"
-brew "federico-terzi/espanso/espanso"
-brew "esptool"
 brew "exiftool"
+brew "tesseract"
 brew "ffmpeg", args: ["HEAD"]
 brew "git"
 brew "git-secret"
-brew "handbrake", args: ["HEAD"]
+brew "go"
 brew "htop"
 brew "hugo"
 brew "ipmitool"
 brew "jq"
 brew "mosh"
 brew "nmap"
-brew "node"
 brew "ocrmypdf"
-brew "fabianishere/personal/pam_reattach"
 brew "pandoc"
-brew "python3"
 brew "reattach-to-user-namespace"
 brew "rsync"
-# brew "skhd"
 brew "shfmt"
+brew "subversion"
 brew "tesseract-lang"
-brew "tesseract"
 brew "tmux"
 brew "topgrade"
 brew "tree"
 brew "vim"
-# brew "yabai", args: ["HEAD"]
 brew "youtube-dl"
 brew "zsh"
 brew "zsh-completions"
+brew "fabianishere/personal/pam_reattach"
 brew "hudochenkov/sshpass/sshpass"
+brew "koekeishiya/formulae/skhd"
+brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 
 ## cask formulae
-cask "alacritty"
+cask "airbuddy"
 cask "alfred"
 cask "amethyst"
 cask "arduino"
 cask "arq"
-cask "autodesk-fusion360"
 cask "balenaetcher"
 cask "bartender"
-#cask "bitbar"
-#cask "bitwarden"
 cask "bonjeff"
 cask "calibre"
 cask "coconutbattery"
+cask "coolterm"
 cask "dbeaver-community"
 cask "drawio"
-cask "evolv-escribe-suite"
 cask "fantastical"
 cask "filebot"
 cask "firefox"
 cask "font-fira-code"
 cask "font-source-code-pro"
 cask "fork"
-cask "gpg-suite-no-mail"
-cask "handbrake"
+cask "google-chrome"
 cask "hazel"
 cask "hex-fiend"
-cask "iina"
 cask "istat-menus"
 cask "iterm2"
-cask "jettison"
-cask "kap"
 cask "keyboardcleantool"
-cask "latest"
-cask "libreoffice"
 cask "little-snitch"
 cask "logitech-camera-settings"
-cask "logitech-options"
 cask "mactex-no-gui"
 cask "marked"
-cask "mas"
 cask "mediathekview"
 cask "microsoft-teams"
 cask "moneymoney"
@@ -106,7 +93,6 @@ cask "monitorcontrol"
 cask "nextcloud"
 cask "numi"
 cask "onyx"
-cask "openemu"
 cask "oracle-jdk"
 cask "pdf-expert"
 cask "plex"
@@ -115,11 +101,9 @@ cask "portfolioperformance"
 cask "qlcommonmark"
 cask "raspberry-pi-imager"
 cask "sequel-ace"
-cask "shifty"
 cask "silicon-info"
 cask "sonos"
 cask "spotify"
-cask "sweet-home3d"
 cask "transmission"
 cask "transmit"
 cask "unclack"
@@ -129,7 +113,6 @@ cask "vscodium"
 cask "webex"
 cask "whichspace"
 cask "wireshark"
-cask "zoom"
 
 ## Mac AppStore
 mas "AdGuard for Safari", id: 1440147259
@@ -137,7 +120,6 @@ mas "Affinity Designer", id: 824171161
 mas "Affinity Photo", id: 824183456
 mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
-mas "Apple Configurator 2", id: 1037126344
 mas "AudioBookBinder", id: 413969927
 mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
@@ -146,28 +128,28 @@ mas "Controller", id: 1198176727
 mas "Create Booklet", id: 943029046
 mas "DaisyDisk", id: 411643860
 mas "Drafts", id: 1435957248
-mas "HomePass", id: 1330266650
+mas "Final Cut Pro", id: 424389933
 mas "iA Writer", id: 775737590
 mas "Interact Scratchpad", id: 1199660222
 mas "Keynote", id: 409183694
 mas "Mactracker", id: 430255202
-mas "Mastonaut", id: 1450757574
-mas "Memento", id: 1200227397
 mas "Microsoft Excel", id: 462058435
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
 mas "Mindcad Tiler", id: 432460453
 mas "MindNode", id: 992076693
+mas "MQTT Explorer", id: 1455214828
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Parcel", id: 639968404
-mas "Passepartout", id: 1433648537
 mas "Reeder", id: 1529448980
 mas "RSS Button for Safari", id: 1437501942
 mas "Scenecuts Helper", id: 1540491573
+mas "SerialTools", id: 611021963
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Turn Off the Lights for Safari", id: 1273998507
 mas "Tweetbot", id: 557168941
 mas "WhatsApp", id: 1147396723
+mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
