@@ -9,9 +9,6 @@ fi
 
 unfunction _exists
 
-alias ls="ls --color -FGhk"
-alias ll="ls --color -FGhkl"
-
 alias mkdir="mkdir -p"
 alias ...="cd ../.."
 alias google="ping -c 10240000 google.com"
