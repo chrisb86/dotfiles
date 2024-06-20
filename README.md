@@ -32,17 +32,12 @@ git-push                       Push changes to origin
 git-update-submodules          Update all submodules
 brew-bundle                    Install applications with brew bundle
 brew-bundle-cleanup            Removew all appplications that are not listed in Brewfile
-deploy-alacritty               Deploy alacritty config
-deploy-bitbar                  Deploy BitBar config
 deploy-duti                    Deploy duti config
-deploy-espanso                 Deploy espanso config
 deploy-htop                    Deploy htop config
 deploy-htop-zfs                Deploy htop config with zfs
-deploy-skhd                    Deploy skhd config
 deploy-tmux                    Deploy tmux config
 deploy-vim                     Deploy vim config
 deploy-vscodium                Deploy VSCodium config
-deploy-yabai                   Deploy yabai config
 deploy-youtubedl               Deploy youtube-dl config
 deploy-zsh                     Deploy zsh config
 deploy-brewfile                Deploy Brewfile
@@ -81,45 +76,6 @@ The tmux config rebinds the prefix key to C-a. It features different shortcuts t
 It also supports nested sessions with a modified color scheme. That’s nice when using tmix.
 
 ![Alacritty window using the dotfiles by chrisb86 in a tmix session](https://raw.githubusercontent.com/chrisb86/dotfiles/main/screenshot-tmix.png)
-
-## Alacritty
-
-I love Alacritty because it's a damn fast Terminal emulator that's configured with a simple text file config.
-
-I've configured it to use tmux for tabs and multiplexing and configured some usefull keybindings.
-
-### Keybindings:
-
-| Key      | Modifier(s) | Description              |
-| -------- | ----------- | ------------------------ |
-| N        | ⌘           | Spawn a new instance     |
-| 0 (Zero) | ⌘           | Reset font size          |
-| +        | ⌘           | Increase font size       |
-| -        | ⌘           | Decrease font size       |
-| J        | ⌘           | Move to next session     |
-| K        | ⌘           | Move to previous session |
-| T        | ⌘           | Create window            |
-| H        | ⌘ | Move to previous window  |
-| L        | ⌘ | Move to next window      |
-| X      | ⌘ | Kill pane/window     |
-| A        | ⌘ | Split pane vertically     |
-| S        | ⌘ | Split pane horizontally      |
-| Z        | ⌘ | Maximize pane      |
-| T       | ⌘⇧ | Create window in nested session |
-| H       | ⌘⇧ | Move to previous window  in nested session |
-| L        | ⌘⇧ | Move to next window  in nested session |
-| X       | ⌘⇧ | Kill pane/window in nested session |
-| A       | ⌘⇧ | Split pane vertically in nested session |
-| S       | ⌘⇧ | Split pane horizontally in nested session |
-| Z       | ⌘⇧ | Maximize pane in nested session |
-| ,      | ⌘ | Open Alacritty config directory |
-| ⌫ | ⌘ | Delete word/line |
-| ← | ⌥ | Move one word left |
-| → | ⌥ | Move one word right |
-| ← | ⌘ | Move to beginning of the line |
-| → | ⌘ | Move to end of the line |
-
-
 
 ## Installation
 
