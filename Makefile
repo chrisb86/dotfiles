@@ -18,9 +18,9 @@ install: git-fetch deploy-base ## Update repor and run deploy-base
 
 deploy-base: deploy-htop-zfs deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
 
-deploy-workstation: deploy-base deploy-alacritty deploy-espanso deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
+deploy-workstation: deploy-base deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
 
-deploy-macos: deploy-htop deploy-workstation deploy-bitbar deploy-duti deploy-skhd deploy-yabai deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
+deploy-macos: deploy-htop deploy-workstation deploy-duti deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
 
 gen-vscodium-plugin-list: ## Update the list of VSCodium plugins
 	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCodium plugins at .config/VSCodium/UserUser/extensions.list"
@@ -53,26 +53,11 @@ git-update-submodules: ## Update all submodules
 
 brew-bundle: ## Install applications with brew bundle
 	@echo "\033[1;32m>>>\033[1;0m\033[1;0m Installing applications from .config/Brewfile" 
-	@brew bundle --file .config/Brewfile || true
+	@brew bundle --file .config/Brewfile --force || true
 
 brew-bundle-cleanup: ## Removew all appplications that are not listed in Brewfile
 	@echo "\033[1;32m>>>\033[1;0m Removing applications that are not listed in .config/Brewfile"
 	@brew bundle cleanup --zap --force --file .config/Brewfile
-
-deploy-alacritty: ## Deploy alacritty config
-	@echo "\033[1;32m>>>\033[1;0m Deploy alacritty config to ${HOMEDIR}/.config/alacritty"
-	@mkdir -p ~/.config/alacritty
-	@cp .config/alacritty/* ${HOMEDIR}/.config/alacritty
-
-deploy-bitbar: ## Deploy BitBar config
-	@echo "\033[1;32m>>>\033[1;0m Deploy BitBar config to ${HOMEDIR}/.config/BitBar"
-	@mkdir -p ${HOMEDIR}/.config/BitBar
-	@cp .config/BitBar/* ${HOMEDIR}/.config/BitBar
-	@echo "\033[1;32m>>>\033[1;0m Setting BitBar plugin directory to ${HOMEDIR}/.config/BitBar/Enabled"
-	@defaults write com.matryer.BitBar pluginsDirectory "${HOMEDIR}/.config/BitBar/Enabled"
-	@echo "\033[1;32m>>>\033[1;0m Enabeling BitBar plugins"
-	@mkdir -p ${HOMEDIR}/.config/BitBar/Enabled
-	@ln -sf ${HOMEDIR}/.config/BitBar/*.sh ${HOMEDIR}/.config/BitBar/Enabled
 
 deploy-duti: ## Deploy duti config
 	@echo "\033[1;32m>>>\033[1;0m Deploy duti config to ${HOMEDIR}/.config/duti"
@@ -80,14 +65,6 @@ deploy-duti: ## Deploy duti config
 	@cp .config/duti/* ${HOMEDIR}/.config/duti
 	@echo "\033[1;32m>>>\033[1;0m Processing duti config from ${HOMEDIR}/.config/duti"
 	@duti ${HOMEDIR}/.config/duti
-
-deploy-espanso: ## Deploy espanso config
-	@echo "\033[1;32m>>>\033[1;0m Deploy espanso config to ${HOMEDIR}/.config/espanso"
-	@mkdir -p ${HOMEDIR}/.config/espanso/user
-	@cp .config/espanso/*.yml ${HOMEDIR}/.config/espanso
-	-@cp .config/espanso/user/*.yml ${HOMEDIR}/.config/espanso/user
-	@echo "\033[1;32m>>>\033[1;0m Enabeling espanso daemon"
-	@espanso register
 
 deploy-htop: ## Deploy htop config
 	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
@@ -98,13 +75,6 @@ deploy-htop-zfs: ## Deploy htop config with zfs
 	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
 	@mkdir -p ${HOMEDIR}/.config/htop
 	@cp .config/htop/htoprc.zfs ${HOMEDIR}/.config/htop/htoprc
-
-deploy-skhd: ## Deploy skhd config
-	@echo "\033[1;32m>>>\033[1;0m Deploy skhd config to ${HOMEDIR}/.config/skhd"
-	@mkdir -p ${HOMEDIR}/.config/skhd
-	@cp .config/skhd/skhdrc ${HOMEDIR}/.config/skhd
-	@echo "\033[1;32m>>>\033[1;0m Enabeling skhd daemon"
-	@brew services restart skhd
 
 deploy-tmux: ## Deploy tmux config
 	@echo "\033[1;32m>>>\033[1;0m Deploy tmux config to ${HOMEDIR}/.config/tmux"
@@ -129,13 +99,6 @@ deploy-vscodium: ## Deploy VSCodium config
 	
 	@echo "\033[1;32m>>>\033[1;0m Install VSCodium extensions from ${HOMEDIR}/.config/VSCodium/User/extensions.list"
 	@cat .config/VSCodium/User/extensions.list | xargs -L 1 code --install-extension
-
-deploy-yabai: ## Deploy yabai config
-	@echo "\033[1;32m>>>\033[1;0m Deploy yabai config to ${HOMEDIR}/.config/yabai"
-	@mkdir -p ${HOMEDIR}/.config/yabai
-	@cp .config/yabai/yabairc ${HOMEDIR}/.config/yabai
-	@echo "\033[1;32m>>>\033[1;0m Enabeling yabai daemon"
-	@brew services restart yabai
 
 deploy-youtubedl: ## Deploy youtube-dl config
 	@echo "\033[1;32m>>>\033[1;0m Deploy youtube-dl config to ${HOMEDIR}/.config/youtube-dl"

@@ -1,5 +1,0 @@
-live_config_reload: true
-
-import:
-  - ~/.config/alacritty/custom.yml
-  - ~/.config/alacritty/nord.yml
