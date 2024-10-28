@@ -3,7 +3,7 @@
 function zwcautocompile () {
   autoload -Uz zrecompile
   
-  for zsh_file in $(find ${ZDOTDIR} -type f -maxdepth 3 \( -name "*.zsh" -o -name ".zlogin" -o -name ".zshrc" \) ! -name "*.zwc" ! -name "*.zwc.old"); do
+  for zsh_file in $(find ${ZDOTDIR} -maxdepth 3 -type f \( -name "*.zsh" -o -name ".zlogin" -o -name ".zshrc" \) ! -name "*.zwc" ! -name "*.zwc.old"); do
       zrecompile -pq $zsh_file && rm -f $zsh_file.zwc.old
   done
 
