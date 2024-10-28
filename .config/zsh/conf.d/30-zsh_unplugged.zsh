@@ -19,9 +19,9 @@ plugin_repos=(
   rupa/z # Tracks your most used directories, based on 'frecency'.
   Skylor-Tang/auto-venv # Automatically activates the Python virtual environment in the current directory or its parent directories.
   
+  zsh-users/zsh-autosuggestions
   zsh-users/zsh-syntax-highlighting
   zsh-users/zsh-history-substring-search
-  zsh-users/zsh-autosuggestions
 )
 
 # load plugins
