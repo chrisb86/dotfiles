@@ -118,7 +118,7 @@ deploy-ssh: ## Deploy SSH config
 	@mkdir -p ${HOMEDIR}/.ssh/master
 	@mkdir -p ${HOMEDIR}/.ssh/conf.d
 	@cp .ssh/config ${HOMEDIR}/.ssh/
-	-@cp .ssh/conf.d/*.conf ${HOMEDIR}/.ssh/conf.d
+	-@cp .ssh/conf.d/* ${HOMEDIR}/.ssh/conf.d
 
 deploy-hushlogin: ## Deploy .hushlogin
 	@echo "\033[1;32m>>>\033[1;0m Deploy .hushlogin to ${HOMEDIR}"
