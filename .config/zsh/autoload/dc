@@ -1,4 +1,14 @@
+# Search for docker-compose files in the current and all sub direcotries and run docker compose with provided arguments
+
 function dc() {
-  DOCKER_PARAMS="$@"
-  find . -maxdepth 2 -type f -regextype posix-extended -regex '.*(docker-compose|compose)\.ya?ml' -execdir "docker compose ${DOCKER_PARAMS}" \;
+    # Save current working directory
+    CURRENT_DIR="${PWD}"
+    
+    for file in $(find ${PWD} -maxdepth 2 -type f -regextype posix-extended -regex '.*(docker-compose|compose)\.ya?ml'); do
+        cd $(dirname "$file")
+        docker compose $@
+    done
+
+    # Change back to saved working directory
+    cd ${CURRENT_DIR}
 }
