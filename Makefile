@@ -112,8 +112,8 @@ deploy-zsh: ## Deploy zsh config
 	@mkdir -p ${HOMEDIR}/.config/zsh/conf.d
 	@cp .zshenv ${HOMEDIR}/
 	@cp .config/zsh/.z* ${HOMEDIR}/.config/zsh
-	@cp .config/zsh/functions/* ${HOMEDIR}/.config/zsh/autoload
-	@cp .config/zsh/lib/*.zsh ${HOMEDIR}/.config/zsh/conf.d
+	@cp .config/zsh/autoload/* ${HOMEDIR}/.config/zsh/autoload
+	@cp .config/zsh/conf.d/*.zsh ${HOMEDIR}/.config/zsh/conf.d
 
 deploy-brewfile: ## Deploy Brewfile
 	@echo "\033[1;32m>>>\033[1;0m Deploy Brewfile to ${HOMEDIR}/.config/"
