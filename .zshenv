@@ -8,5 +8,10 @@ export XDG_DATA_HOME=${XDG_DATA_HOME:=${HOME}/.local/share}
 # Where to look for zsh config
 export ZDOTDIR=${ZDOTDIR:=${XDG_CONFIG_HOME}/zsh}
 
+export ZAUTOLOADDIR="${ZDOTDIR}/autoload" # Autoladed functions
+export ZPLUGINDIR="${ZDOTDIR}/plugins" # External plugins
+export ZLIBDIR="${ZDOTDIR}/conf.d" # Configuration files
+export ZCACHE="${XDG_CACHE_HOME}/zsh" # Cache directory for history and zcompdump
+
 # Load config files in $ZSH/lib that for stage 1
-for config_file ($ZDOTDIR/lib/10-*.zsh) source $config_file
+for config_file (${ZLIBDIR}/10-*.zsh) source $config_file

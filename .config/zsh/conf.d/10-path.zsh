@@ -13,7 +13,7 @@ _prepath() {
 }
 
 _prepath /usr/bin /bin /usr/sbin /sbin /usr/local/bin /usr/local/sbin # BSD and macOS
-_prepath /opt/homebrew/bin /opt/homebrew/sbin # Homebrew on Apple Silicon
+_prepath /opt/homebrew/bin /opt/homebrew/sbin /usr/local/bin # Homebrew on macOS
 _prepath ~/bin ~/.local/bin # $HOME
 
 unfunction _prepath

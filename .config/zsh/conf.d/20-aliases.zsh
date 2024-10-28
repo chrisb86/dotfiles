@@ -1,16 +1,25 @@
 _exists() { (( $+commands[$1] )) }
 
-_exists less			&& export PAGER=less
+_exists less && export PAGER=less
 
 if _exists vim; then
 		export EDITOR=vim
 		alias vim="vim -p"
 fi
 
+## ls/eza
+if _exists eza; then
+  alias eza="eza --color --icons --git"
+  alias ls="eza"
+fi
+
 unfunction _exists
 
+
 alias mkdir="mkdir -p"
+alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 alias google="ping -c 10240000 google.com"
 alias history="history -i"
 alias sulast="sudo $(history -p !-1)"

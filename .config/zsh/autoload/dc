@@ -1,0 +1,4 @@
+function dc() {
+  DOCKER_PARAMS="$@"
+  find . -maxdepth 2 -type f -regextype posix-extended -regex '.*(docker-compose|compose)\.ya?ml' -execdir "docker compose ${DOCKER_PARAMS}" \;
+}

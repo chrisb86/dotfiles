@@ -108,12 +108,12 @@ deploy-youtubedl: ## Deploy youtube-dl config
 deploy-zsh: ## Deploy zsh config
 	@echo "\033[1;32m>>>\033[1;0m Deploy zsh config to ${HOMEDIR}/.config/zsh"
 	@mkdir -p ${HOMEDIR}/.config/zsh
-	@mkdir -p ${HOMEDIR}/.config/zsh/functions
-	@mkdir -p ${HOMEDIR}/.config/zsh/lib
+	@mkdir -p ${HOMEDIR}/.config/zsh/autoload
+	@mkdir -p ${HOMEDIR}/.config/zsh/conf.d
 	@cp .zshenv ${HOMEDIR}/
 	@cp .config/zsh/.z* ${HOMEDIR}/.config/zsh
-	@cp .config/zsh/functions/* ${HOMEDIR}/.config/zsh/functions
-	@cp .config/zsh/lib/*.zsh ${HOMEDIR}/.config/zsh/lib
+	@cp .config/zsh/functions/* ${HOMEDIR}/.config/zsh/autoload
+	@cp .config/zsh/lib/*.zsh ${HOMEDIR}/.config/zsh/conf.d
 
 deploy-brewfile: ## Deploy Brewfile
 	@echo "\033[1;32m>>>\033[1;0m Deploy Brewfile to ${HOMEDIR}/.config/"

@@ -59,15 +59,7 @@ The config delivers some nice extra functions.
 
 _extract_ can be run with _extract <filename>_ to extract archives in any given formats.
 
-### tmix()
-
-_tmix_ creates a new tmux session and connects to a given list of servers with mosh and attaches to a tmux session at the server.
-
-You must define a space separated list of servers as _$TMIX_SERVERS=“<SERVERS>”_ e.g. in _~/.zsh/lib/30-extras.zsh_.
-
-You can define a name for the used session in _$TMIX_SESSION=“<SESSION>”_. Otherwise it will use „TMIX“.
-
-_tmix kill_ kills the session.
+It utilizes [zsh_unplugged(]https://github.com/mattmc3/zsh_unplugged) for downloading plugins and the small amount of plugins is carefully picked.
 
 ## tmux config
 
