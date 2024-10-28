@@ -1,7 +1,8 @@
 ## Command history configuration
-HISTFILE="${ZCACHE}/history"
-HISTSIZE=1000000000
-SAVEHIST=1000000000
+export HISTFILE="${ZCACHE}/history"
+export HISTSIZE=1000000000
+export SAVEHIST=${HISTSIZE}
+export HISTORY_IGNORE="([bf]g *|disown|cd ..|cd -)"
 
 export HISTTIMEFORMAT="[%F %T] "
 setopt INC_APPEND_HISTORY
@@ -13,4 +14,3 @@ setopt incappendhistory
 setopt histignorespace
 setopt histnostore
 setopt share_history
-export HISTORY_IGNORE="([bf]g *|disown|cd ..|cd -)"
