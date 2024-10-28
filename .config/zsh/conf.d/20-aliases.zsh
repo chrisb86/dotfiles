@@ -2,19 +2,35 @@ _exists() { (( $+commands[$1] )) }
 
 _exists less && export PAGER=less
 
+# vim
 if _exists vim; then
 		export EDITOR=vim
 		alias vim="vim -p"
 fi
 
-## ls/eza
+# ls/eza
 if _exists eza; then
   alias eza="eza --color --icons --git"
   alias ls="eza"
 fi
 
-unfunction _exists
+# fetch
+if ! _exists fetch; then
+  if _exists curl; then
+    alias fetch="curl -O"
+  elif _exists curl; then
+    alias fetch="wget"
+  else
+    echo "fetch not found."
+  fi
+fi
 
+# htop
+if _exists htop; then
+  alias htop="sudo htop"
+fi
+
+unfunction _exists
 
 alias mkdir="mkdir -p"
 alias ..="cd .."
@@ -22,16 +38,12 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias google="ping -c 10240000 google.com"
 alias history="history -i"
-alias sulast="sudo $(history -p !-1)"
-alias ydl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
-alias htop="sudo htop"
 
 case `uname` in
   Darwin)
     # commands for OS X go here
     alias flushdns="sudo dscacheutil -flushcache; sudo killall -HUP mDNSResponder"
     alias r="open -a"
-    alias fetch="curl -O"
   ;;
   Linux)
     # commands for Linux go here
