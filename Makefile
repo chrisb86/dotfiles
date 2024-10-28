@@ -16,11 +16,11 @@ all: git-fetch git-secrets-reveal deploy-macos ## Update repo, decrypt secrets a
 
 install: git-fetch deploy-base ## Update repor and run deploy-base
 
-deploy-base: deploy-htop-zfs deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
+deploy-base: deploy-eza deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
 
 deploy-workstation: deploy-base deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
 
-deploy-macos: deploy-htop deploy-workstation deploy-duti deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
+deploy-macos: deploy-htop deploy-workstation deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
 
 gen-vscodium-plugin-list: ## Update the list of VSCodium plugins
 	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCodium plugins at .config/VSCodium/UserUser/extensions.list"
@@ -59,22 +59,15 @@ brew-bundle-cleanup: ## Removew all appplications that are not listed in Brewfil
 	@echo "\033[1;32m>>>\033[1;0m Removing applications that are not listed in .config/Brewfile"
 	@brew bundle cleanup --zap --force --file .config/Brewfile
 
-deploy-duti: ## Deploy duti config
-	@echo "\033[1;32m>>>\033[1;0m Deploy duti config to ${HOMEDIR}/.config/duti"
-	@mkdir -p ${HOMEDIR}/.config/duti
-	@cp .config/duti/* ${HOMEDIR}/.config/duti
-	@echo "\033[1;32m>>>\033[1;0m Processing duti config from ${HOMEDIR}/.config/duti"
-	@duti ${HOMEDIR}/.config/duti
+deploy-eza: ## Deploy eza config
+	@echo "\033[1;32m>>>\033[1;0m Deploy eza config to ${HOMEDIR}/.config/eza"
+	@mkdir -p ${HOMEDIR}/.config/eza
+	@cp .config/eza/* ${HOMEDIR}/.config/eza
 
 deploy-htop: ## Deploy htop config
 	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
 	@mkdir -p ${HOMEDIR}/.config/htop
 	@cp .config/htop/htoprc ${HOMEDIR}/.config/htop/htoprc
-
-deploy-htop-zfs: ## Deploy htop config with zfs
-	@echo "\033[1;32m>>>\033[1;0m Deploy htop config to ${HOMEDIR}/.config/htop"
-	@mkdir -p ${HOMEDIR}/.config/htop
-	@cp .config/htop/htoprc.zfs ${HOMEDIR}/.config/htop/htoprc
 
 deploy-tmux: ## Deploy tmux config
 	@echo "\033[1;32m>>>\033[1;0m Deploy tmux config to ${HOMEDIR}/.config/tmux"
