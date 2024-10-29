@@ -21,6 +21,5 @@ export PYTHONUSERBASE=${HOME}/.local
 export INPUTRC="${XDG_CONFIG_HOME}/readline/inputrc"
 export MANPATH="${MANPATH-$(manpath)}:${HOME}/.local/share/man"
 
-
 # EZA
 EZA_CONFIG_DIR=${XDG_CONFIG_HOME}/eza

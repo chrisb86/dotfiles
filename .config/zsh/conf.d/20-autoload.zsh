@@ -2,10 +2,10 @@
 
 if [[ -d "${ZAUTOLOADDIR}" ]]; then
 
-    fpath=($fpath ${ZAUTOLOADDIR})
+  fpath=($fpath ${ZAUTOLOADDIR})
 
-    # Load functions
-    for func in ${ZAUTOLOADDIR}/*; do
-        autoload -Uz ${func:t}
-    done
+  # Load functions
+  for func in ${ZAUTOLOADDIR}/*; do
+    autoload -Uz ${func:t}
+  done
 fi

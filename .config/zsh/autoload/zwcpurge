@@ -1,8 +1,8 @@
 ## Purge all compiled zwc files
 
-function zwcpurge () {
+function zwcpurge() {
   autoload -Uz zrecompile
   for zsh_file in $(find ${ZDOTDIR} -maxdepth 3 -type f \( -name "*.zwc" -o -name "*.zwc.old" \)); do
-      rm -f ${zsh_file}
+    rm -f ${zsh_file}
   done
 }
