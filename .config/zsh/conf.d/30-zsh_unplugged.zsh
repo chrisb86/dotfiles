@@ -23,6 +23,7 @@ plugin_repos=(
   zsh-users/zsh-syntax-highlighting
   kulynyak/zsh.prepend-sudo
   zsh-users/zsh-history-substring-search
+  amyreese/zsh-titles
 )
 
 # load plugins
