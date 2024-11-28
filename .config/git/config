@@ -1,0 +1,7 @@
+[init]
+	defaultBranch = main
+[user]
+	name = Christian Baer
+	email = chris@debilux.org
+[core]
+	editor = vim
