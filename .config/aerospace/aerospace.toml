@@ -10,7 +10,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget borders active_color=0xff7287fd inactive_color=0xff8c8fa1 width=6.0'
+  'exec-and-forget borders active_color=0xffeff1f5 inactive_color=0xff8c8fa1 width=10'
 ]
 
 # Start AeroSpace at login
@@ -102,10 +102,10 @@ alt-f = 'fullscreen'
 alt-r = 'reload-config'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-left = 'focus left'
-alt-down = 'focus down'
-alt-up = 'focus up'
-alt-right = 'focus right'
+alt-cmd-left = 'focus left'
+alt-cmd-down = 'focus down'
+alt-cmd-up = 'focus up'
+alt-cmd-right = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 alt-shift-h = 'move left'
@@ -255,6 +255,6 @@ if.app-id = 'com.mojang.minecraftlauncher'
 run = 'move-node-to-workspace 7'
 
 ## Floating apps
-# [[on-window-detected]]
-# if.app-id = 'com.googlecode.iterm2'
-# run = 'layout floating'
+[[on-window-detected]]
+if.app-id = 'com.jordanbaird.Ice'
+run = 'layout floating'
