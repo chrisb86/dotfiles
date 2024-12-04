@@ -1,3 +1,7 @@
+# This needs jankyborders and hyperkey installed.
+# Hyperkey must configured configured to use caps lock as hyperkey und must not include shift in hyperkey.
+
+
 # Place a copy of this config to ~/.aerospace.toml
 # After that, you can edit ~/.aerospace.toml to your liking
 
@@ -14,7 +18,7 @@ after-startup-command = [
 ]
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -43,7 +47,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
 # Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
-automatically-unhide-macos-hidden-apps = false
+automatically-unhide-macos-hidden-apps = true
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
@@ -57,6 +61,7 @@ preset = 'qwerty'
 #                 In this example, 24 is a default value when there is no match.
 #                 Monitor pattern is the same as for 'workspace-to-monitor-force-assignment'.
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
+
 [gaps]
 inner.horizontal = 24
 inner.vertical =   24
@@ -96,49 +101,47 @@ outer.right =      24
 # '''
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-period = 'layout tiles horizontal vertical'
-alt-comma = 'layout accordion horizontal vertical'
-alt-f = 'fullscreen'
-alt-r = 'reload-config'
+cmd-ctrl-alt-period = 'layout tiles horizontal vertical'
+cmd-ctrl-alt-comma = 'layout accordion horizontal vertical'
+cmd-ctrl-alt-f = 'fullscreen'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-cmd-left = 'focus left'
-alt-cmd-down = 'focus down'
-alt-cmd-up = 'focus up'
-alt-cmd-right = 'focus right'
+cmd-ctrl-alt-left = 'focus left'
+cmd-ctrl-alt-down = 'focus down'
+cmd-ctrl-alt-up = 'focus up'
+cmd-ctrl-alt-right = 'focus right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
+cmd-ctrl-alt-shift-h = 'move left'
+cmd-ctrl-alt-shift-j = 'move down'
+cmd-ctrl-alt-shift-k = 'move up'
+cmd-ctrl-alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+cmd-ctrl-alt-shift-minus = 'resize smart -50'
+cmd-ctrl-alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-# ®
+cmd-ctrl-alt-1 = 'workspace 1'
+cmd-ctrl-alt-2 = 'workspace 2'
+cmd-ctrl-alt-3 = 'workspace 3'
+cmd-ctrl-alt-4 = 'workspace 4'
+cmd-ctrl-alt-5 = 'workspace 5'
+cmd-ctrl-alt-6 = 'workspace 6'
+cmd-ctrl-alt-7 = 'workspace 7'
+# cmd-ctrl-alt-8 = 'workspace 8'
+# cmd-ctrl-alt-9 = 'workspace 9'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-alt-shift-1 = 'move-node-to-workspace 1'
-alt-shift-2 = 'move-node-to-workspace 2'
-alt-shift-3 = 'move-node-to-workspace 3'
-alt-shift-4 = 'move-node-to-workspace 4'
-alt-shift-5 = 'move-node-to-workspace 5'
-alt-shift-6 = 'move-node-to-workspace 6'
-alt-shift-7 = 'move-node-to-workspace 7'
-alt-shift-8 = 'move-node-to-workspace 8'
-alt-shift-9 = 'move-node-to-workspace 9'
+cmd-ctrl-alt-shift-1 = 'move-node-to-workspace 1'
+cmd-ctrl-alt-shift-2 = 'move-node-to-workspace 2'
+cmd-ctrl-alt-shift-3 = 'move-node-to-workspace 3'
+cmd-ctrl-alt-shift-4 = 'move-node-to-workspace 4'
+cmd-ctrl-alt-shift-5 = 'move-node-to-workspace 5'
+cmd-ctrl-alt-shift-6 = 'move-node-to-workspace 6'
+cmd-ctrl-alt-shift-7 = 'move-node-to-workspace 7'
+# cmd-ctrl-alt-shift-8 = 'move-node-to-workspace 8'
+# cmd-ctrl-alt-shift-9 = 'move-node-to-workspace 9'
 # alt-shift-a = 'move-node-to-workspace A'
 # alt-shift-b = 'move-node-to-workspace B'
 # alt-shift-c = 'move-node-to-workspace C'
@@ -163,13 +166,13 @@ alt-shift-9 = 'move-node-to-workspace 9'
 # alt-shift-z = 'move-node-to-workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
-alt-tab = 'workspace-back-and-forth'
+cmd-ctrl-alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+cmd-ctrl-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # alt-shift-sfemicolon = 'mode service'
-alt-shift-s = 'mode service'
+cmd-ctrl-alt-s = 'mode service'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -182,10 +185,10 @@ backspace = ['close-all-windows-but-current', 'mode main']
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
 #s = ['layout sticky tiling', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+cmd-ctrl-alt-shift-h = ['join-with left', 'mode main']
+cmd-ctrl-alt-shift-j = ['join-with down', 'mode main']
+cmd-ctrl-alt-shift-k = ['join-with up', 'mode main']
+cmd-ctrl-alt-shift-l = ['join-with right', 'mode main']
 
 ## Workspace 1: Main
 [[on-window-detected]]
@@ -254,7 +257,30 @@ run = 'move-node-to-workspace 7'
 if.app-id = 'com.mojang.minecraftlauncher'
 run = 'move-node-to-workspace 7'
 
+[[on-window-detected]]
+if.app-id = 'com.moneymoney-app.retail'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Actual Budget'
+run = 'move-node-to-workspace 7'
+
 ## Floating apps
 [[on-window-detected]]
 if.app-id = 'com.jordanbaird.Ice'
 run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'ntfy.sh'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'Home Assistant'
+run = 'layout floating'
+
+[exec]
+inherit-env-vars = true
+
+## Add homebrew prefix to path
+[exec.env-vars]
+PATH = '$(brew --prefix)/bin:/$(brew --prefix)/sbin:${PATH}'
