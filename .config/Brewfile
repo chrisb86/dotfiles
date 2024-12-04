@@ -2,154 +2,133 @@
 cask_args appdir: "/Applications"
 cask_args language: "de,deu,en,eng"
 
-## Taps
-tap "buo/cask-upgrade"
-tap "fabianishere/personal"
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/cask-drivers"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
-tap "homebrew/core"
-tap "homebrew/services"
-tap "hudochenkov/sshpass"
-tap "khanhas/tap"
-tap "koekeishiya/formulae"
+# ## Taps
+# tap "homebrew/bundle"
+# tap "homebrew/cask"
+# tap "homebrew/cask-drivers"
+# tap "homebrew/cask-fonts"
+# tap "homebrew/cask-versions"
+# tap "homebrew/core"
+# tap "homebrew/services"
+# tap "microsoft/git"
 
 ## brew formulae
-brew "arping"
-brew "node"
-brew "bitwarden-cli"
+brew "FelixKratz/formulae/borders"
 brew "brew-cask-completion"
-brew "python@3.9"
+brew "arping"
 brew "checkbashisms"
-brew "convmv"
-brew "duti"
-brew "exiftool"
-brew "tesseract"
-brew "ffmpeg", args: ["HEAD"]
+brew "eza"
 brew "git"
 brew "git-secret"
-brew "go"
 brew "htop"
 brew "hugo"
-brew "ipmitool"
+brew "iperf"
+brew "iperf3"
 brew "jq"
+brew "mas"
 brew "mosh"
 brew "nmap"
+brew "node"
 brew "ocrmypdf"
-brew "pandoc"
-brew "reattach-to-user-namespace"
+brew "python3"
 brew "rsync"
+brew "rclone"
+brew "restic"
 brew "shfmt"
-brew "subversion"
 brew "tesseract-lang"
 brew "tmux"
 brew "topgrade"
 brew "tree"
 brew "vim"
-brew "youtube-dl"
+brew "yt-dlp"
+#brew "trippy"
 brew "zsh"
 brew "zsh-completions"
-brew "fabianishere/personal/pam_reattach"
-brew "hudochenkov/sshpass/sshpass"
-brew "koekeishiya/formulae/skhd"
-brew "koekeishiya/formulae/yabai", args: ["HEAD"]
 
-## cask formulae
-cask "airbuddy"
-cask "alfred"
-cask "amethyst"
-cask "arduino"
-cask "arq"
-cask "balenaetcher"
-cask "bartender"
-cask "bonjeff"
-cask "calibre"
-cask "coconutbattery"
-cask "coolterm"
-cask "dbeaver-community"
-cask "drawio"
-cask "fantastical"
-cask "filebot"
-cask "firefox"
+# Fonts
+cask "font-meslo-lg-nerd-font"
 cask "font-fira-code"
 cask "font-source-code-pro"
+
+# Casks
+cask "adobe-creative-cloud"
+cask "airbuddy"
+cask "minecraft"
+cask "filebot"
+cask "firefox"
+cask "birdfont"
+cask "balenaetcher"
+cask "bettertouchtool"
+cask "bonjeff"
 cask "fork"
+cask "fujitsu-scansnap-manager"
 cask "google-chrome"
+cask "hyperkey"
+cask "raspberry-pi-imager"
+cask "hammerspoon"
 cask "hazel"
-cask "hex-fiend"
-cask "istat-menus"
-cask "iterm2"
-cask "keyboardcleantool"
-cask "little-snitch"
-cask "logitech-camera-settings"
-cask "mactex-no-gui"
+cask "curseforge"
+cask "obs"
+# cask "hiddenbar"
+cask "jordanbaird-ice"
+# cask "karabiner-elements"
 cask "marked"
+cask "moneymoney"
+cask "pdf-expert"
+# cask "sequel-ace"
+# cask "thor"
+cask "transmit"
+# cask "whichspace"
+cask "calibre"
+cask "coconutbattery"
+cask "vscodium"
+cask "itsycal"
+cask "stats"
+cask "iterm2"
+cask "dbeaver-community"
+cask "discord"
+cask "inkscape"
+cask "joplin"
 cask "mediathekview"
 cask "microsoft-teams"
-cask "moneymoney"
 cask "monitorcontrol"
 cask "nextcloud"
 cask "numi"
-cask "onyx"
-cask "oracle-jdk"
-cask "pdf-expert"
-cask "plex"
-cask "pocket-casts"
-cask "portfolioperformance"
-cask "qlcommonmark"
-cask "raspberry-pi-imager"
-cask "sequel-ace"
-cask "silicon-info"
-cask "sonos"
+cask "raycast"
+# cask "rectangle"
 cask "spotify"
-cask "transmission"
-cask "transmit"
-cask "unclack"
 cask "vlc"
 cask "vnc-viewer"
-cask "vscodium"
-cask "webex"
-cask "whichspace"
-cask "wireshark"
+cask "nikitabobko/tap/aerospace"
 
 ## Mac AppStore
-mas "AdGuard for Safari", id: 1440147259
-mas "Affinity Designer", id: 824171161
-mas "Affinity Photo", id: 824183456
-mas "Affinity Publisher", id: 881418622
-mas "Amphetamine", id: 937984704
-mas "AudioBookBinder", id: 413969927
-mas "Bitwarden", id: 1352778147
-mas "Cardhop", id: 1290358394
-mas "ColorSlurp", id: 1287239339
-mas "Controller", id: 1198176727
-mas "Create Booklet", id: 943029046
-mas "DaisyDisk", id: 411643860
-mas "Drafts", id: 1435957248
-mas "Final Cut Pro", id: 424389933
-mas "iA Writer", id: 775737590
-mas "Interact Scratchpad", id: 1199660222
-mas "Keynote", id: 409183694
-mas "Mactracker", id: 430255202
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
-mas "Mindcad Tiler", id: 432460453
-mas "MindNode", id: 992076693
-mas "MQTT Explorer", id: 1455214828
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
-mas "Reeder", id: 1529448980
-mas "RSS Button for Safari", id: 1437501942
-mas "Scenecuts Helper", id: 1540491573
-mas "SerialTools", id: 611021963
-mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
-mas "Turn Off the Lights for Safari", id: 1273998507
-mas "Tweetbot", id: 557168941
-mas "WhatsApp", id: 1147396723
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
+mas "AdGuard for Safari", id: 1440147259;
+mas "Affinity Designer", id: 824171161;
+mas "Affinity Photo", id: 824183456;
+mas "Affinity Publisher", id: 881418622;
+mas "Amphetamine", id: 937984704;
+mas "AudioBookBinder", id: 413969927;
+mas "Bitwarden", id: 1352778147;
+mas "Cardhop", id: 1290358394;
+mas "ColorSlurp", id: 1287239339;
+mas "Create Booklet", id: 943029046;
+mas "DaisyDisk", id: 411643860;
+mas "Drafts", id: 1435957248;
+mas "Draw Things", id: 6444050820;
+mas "Final Cut Pro", id: 424389933;
+mas "iA Writer", id: 775737590;
+mas "Ice Cubes", id: 6444915884;
+mas "Interact Scratchpad", id: 1199660222;
+mas "Microsoft Excel", id: 462058435;
+mas "Microsoft PowerPoint", id: 462062816;
+mas "Microsoft Word", id: 462054704;
+mas "Mindcad Tiler", id: 432460453;
+mas "Moom Classic", id: 419330170;
+mas "MQTT Explorer", id: 1455214828;
+mas "Parcel", id: 639968404;
+mas "Reeder", id: 1529448980;
+mas "RSS Button for Safari", id: 1437501942;
+mas "The Unarchiver", id: 425424353;
+mas "Todoist", id: 585829637;
+mas "WireGuard", id: 1451685025;
+mas "WhatsApp", id: 310633997;
