@@ -1,0 +1,14 @@
+font-family = MesloLGM Nerd Font Mono
+font-thicken = true
+font-size = 18
+theme = catppuccin-mocha
+
+cursor-opacity = 0.5
+cursor-style-blink = true
+
+background-opacity = 0.9
+background-blur-radius = 20
+
+initial-command = /opt/homebrew/bin/tmux a -d
+quit-after-last-window-closed = true
+
