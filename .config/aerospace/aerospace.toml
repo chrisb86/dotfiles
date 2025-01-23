@@ -13,8 +13,10 @@ after-login-command = []
 # You can use it to add commands that run after AeroSpace startup.
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
+# JankyBorders has a built-in detection of already running process,
+# so it won't be run twice on AeroSpace restart
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffeff1f5 inactive_color=0xff8c8fa1 width=10'
+    'exec-and-forget borders active_color=0xffeff1f5 inactive_color=0xff8c8fa1 width=10.0'
 ]
 
 # Start AeroSpace at login
@@ -63,12 +65,12 @@ preset = 'qwerty'
 #                 See: https://nikitabobko.github.io/AeroSpace/guide#assign-workspaces-to-monitors
 
 [gaps]
-inner.horizontal = 24
-inner.vertical =   24
-outer.left =       24
-outer.bottom =     24
-outer.top =        24
-outer.right =      24
+inner.horizontal = 16
+inner.vertical =   16
+outer.left =       16
+outer.bottom =     16
+outer.top =        16
+outer.right =      16
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -118,8 +120,8 @@ cmd-ctrl-alt-shift-k = 'move up'
 cmd-ctrl-alt-shift-l = 'move right'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
-cmd-ctrl-alt-shift-minus = 'resize smart -50'
-cmd-ctrl-alt-shift-equal = 'resize smart +50'
+cmd-ctrl-alt-shift-down = 'resize smart -50'
+cmd-ctrl-alt-shift-up = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 cmd-ctrl-alt-1 = 'workspace 1'
@@ -237,6 +239,10 @@ run = 'move-node-to-workspace 4'
 ## Workspace 5: Shell
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 5'
 
 ## Workspace 6: Code
