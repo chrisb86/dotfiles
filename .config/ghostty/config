@@ -1,6 +1,6 @@
 font-family = MesloLGM Nerd Font Mono
 font-thicken = true
-font-size = 18
+font-size = 15
 theme = catppuccin-mocha
 
 cursor-opacity = 0.5
