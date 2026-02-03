@@ -17,7 +17,6 @@ tap "FelixKratz/formulae"
 ## brew formulae
 brew "FelixKratz/formulae/borders"
 brew "brew-cask-completion"
-brew "arping"
 brew "checkbashisms"
 brew "eza"
 brew "git"
