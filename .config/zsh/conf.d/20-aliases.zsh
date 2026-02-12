@@ -18,16 +18,11 @@ fi
 if ! _exists fetch; then
   if _exists curl; then
     alias fetch="curl -O"
-  elif _exists curl; then
+  elif _exists wget; then
     alias fetch="wget"
   else
     echo "fetch not found."
   fi
-fi
-
-# htop
-if _exists htop; then
-  alias htop="sudo htop"
 fi
 
 unfunction _exists
@@ -36,7 +31,7 @@ alias mkdir="mkdir -p"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
-alias google="ping -c 10240000 google.com"
+alias google="ping google.com"
 alias history="history -i"
 
 case `uname` in

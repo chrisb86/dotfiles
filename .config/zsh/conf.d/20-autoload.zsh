@@ -2,7 +2,7 @@
 
 if [[ -d "${ZAUTOLOADDIR}" ]]; then
 
-  fpath=($fpath ${ZAUTOLOADDIR})
+  fpath=(${ZAUTOLOADDIR} $fpath)
 
   # Load functions
   for func in ${ZAUTOLOADDIR}/*; do

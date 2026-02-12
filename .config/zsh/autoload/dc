@@ -10,12 +10,12 @@ function dc() {
     # Save current working directory
     CURRENT_DIR="${PWD}"
 
-    for file in $(find ${PWD} -maxdepth 2 -type f -regextype posix-extended -regex '.*(docker-compose|compose)\.ya?ml' | sort); do
-      cd $(dirname "$file")
-      docker compose $@
+    for file in $(find "${PWD}" -maxdepth 2 -type f \( -name "docker-compose.yml" -o -name "docker-compose.yaml" -o -name "compose.yml" -o -name "compose.yaml" \) | sort); do
+      cd "$(dirname "$file")"
+      docker compose "$@"
     done
 
     # Change back to saved working directory
-    cd ${CURRENT_DIR}
+    cd "${CURRENT_DIR}"
   fi
 }

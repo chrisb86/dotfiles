@@ -2,3 +2,4 @@
 
 # Load config files in $ZSH/lib that for stage 2
 for config_file (${ZLIBDIR}/20-*.zsh) source $config_file
+unset config_file

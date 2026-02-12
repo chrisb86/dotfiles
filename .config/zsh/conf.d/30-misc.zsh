@@ -10,7 +10,7 @@ setopt long_list_jobs
 
 ## pager
 export LC_CTYPE=$LANG
-export LC_ALL=de_DE.UTF-8
+export LANG=de_DE.UTF-8
 export IOCAGE_COLOR=TRUE
 
 ## Set some app specific dirs with XDM scheme

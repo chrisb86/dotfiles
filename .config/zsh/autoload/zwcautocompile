@@ -3,19 +3,19 @@
 function zwcautocompile() {
   autoload -Uz zrecompile
 
-  for f in $(find ${ZDOTDIR} -maxdepth 3 -type f \( -name "*.zsh" -o -name ".zlogin" -o -name ".zshrc" \) ! -name "*.zwc" ! -name "*.zwc.old"); do
-    zrecompile -pq ${f} && rm -f ${f}.zwc.old
+  for f in $(find "${ZDOTDIR}" -maxdepth 3 -type f \( -name "*.zsh" -o -name ".zlogin" -o -name ".zshrc" \) ! -name "*.zwc" ! -name "*.zwc.old"); do
+    zrecompile -pq "${f}" && rm -f "${f}.zwc.old"
   done
 
-  if [[ -d ${ZAUTOLOADDIR} ]]; then
-    for f in ${ZAUTOLOADDIR}/*; do
-      zrecompile -pq ${f} && rm -f ${f}.zwc.old
+  if [[ -d "${ZAUTOLOADDIR}" ]]; then
+    for f in "${ZAUTOLOADDIR}"/*; do
+      zrecompile -pq "${f}" && rm -f "${f}.zwc.old"
     done
   fi
 
-  if [[ -d ${ZLIBDIR} ]]; then
-    for f in ${ZLIBDIR}/*; do
-      zrecompile -pq ${f} && rm -f ${f}.zwc.old
+  if [[ -d "${ZLIBDIR}" ]]; then
+    for f in "${ZLIBDIR}"/*; do
+      zrecompile -pq "${f}" && rm -f "${f}.zwc.old"
     done
   fi
 }

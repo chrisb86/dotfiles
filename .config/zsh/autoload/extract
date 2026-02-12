@@ -5,7 +5,7 @@ function extract() {
     echo "       extract <path/file_name_1.ext> [path/file_name_2.ext] [path/file_name_3.ext]"
     return 1
   else
-    for n in $@; do
+    for n in "$@"; do
       if [ -f "$n" ]; then
         case "${n%,}" in
         *.tar.bz2 | *.tar.gz | *.tar.xz | *.tbz2 | *.tgz | *.txz | *.tar)

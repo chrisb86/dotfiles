@@ -1,6 +1,6 @@
 # get zsh_unplugged and store it with your other plugins
 if [[ ! -d ${ZPLUGINDIR}/zsh_unplugged ]]; then
-  git clone --quiet https://github.com/mattmc3/zsh_unplugged ${ZPLUGINDIR}/zsh_unplugged
+  git clone --quiet --depth 1 https://github.com/mattmc3/zsh_unplugged ${ZPLUGINDIR}/zsh_unplugged
 fi
 source ${ZPLUGINDIR}/zsh_unplugged/zsh_unplugged.zsh
 

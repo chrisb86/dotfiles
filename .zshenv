@@ -15,3 +15,4 @@ export ZCACHE="${XDG_CACHE_HOME}/zsh" # Cache directory for history and zcompdum
 
 # Load config files in $ZSH/lib that for stage 1
 for config_file (${ZLIBDIR}/10-*.zsh) source $config_file
+unset config_file

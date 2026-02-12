@@ -20,11 +20,11 @@ if [[ "$OSTYPE" == darwin* ]]; then
 else
     # Linux/BSD: Start ssh-agent if not running
     if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-        ssh-agent -t 1h > "$HOME/.ssh-agent.env"
+        ( umask 077; ssh-agent -t 1h > "$HOME/.ssh-agent.env" )
     fi
     
     # Source ssh-agent environment
-    if [[ ! -S ~/.ssh/ssh_auth_sock && -f "$HOME/.ssh-agent.env" ]]; then
+    if [[ ! -S "$SSH_AUTH_SOCK" && -f "$HOME/.ssh-agent.env" ]]; then
         source "$HOME/.ssh-agent.env" >/dev/null
     fi
     

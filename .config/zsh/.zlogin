@@ -2,6 +2,7 @@
 
 ## Load config files in $ZSH/lib that for stage 3
 for config_file (${ZLIBDIR}/30-*.zsh) source $config_file
+unset config_file
 
 ## Compile startup files
 zwcautocompile
