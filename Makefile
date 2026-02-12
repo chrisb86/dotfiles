@@ -73,6 +73,8 @@ deploy-tmux: ## Deploy tmux config
 	@echo "\033[1;32m>>>\033[1;0m Deploy tmux config to ${HOMEDIR}/.config/tmux"
 	@mkdir -p ${HOMEDIR}/.config/tmux
 	@cp .config/tmux/*.conf ${HOMEDIR}/.config/tmux
+	@cp .config/tmux/*.sh ${HOMEDIR}/.config/tmux
+	@chmod +x ${HOMEDIR}/.config/tmux/*.sh
 
 deploy-vim: ## Deploy vim config
 	@echo "\033[1;32m>>>\033[1;0m Deploy vim config to ${HOMEDIR}/.config/vim"
