@@ -7,11 +7,10 @@ set -eu
 buf=$(cat)
 
 # Try methods in order of preference
-copy_backend_remote_tunnel_port=$(tmux show-option -gvq "@copy_backend_remote_tunnel_port" 2>/dev/null || echo "")
 
 # Method 1: Use pbcopy if available (local macOS)
 if command -v pbcopy >/dev/null 2>&1; then
-  printf "%s" "$buf" | pbcopy
+  printf '%s' "$buf" | pbcopy
 # Method 2: OSC 52 (for mosh/ssh)
 elif [ -n "${TMUX:-}" ]; then
   # Get the tmux tty
