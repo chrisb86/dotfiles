@@ -1,12 +1,6 @@
 # This needs jankyborders and hyperkey installed.
-# Hyperkey must configured configured to use caps lock as hyperkey und must not include shift in hyperkey.
+# Hyperkey must be configured to use caps lock as hyperkey and must not include shift in hyperkey.
 
-
-# Place a copy of this config to ~/.aerospace.toml
-# After that, you can edit ~/.aerospace.toml to your liking
-
-# You can use it to add commands that run after login to macOS user session.
-# 'start-at-login' needs to be 'true' for 'after-login-command' to work
 # Available commands: https://nikitabobko.github.io/AeroSpace/commands
 after-login-command = []
 
@@ -142,30 +136,6 @@ cmd-ctrl-alt-shift-4 = 'move-node-to-workspace 4'
 cmd-ctrl-alt-shift-5 = 'move-node-to-workspace 5'
 cmd-ctrl-alt-shift-6 = 'move-node-to-workspace 6'
 cmd-ctrl-alt-shift-7 = 'move-node-to-workspace 7'
-# cmd-ctrl-alt-shift-8 = 'move-node-to-workspace 8'
-# cmd-ctrl-alt-shift-9 = 'move-node-to-workspace 9'
-# alt-shift-a = 'move-node-to-workspace A'
-# alt-shift-b = 'move-node-to-workspace B'
-# alt-shift-c = 'move-node-to-workspace C'
-# alt-shift-d = 'move-node-to-workspace D'
-# alt-shift-e = 'move-node-to-workspace E'
-# alt-shift-f = 'move-node-to-workspace F'
-# alt-shift-g = 'move-node-to-workspace G'
-# alt-shift-i = 'move-node-to-workspace I'
-# alt-shift-m = 'move-node-to-workspace M'
-# alt-shift-n = 'move-node-to-workspace N'
-# alt-shift-o = 'move-node-to-workspace O'
-# alt-shift-p = 'move-node-to-workspace P'
-# alt-shift-q = 'move-node-to-workspace Q'
-# alt-shift-r = 'move-node-to-workspace R'
-# alt-shift-s = 'move-node-to-workspace S'
-# alt-shift-t = 'move-node-to-workspace T'
-# alt-shift-u = 'move-node-to-workspace U'
-# alt-shift-v = 'move-node-to-workspace V'
-# alt-shift-w = 'move-node-to-workspace W'
-# alt-shift-x = 'move-node-to-workspace X'
-# alt-shift-y = 'move-node-to-workspace Y'
-# alt-shift-z = 'move-node-to-workspace Z'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 cmd-ctrl-alt-tab = 'workspace-back-and-forth'
@@ -173,7 +143,6 @@ cmd-ctrl-alt-tab = 'workspace-back-and-forth'
 cmd-ctrl-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-# alt-shift-sfemicolon = 'mode service'
 cmd-ctrl-alt-s = 'mode service'
 
 # 'service' binding mode declaration.
@@ -238,10 +207,6 @@ run = 'move-node-to-workspace 4'
 
 ## Workspace 5: Shell
 [[on-window-detected]]
-if.app-id = 'com.googlecode.iterm2'
-run = 'move-node-to-workspace 5'
-
-[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 5'
 
@@ -289,4 +254,4 @@ inherit-env-vars = true
 
 ## Add homebrew prefix to path
 [exec.env-vars]
-PATH = '$(brew --prefix)/bin:/$(brew --prefix)/sbin:${PATH}'
+PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
