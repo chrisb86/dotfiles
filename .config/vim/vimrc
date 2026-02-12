@@ -1,13 +1,14 @@
-set undodir=${VIMDOTDIR}/undo
-set directory=${VIMDOTDIR}/swap
-set backupdir=${VIMDOTDIR}/backup
-set viewdir=${VIMDOTDIR}/view
-set viminfo+='1000,n${VIMDOTDIR}/viminfo
+set nocompatible           " Vim defaults rather than vi ones. Keep at top.
+
+set undodir=$VIMDOTDIR/undo
+set directory=$VIMDOTDIR/swap
+set backupdir=$VIMDOTDIR/backup
+set viewdir=$VIMDOTDIR/view
+set viminfo+='1000,n$VIMDOTDIR/viminfo
 set runtimepath=$XDG_CONFIG_HOME/vim,$VIMRUNTIME,$XDG_CONFIG_HOME/vim/after
 
-
 " Install vim-plug if not found
-if empty(glob('${VIMDOTDIR}/autoload/plug.vim'))
+if empty(glob($VIMDOTDIR.'/autoload/plug.vim'))
   silent !curl -fLo ${VIMDOTDIR}/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 endif
@@ -18,18 +19,11 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 \| endif
 
 " Specify a directory for plugins
-" Install plugins
-call plug#begin('$VIMDOTDIR/plugged')
-
-	Plug 'elzr/vim-json'
-  Plug 'arcticicestudio/nord-vim'
-
-" Initialize plugin system
+call plug#begin($VIMDOTDIR.'/plugged')
+  Plug 'elzr/vim-json'
+  Plug 'nordtheme/vim'
 call plug#end()
 
-set nocompatible           " Vim defaults rather than vi ones. Keep at top.
-filetype plugin indent on  " Enable filetype-specific settings.
-syntax on                  " Enable syntax highlighting.
 set backspace=2            " Make the backspace behave as most applications.
 set autoindent             " Use current indent for new lines.
 set display=lastline       " Show as much of the line as will fit.
@@ -48,18 +42,23 @@ set nrformats-=octal       " Remove octal support from 'nrformats'.
 set tabstop=2              " Size of a Tab character.
 set shiftwidth=2           " Use same value as 'tabstop'.
 set softtabstop=2          " Use same value as 'shiftwidth'.
-set encoding=utf-8         " Set encoding
 color nord                 " Use Nord color scheme
-set list listchars=tab:»⤍·,trail:·,eol:¤,nbsp:˽ " Show invisible chars
-" set colorcolumn=80         " Highlight the 80th collumn
-set wrap linebreak nolist  " Softwrap long lines at window border, don't break words
-set showbreak=             " Intend softwrapped lines with unbreakable space
+set listchars=tab:»·,trail:·,eol:¤,nbsp:ʽ " Define invisible chars
+set wrap linebreak         " Softwrap long lines at window border, don't break words
+set showbreak=            " Indent softwrapped lines with unbreakable space
 
-" Highlight the line the cursor is on in markdown files
-autocmd FileType markdown set cursorline
+" Filetype-specific settings
+augroup filetypes
+  autocmd!
+  autocmd FileType markdown set cursorline
+  autocmd BufNewFile,BufRead *.md set filetype=markdown
+  autocmd FileType make set noexpandtab
+  autocmd FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
+augroup end
 
 " Go to the last cursor location when opening a file.
 augroup jump
+  autocmd!
   autocmd BufReadPost *
     \  if line("'\"") > 1 && line("'\"") <= line("$") && &ft !~# 'commit'
       \| exe 'normal! g`"'
@@ -73,18 +72,3 @@ fun! s:trim_whitespace()
   call winrestview(l:save)
 endfun
 command! TrimWhitespace call s:trim_whitespace()
-
-" Highlight characters behind the 80 chars margin
-" :au BufWinEnter * let w:m2=matchadd('ColumnMargin', '\%>80v.\+', -1)
-
-" Treat all .md files as markdown
-autocmd BufNewFile,BufRead *.md set filetype=markdown
-
-" make uses real tabs
-au FileType make set noexpandtab
-
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
-" make Python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python set softtabstop=4 tabstop=4 shiftwidth=4 textwidth=79
