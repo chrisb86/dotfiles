@@ -20,23 +20,25 @@ The repo ships with a Makefile that you can use to deploy and update the dotfile
 # make help
 help                           This help
 all                            Update repo and run deploy-macos
-install                        Update repor and run deploy-base
-deploy-base                    Only deploy basic conf files for shell usage
-deploy-workstation             Deploy workstation specific config files (inherits deploy-shell)
+install                        Update repo and run deploy-base
+deploy-base                    Only deploy basic conf files for shell usage (eza, tmux, vim, zsh, ssh, hushlogin, git, htop)
+deploy-workstation             Deploy platform-independent workstation config files (inherits deploy-base)
 deploy-macos                   Deploy macOS specific config files (inherits deploy-workstation)
 gen-vscode-extension-list      Update the list of VSCode extensions
 git-fetch                      Fetch changes from origin
 git-push                       Push changes to origin
 git-update-submodules          Update all submodules
 brew-bundle                    Install applications with brew bundle
-brew-bundle-cleanup            Removew all appplications that are not listed in Brewfile
-deploy-duti                    Deploy duti config
+brew-bundle-cleanup            Remove all applications that are not listed in Brewfile
+deploy-eza                     Deploy eza config
 deploy-htop                    Deploy htop config
-deploy-htop-zfs                Deploy htop config with zfs
 deploy-tmux                    Deploy tmux config
 deploy-vim                     Deploy vim config
 deploy-vscode                  Deploy VSCode config
-deploy-youtubedl               Deploy youtube-dl config
+deploy-aerospace               Deploy Aerospace config
+deploy-ghostty                 Deploy Ghostty config
+deploy-git                     Deploy Git config
+deploy-karabiner               Deploy Karabiner config
 deploy-zsh                     Deploy zsh config
 deploy-brewfile                Deploy Brewfile
 deploy-ssh                     Deploy SSH config

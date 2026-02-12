@@ -1,5 +1,12 @@
 SHELL = /bin/sh
 HOMEDIR = ${HOME}
+UNAME_S = $(shell uname -s)
+
+ifeq ($(UNAME_S),Darwin)
+VSCODE_USER_DIR = ${HOMEDIR}/Library/Application Support/Code/User
+else
+VSCODE_USER_DIR = ${HOMEDIR}/.config/Code/User
+endif
 
 
 .PHONY: help all
@@ -16,11 +23,11 @@ all: git-fetch deploy-macos ## Update repo and run deploy-macos
 
 install: git-fetch deploy-base ## Update repor and run deploy-base
 
-deploy-base: deploy-eza deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
+deploy-base: deploy-eza deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin deploy-git deploy-htop ## Only deploy basic conf files for shell usage
 
-deploy-workstation: deploy-base deploy-vscode deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
+deploy-workstation: deploy-base deploy-vscode deploy-ghostty ## Deploy workstation specific config files (inherits deploy-shell)
 
-deploy-macos: deploy-htop deploy-workstation deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
+deploy-macos: deploy-workstation deploy-brewfile deploy-aerospace deploy-karabiner ## Deploy macOS specific config files (inherits deploy-workstation)
 
 gen-vscode-extension-list: ## Update the list of VSCode extensions
 	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCode extensions at .config/Code/User/extensions.list"
@@ -76,17 +83,33 @@ deploy-vim: ## Deploy vim config
 	@cp .config/vim/vimrc ${HOMEDIR}/.config/vim
 
 deploy-vscode: ## Deploy VSCode config
-	@echo "\033[1;32m>>>\033[1;0m Deploy VSCode config to ${HOMEDIR}/Library/Application Support/Code/User"
-	@mkdir -p "${HOMEDIR}/Library/Application Support/Code/User"
-	@cp .config/Code/User/*.json "${HOMEDIR}/Library/Application Support/Code/User"
+	@echo "\033[1;32m>>>\033[1;0m Deploy VSCode config to ${VSCODE_USER_DIR}"
+	@mkdir -p "${VSCODE_USER_DIR}"
+	@cp .config/Code/User/*.json "${VSCODE_USER_DIR}"
 	
 	@echo "\033[1;32m>>>\033[1;0m Install VSCode extensions from .config/Code/User/extensions.list"
 	@cat .config/Code/User/extensions.list | xargs -L 1 code --install-extension
 
-deploy-youtubedl: ## Deploy youtube-dl config
-	@echo "\033[1;32m>>>\033[1;0m Deploy youtube-dl config to ${HOMEDIR}/.config/youtube-dl"
-	@mkdir -p ${HOMEDIR}/.config/youtube-dl
-	@cp .config/youtube-dl/config ${HOMEDIR}/.config/youtube-dl
+deploy-aerospace: ## Deploy Aerospace config
+	@echo "\033[1;32m>>>\033[1;0m Deploy Aerospace config to ${HOMEDIR}/.config/aerospace"
+	@mkdir -p ${HOMEDIR}/.config/aerospace
+	@cp .config/aerospace/aerospace.toml ${HOMEDIR}/.config/aerospace
+
+deploy-ghostty: ## Deploy Ghostty config
+	@echo "\033[1;32m>>>\033[1;0m Deploy Ghostty config to ${HOMEDIR}/.config/ghostty"
+	@mkdir -p ${HOMEDIR}/.config/ghostty
+	@cp .config/ghostty/config ${HOMEDIR}/.config/ghostty
+
+deploy-git: ## Deploy Git config
+	@echo "\033[1;32m>>>\033[1;0m Deploy Git config to ${HOMEDIR}/.config/git"
+	@mkdir -p ${HOMEDIR}/.config/git
+	@cp .config/git/config ${HOMEDIR}/.config/git
+
+deploy-karabiner: ## Deploy Karabiner config
+	@echo "\033[1;32m>>>\033[1;0m Deploy Karabiner config to ${HOMEDIR}/.config/karabiner"
+	@mkdir -p ${HOMEDIR}/.config/karabiner/scripts
+	@cp .config/karabiner/karabiner.json ${HOMEDIR}/.config/karabiner
+	@cp .config/karabiner/scripts/*.scpt ${HOMEDIR}/.config/karabiner/scripts
 
 deploy-zsh: ## Deploy zsh config
 	@echo "\033[1;32m>>>\033[1;0m Deploy zsh config to ${HOMEDIR}/.config/zsh"
