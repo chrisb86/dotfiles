@@ -24,7 +24,7 @@ install                        Update repor and run deploy-base
 deploy-base                    Only deploy basic conf files for shell usage
 deploy-workstation             Deploy workstation specific config files (inherits deploy-shell)
 deploy-macos                   Deploy macOS specific config files (inherits deploy-workstation)
-gen-vscodium-plugin-list       Update the list of VSCodium plugins
+gen-vscode-extension-list      Update the list of VSCode extensions
 git-fetch                      Fetch changes from origin
 git-push                       Push changes to origin
 git-update-submodules          Update all submodules
@@ -35,7 +35,7 @@ deploy-htop                    Deploy htop config
 deploy-htop-zfs                Deploy htop config with zfs
 deploy-tmux                    Deploy tmux config
 deploy-vim                     Deploy vim config
-deploy-vscodium                Deploy VSCodium config
+deploy-vscode                  Deploy VSCode config
 deploy-youtubedl               Deploy youtube-dl config
 deploy-zsh                     Deploy zsh config
 deploy-brewfile                Deploy Brewfile

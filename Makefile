@@ -18,13 +18,13 @@ install: git-fetch deploy-base ## Update repor and run deploy-base
 
 deploy-base: deploy-eza deploy-tmux deploy-vim deploy-zsh deploy-ssh deploy-hushlogin ## Only deploy basic conf files for shell usage
 
-deploy-workstation: deploy-base deploy-vscodium deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
+deploy-workstation: deploy-base deploy-vscode deploy-youtubedl ## Deploy workstation specific config files (inherits deploy-shell)
 
 deploy-macos: deploy-htop deploy-workstation deploy-brewfile ## Deploy macOS specific config files (inherits deploy-workstation)
 
-gen-vscodium-plugin-list: ## Update the list of VSCodium plugins
-	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCodium plugins at .config/VSCodium/UserUser/extensions.list"
-	@code --list-extensions > .config/VSCodium/UserUser/extensions.list
+gen-vscode-extension-list: ## Update the list of VSCode extensions
+	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCode extensions at .config/Code/User/extensions.list"
+	@code --list-extensions > .config/Code/User/extensions.list
 
 git-fetch: ## Fetch changes from origin
 	@echo "\033[1;32m>>>\033[1;0m Fetching changes from origin."
@@ -75,13 +75,13 @@ deploy-vim: ## Deploy vim config
 	@mkdir -p ${HOMEDIR}/.config/vim/undo
 	@cp .config/vim/vimrc ${HOMEDIR}/.config/vim
 
-deploy-vscodium: ## Deploy VSCodium config
-	@echo "\033[1;32m>>>\033[1;0m Deploy VSCodium config to ${HOMEDIR}/.config/VSCodium/User"
-	@mkdir -p ${HOMEDIR}/.config/VSCodium/User
-	@cp .config/VSCodium/User/*.json ${HOMEDIR}/.config/VSCodium/User
+deploy-vscode: ## Deploy VSCode config
+	@echo "\033[1;32m>>>\033[1;0m Deploy VSCode config to ${HOMEDIR}/Library/Application Support/Code/User"
+	@mkdir -p "${HOMEDIR}/Library/Application Support/Code/User"
+	@cp .config/Code/User/*.json "${HOMEDIR}/Library/Application Support/Code/User"
 	
-	@echo "\033[1;32m>>>\033[1;0m Install VSCodium extensions from ${HOMEDIR}/.config/VSCodium/User/extensions.list"
-	@cat .config/VSCodium/User/extensions.list | xargs -L 1 code --install-extension
+	@echo "\033[1;32m>>>\033[1;0m Install VSCode extensions from .config/Code/User/extensions.list"
+	@cat .config/Code/User/extensions.list | xargs -L 1 code --install-extension
 
 deploy-youtubedl: ## Deploy youtube-dl config
 	@echo "\033[1;32m>>>\033[1;0m Deploy youtube-dl config to ${HOMEDIR}/.config/youtube-dl"

@@ -7,7 +7,7 @@
   "editor.wordWrap": "on",
   "workbench.startupEditor": "newUntitledFile",
   "workbench.fontAliasing": "auto",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "workbench.colorTheme": "Nord",
   "workbench.preferredDarkColorTheme": "Nord",
   "workbench.iconTheme": "city-lights-icons-vsc",
