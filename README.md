@@ -19,14 +19,12 @@ The repo ships with a Makefile that you can use to deploy and update the dotfile
 ```shell
 # make help
 help                           This help
-all                            Update repo, decrypt secrets and run deploy-macos
+all                            Update repo and run deploy-macos
 install                        Update repor and run deploy-base
 deploy-base                    Only deploy basic conf files for shell usage
 deploy-workstation             Deploy workstation specific config files (inherits deploy-shell)
 deploy-macos                   Deploy macOS specific config files (inherits deploy-workstation)
 gen-vscodium-plugin-list       Update the list of VSCodium plugins
-git-secrets-hide               Hide secrets with git-secret
-git-secrets-reveal             Reveal secrets with git-secret
 git-fetch                      Fetch changes from origin
 git-push                       Push changes to origin
 git-update-submodules          Update all submodules
@@ -46,8 +44,6 @@ deploy-hushlogin               Deploy .hushlogin
 ```
 
 The dotfiles will be copied to your **~**.
-
-The repo is initialized for beeing used with git-secret. My own personal secrets are pushed to the repo as well and can be decrypted with my GPG key.
 
 ## ZSH with bells and whistles
 
@@ -69,6 +65,16 @@ It also supports nested sessions with a modified color scheme. That’s nice whe
 
 ![Alacritty window using the dotfiles by chrisb86 in a tmix session](https://raw.githubusercontent.com/chrisb86/dotfiles/main/screenshot-tmix.png)
 
+## Karabiner Elements
+
+- Map Capslock to CTRl+OPT+CMD
+- Map Capslock+Shift to CTRl+OPT+CMD+Shift
+- Display start of Music on Play/Pause button and toggle playpause only in Spotify when it's running
+
+# Aerospace
+
+Shortcuts
+
 ## Installation
 
 ## ### Getting the dotfiles.
@@ -80,15 +86,19 @@ git clone https://github.com/chrisb86/dotfiles.git
 ### Deploying the dotfiles
 
 For installing the base set for shell usage run
+
 ```shell
 make install
 ```
+
 For the fullfl edged setup with decrypting of the secrets use
+
 ```shell
 make install
 ```
 
 To list all avaliable commands run:
+
 ```shell
 make help
 ```

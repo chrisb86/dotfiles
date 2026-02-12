@@ -12,7 +12,7 @@ HOMEDIR = ${HOME}
 help: ## This help
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[1;1;36m%-30s\033[1;0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
-all: git-fetch git-secrets-reveal deploy-macos ## Update repo, decrypt secrets and run deploy-macos
+all: git-fetch deploy-macos ## Update repo and run deploy-macos
 
 install: git-fetch deploy-base ## Update repor and run deploy-base
 
@@ -25,18 +25,6 @@ deploy-macos: deploy-htop deploy-workstation deploy-brewfile ## Deploy macOS spe
 gen-vscodium-plugin-list: ## Update the list of VSCodium plugins
 	@echo "\033[1;32m>>>\033[1;0m Updating the list of VSCodium plugins at .config/VSCodium/UserUser/extensions.list"
 	@code --list-extensions > .config/VSCodium/UserUser/extensions.list
-
-git-secrets-hide: ## Hide secrets with git-secret
-	@echo "\033[1;32m>>>\033[1;0m Encrypting secrets."
-	@git secret hide
-	@echo "\033[1;32m>>>\033[1;0m Creating commit."
-	@git add -A && git commit -m "Updated secrets."
-
-git-secrets-reveal: ## Reveal secrets with git-secret
-	@echo "\033[1;32m>>>\033[1;0m Decrypting secrets."
-	@git secret reveal
-	@echo "\033[1;32m>>>\033[1;0m Remove encrypted files."
-	@git secret clean
 
 git-fetch: ## Fetch changes from origin
 	@echo "\033[1;32m>>>\033[1;0m Fetching changes from origin."
