@@ -21,7 +21,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 " Specify a directory for plugins
 call plug#begin($VIMDOTDIR.'/plugged')
   Plug 'elzr/vim-json'
-  Plug 'nordtheme/vim'
+  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
 set backspace=2            " Make the backspace behave as most applications.
@@ -42,7 +42,8 @@ set nrformats-=octal       " Remove octal support from 'nrformats'.
 set tabstop=2              " Size of a Tab character.
 set shiftwidth=2           " Use same value as 'tabstop'.
 set softtabstop=2          " Use same value as 'shiftwidth'.
-color nord                 " Use Nord color scheme
+set termguicolors              " Enable true color support
+color catppuccin_mocha         " Use Catppuccin Mocha color scheme
 set listchars=tab:»·,trail:·,eol:¤,nbsp:ʽ " Define invisible chars
 set wrap linebreak         " Softwrap long lines at window border, don't break words
 set showbreak=            " Indent softwrapped lines with unbreakable space
