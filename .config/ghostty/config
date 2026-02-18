@@ -3,18 +3,18 @@ font-thicken = true
 font-size = 15
 theme = Catppuccin Mocha
 
-window-inherit-font-size = true
-window-height = 33
-window-width = 130
-
 cursor-opacity = 0.5
 cursor-style-blink = true
 
 background-opacity = 0.9
 background-blur-radius = 20
 
-initial-command = tmux new -A -s main
+initial-command = /opt/homebrew/bin/tmux new -A -s main
 quit-after-last-window-closed = true
+
+window-inherit-font-size = true
+window-height = 33
+window-width = 130
 
 mouse-hide-while-typing = true
 shell-integration = zsh
