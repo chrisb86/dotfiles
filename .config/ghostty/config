@@ -1,7 +1,7 @@
 font-family = MesloLGM Nerd Font Mono
 font-thicken = true
 font-size = 15
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 
 window-inherit-font-size = true
 window-height = 33
