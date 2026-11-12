@@ -1,0 +1,168 @@
+## Options
+cask_args appdir: "/Applications"
+cask_args language: "de,deu,en,eng"
+
+#Taps
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
+tap "nikitabobko/tap", trusted: true
+
+# Checks for bashisms in shell scripts
+brew "checkbashisms"
+# Modern, maintained replacement for ls
+brew "eza"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# Distributed revision control system
+brew "git"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Improved top (interactive process viewer)
+brew "htop"
+# Configurable static site generator
+brew "hugo"
+# Tool to measure maximum TCP and UDP bandwidth
+brew "iperf"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Mac App Store command-line interface
+brew "mas"
+# Deep clean and optimize your Mac
+brew "mole"
+# Remote terminal application
+brew "mosh"
+# Rsync for cloud storage
+brew "rclone"
+# Fast, efficient and secure backup program
+brew "restic"
+# Utility that provides fast incremental file transfer
+brew "rsync"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Vi 'workalike' with many additional features
+brew "vim"
+# UNIX shell (command interpreter)
+brew "zsh"
+# Additional completion definitions for zsh
+brew "zsh-completions"
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
+# Privacy-focused app for managing your finances
+cask "actual"
+# Collection of apps and services for photography, design, video, web, and UX
+cask "adobe-creative-cloud"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace"
+# Tool to flash OS images to SD cards & USB drives
+cask "balenaetcher", args: { language: "de,deu,en,eng" }
+# Tool to customise input devices and automate computer systems
+cask "bettertouchtool"
+# Font editor
+cask "birdfont"
+# Shows a live display of the Bonjour services published on your network
+cask "bonjeff", args: { language: "de,deu,en,eng" }
+# E-books management software
+cask "calibre", args: { language: "de,deu,en,eng" }
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Tool to show live information about the batteries in various devices
+cask "coconutbattery", args: { language: "de,deu,en,eng" }
+# Universal database tool and SQL client
+cask "dbeaver-community", args: { language: "de,deu,en,eng" }
+# Voice and text chat software
+cask "discord", args: { language: "de,deu,en,eng" }
+# Web browser
+cask "firefox"
+cask "font-fira-code", args: { language: "de,deu,en,eng" }
+cask "font-meslo-lg-nerd-font"
+cask "font-monaspace"
+cask "font-source-code-pro", args: { language: "de,deu,en,eng" }
+cask "fujitsu-scansnap-manager"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome", args: { language: "de,deu,en,eng" }
+# Desktop automation application
+cask "hammerspoon"
+# Automated organisation
+cask "hazel", args: { language: "de,deu,en,eng" }
+# Vector graphics editor
+cask "inkscape", args: { language: "de,deu,en,eng" }
+# Menu bar calendar
+cask "itsycal"
+# Keyboard customiser
+cask "karabiner-elements"
+# Manages online multimedia libs of German, Austrian and Swiss public broadcasters
+cask "mediathekview", args: { language: "de,deu,en,eng" }
+# Meet, chat, call, and collaborate in just one place
+cask "microsoft-teams", args: { language: "de,deu,en,eng" }
+# Utility that automatically downloads firmwares and installers
+cask "mist"
+# German banking and financial management software
+cask "moneymoney", args: { language: "de,deu,en,eng" }
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol", args: { language: "de,deu,en,eng" }
+# Desktop sync client for Nextcloud software products
+cask "nextcloud"
+# Calculator and converter application
+cask "numi", args: { language: "de,deu,en,eng" }
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# PDF reader, editor and annotator
+cask "pdf-expert", args: { language: "de,deu,en,eng" }
+# Instant messaging application focusing on security
+cask "signal"
+# Git GUI client
+cask "sourcegit"
+# Music streaming service
+cask "spotify"
+# Menu bar manager
+cask "thaw"
+# Customizable email client
+cask "thunderbird"
+# Open-source code editor
+cask "visual-studio-code"
+# Multimedia player
+cask "vlc"
+
+# Video communication and virtual meeting platform
+cask "zoom"
+mas "AdGuard for Safari", id: 1440147259
+mas "Affinity Designer", id: 824171161
+mas "Affinity Photo", id: 824183456
+mas "Affinity Publisher", id: 881418622
+mas "Amphetamine", id: 937984704
+mas "AudioBookBinder", id: 413969927
+mas "AusweisApp", id: 948660805
+mas "Bitwarden", id: 1352778147
+mas "Cardhop", id: 1290358394
+mas "ColorSlurp", id: 1287239339
+mas "Create Booklet", id: 943029046
+mas "Drafts", id: 1435957248
+mas "Final Cut Pro", id: 424389933
+mas "Home Assistant", id: 1099568401
+mas "Infuse", id: 1136220934
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft OneNote", id: 784801555
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Mindcad Tiler", id: 432460453
+mas "Parcel", id: 375589283
+mas "Reeder", id: 1529448980
+mas "TestFlight", id: 899247664
+mas "The Unarchiver", id: 425424353
+mas "Todoist", id: 585829637
+mas "WhatsApp", id: 310633997
+mas "WireGuard", id: 1451685025
+mas "Xcode", id: 497799835
+
+vscode "anseki.vscode-color"
+vscode "kamikillerto.vscode-colorize"
+vscode "usernamehw.errorlens"
+vscode "usernamehw.indent-one-space"
+vscode "oderwat.indent-rainbow"
+vscode "esbenp.prettier-vscode"
+vscode "redhat.vscode-yaml"
