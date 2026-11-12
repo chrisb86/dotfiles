@@ -123,6 +123,8 @@ cask "spotify"
 cask "thaw"
 # Customizable email client
 cask "thunderbird"
+# Application launcher
+cask "tuna"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
