@@ -13,7 +13,7 @@ brew "eza"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Distributed revision control system
-brew "git"
+# brew "git"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Improved top (interactive process viewer)
@@ -56,6 +56,8 @@ cask "actual"
 cask "adobe-creative-cloud"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
+# Image editing and design software
+cask "affinity"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher", args: { language: "de,deu,en,eng" }
 # Tool to customise input devices and automate computer systems
@@ -80,7 +82,8 @@ cask "font-fira-code", args: { language: "de,deu,en,eng" }
 cask "font-meslo-lg-nerd-font"
 cask "font-monaspace"
 cask "font-source-code-pro", args: { language: "de,deu,en,eng" }
-cask "fujitsu-scansnap-manager"
+# ScanSnap scanner software
+cask "scansnap-home"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Web browser
@@ -121,8 +124,10 @@ cask "signal"
 cask "sourcegit"
 # Music streaming service
 cask "spotify"
+# System monitor for the menu bar
+cask "stats"
 # Menu bar manager
-cask "thaw"
+cask "thaw@beta"
 # Customizable email client
 cask "thunderbird"
 # Application launcher
@@ -132,19 +137,11 @@ cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 
-# Video communication and virtual meeting platform
-cask "zoom"
-mas "AdGuard for Safari", id: 1440147259
-mas "Affinity Designer", id: 824171161
-mas "Affinity Photo", id: 824183456
-mas "Affinity Publisher", id: 881418622
 mas "Amphetamine", id: 937984704
-mas "AudioBookBinder", id: 413969927
 mas "AusweisApp", id: 948660805
 mas "Bitwarden", id: 1352778147
 mas "Cardhop", id: 1290358394
 mas "ColorSlurp", id: 1287239339
-mas "Create Booklet", id: 943029046
 mas "Drafts", id: 1435957248
 mas "Final Cut Pro", id: 424389933
 mas "Home Assistant", id: 1099568401
@@ -153,15 +150,13 @@ mas "Microsoft Excel", id: 462058435
 mas "Microsoft OneNote", id: 784801555
 mas "Microsoft PowerPoint", id: 462062816
 mas "Microsoft Word", id: 462054704
-mas "Mindcad Tiler", id: 432460453
 mas "Parcel", id: 375589283
 mas "Reeder", id: 1529448980
 mas "TestFlight", id: 899247664
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "WhatsApp", id: 310633997
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
+# mas "WireGuard", id: 1451685025
 
 vscode "anseki.vscode-color"
 vscode "kamikillerto.vscode-colorize"
