@@ -113,6 +113,8 @@ cask "numi", args: { language: "de,deu,en,eng" }
 cask "obsidian"
 # PDF reader, editor and annotator
 cask "pdf-expert", args: { language: "de,deu,en,eng" }
+# GUI to browse and restore restic backups
+cask "restic-browser"
 # Instant messaging application focusing on security
 cask "signal"
 # Git GUI client
