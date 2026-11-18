@@ -96,6 +96,8 @@ cask "hazel", args: { language: "de,deu,en,eng" }
 cask "inkscape", args: { language: "de,deu,en,eng" }
 # Menu bar calendar
 cask "itsycal"
+# Ventoy installer and disk image flasher
+cask "mactoy"
 # Keyboard customiser
 cask "karabiner-elements"
 # Manages online multimedia libs of German, Austrian and Swiss public broadcasters
